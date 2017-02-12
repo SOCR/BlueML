@@ -1,3 +1,12 @@
+$(function () {
+    remove_or_show_nav_buttons();
+
+
+
+});
+
+
+
 
 
 
@@ -13,7 +22,6 @@ $("#next_module").click(function () {
 
 
 
-
     $next_module_page =  $("li.module").next();
     $("li.module").css("visibility","hidden");
     $("li.module").removeClass("module");
@@ -21,6 +29,7 @@ $("#next_module").click(function () {
     $next_module_page.css("visibility","visible");
 
 
+    remove_or_show_nav_buttons()
 
 
 });
@@ -45,5 +54,27 @@ $("#previous_module").click(function () {
     $prev_module_page.attr("class", "module");
     $prev_module.css("visibility","visible")
 
+    remove_or_show_nav_buttons()
 
 });
+
+
+//Checks to see if at beginning or end of modules, if so, hides the appropriate buttons.
+function  remove_or_show_nav_buttons() {
+
+    if( !$("li.active").prev('li')[0] ) {
+        console.log("doesnt exist");
+        $("#previous_module").hide();
+    }
+    else{
+        $("#previous_module").show()
+    }
+    if(! $("li.active").next('li')[0] ) {
+        $("#next_module").hide();
+    }
+    else{
+        $("#next_module").show();
+    }
+
+
+}
