@@ -85,11 +85,11 @@
 <!-- /.container -->
 <!-- Web App Content -->
 <div class="app-container">
-    <ul class="nav nav-pills nav-justified">
-        <li role="presentation" class="active"><a href="#">Select Training Data</a></li>
-        <li role="presentation"><a href="#">Upload Test Data</a></li>
-        <li role="presentation"><a href="#">Analysis</a></li>
-        <li role="presentation"><a href="#">Results</a></li>
+    <ul class="nav nav-pills nav-justified app-nav">
+        <li id = "training_data_page" role="presentation" class="active"><a href="#">Select Training Data</a></li>
+        <li id = "load_data_page" role="presentation"><a href="#">Upload Test Data</a></li>
+        <li id = "analysis_page" role="presentation"><a href="#">Analysis</a></li>
+        <li id = "results_page" role="presentation"><a href="#">Results</a></li>
     </ul>
 
 
@@ -108,13 +108,6 @@
 
 
 
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-            0%
-        </div>
-    </div>
-
-
 
 
 
@@ -126,10 +119,13 @@
 
 
 <!-- jQuery Version 1.11.1 -->
-<script src="js/jquery.js"></script>
+<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+
+
+<script src="js/nav.js"></script>
 
 </body>
 
