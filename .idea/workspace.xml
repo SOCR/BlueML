@@ -231,6 +231,13 @@
       <workItem from="1486933660613" duration="3075000" />
       <workItem from="1486937119314" duration="1093000" />
     </task>
+    <task id="LOCAL-00001" summary="index.html">
+      <created>1486932056693</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1486932056693</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -265,6 +272,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="index.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="index.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
