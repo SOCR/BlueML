@@ -1,7 +1,8 @@
 $(function () {
+
+    $('.module').eq(0).show().siblings('.module').hide();
+
     remove_or_show_nav_buttons();
-
-
 
 });
 
@@ -20,13 +21,8 @@ $("#next_module").click(function () {
     $("li.active").removeClass("active");
     $next_module_tab.attr("class", "active");
 
-
-
-    $next_module_page =  $("li.module").next();
-    $("li.module").css("visibility","hidden");
-    $("li.module").removeClass("module");
-    $next_module_page.attr("class", "module");
-    $next_module_page.css("visibility","visible");
+    var index = $next_module_tab.index();
+    $('.module').eq(index).show().siblings('.module').hide();
 
 
     remove_or_show_nav_buttons()
@@ -46,13 +42,8 @@ $("#previous_module").click(function () {
     $("li.active").removeClass("active");
     $prev_module.attr("class", "active");
 
-
-
-    $prev_module_page =  $("li.module").prev();
-    $("li.module").css("visibility","hidden");
-    $("li.module").removeClass("module");
-    $prev_module_page.attr("class", "module");
-    $prev_module.css("visibility","visible")
+    var index = $prev_module.index();
+    $('.module').eq(index).show().siblings('.module').hide();
 
     remove_or_show_nav_buttons()
 
