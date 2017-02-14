@@ -13,7 +13,7 @@
   		<meta name="google-translate-customization" content="234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e"></meta>
     
         <!-- Import Statements for CSS files -->
-        <link rel="stylesheet" href="./css/sample.css" type="text/css">
+
   		<link href="./css/bootstrap.css" rel="stylesheet">
   		<style type="text/css">
 		      body {
@@ -25,8 +25,10 @@
 		<style type="text/css">body {position: static !important; top:0px !important;}</style>
 		
   	 	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="css/layout.css" rel="stylesheet" media="screen">
 
-	    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
       		<script src="js/html5.js"></script>
     	<![endif]-->
@@ -172,50 +174,60 @@
         </div>
     </div>
     <!-- /.row -->
-
-</div>
+  </div>
 <!-- /.container -->
 
 <!-- Web App Content -->
+
 <div class="app-container">
-    <ul class="nav nav-pills nav-justified app-nav">
-        <li id = "training_data_page" role="presentation" class="active"><a href="#">Select Training Data</a></li>
-        <li id = "load_data_page" role="presentation"><a href="#">Upload Test Data</a></li>
-        <li id = "analysis_page" role="presentation"><a href="#">Analysis</a></li>
-        <li id = "results_page" role="presentation"><a href="#">Results</a></li>
-    </ul>
+	<div class="app-nav-bar">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<ul class="nav nav-pills nav-justified app-nav">
+					 <li id = "training_data_page" role="presentation" class="active"><a href="#">Select Training Data</a></li>
+					 <li id = "load_data_page" role="presentation"><a href="#">Upload Test Data</a></li>
+					  <li id = "analysis_page" role="presentation"><a href="#">Analysis</a></li>
+					<li id = "results_page" role="presentation"><a href="#">Results</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
 
+	<div class="app-interface-container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+
+				<div id="Training Data Page" class = "module" >
+					<!-- Training Data Page goes here -->
+					<h1>Select Training Data</h1>
+
+				</div>
+				<div id="Load Data Page" class = "module">
+					<!-- Load Data Page goes here -->
+					<h1>Upload Your Data</h1>
+				</div>
+				<div id="Analysis Page" class = "module">
+					<!-- Analysis Page goes here -->
+					<h1>Analysis</h1>
+				</div>
+				<div id="Result Page" class = "module">
+					<!-- Result Page goes here -->
+					<h1>Result</h1>
+				</div>
 
 
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <ul class = "modules">
-            <li id="Training Data Page" class = "module" >
-                <h1>Select Training Data</h1>
+				<button type="button" id="previous_module" class="btn btn-outline-primary">Previous</button>
+				<button type="button" id="next_module" class="btn btn-outline-primary">Next</button>
+			</div>
+	</div>
 
-            <li id="Load Data Page" class = "">
-                <h1>Upload Your Data</h1>
-
-            </ul>
-
-        </div>
-
-
-        <button type="button" id="previous_module" class="btn btn-outline-primary">Previous</button>
-        <button type="button" id="next_module" class="btn btn-outline-primary">Next</button>
 
     </div>
-
-
-
-
-
-
     <!-- /.row -->
+
 </div>
 <!-- /.container -->
-</div>
 
 
 
