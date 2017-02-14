@@ -22,6 +22,11 @@
                padding-top: 60px;
                padding-bottom: 40px;
              }
+
+			 .containerCheck
+			 {float:left;
+			 }
+
        </style>
        <style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
        <style type="text/css">body {position: static !important; top:0px !important;}</style>
@@ -190,8 +195,8 @@
 
 
 
-    <div class="row">
-        <div class="col-lg-12 text-center">
+	<div class="row" style="display:block">
+        <div class="col-lg-12 text-center" >
 
             <div id="Training Data Page" class = "module" >
 				<!-- Training Data Page goes here -->
@@ -215,54 +220,59 @@
 					</ul>
 				</div>
 				<h3>Select Features for Classification</h3>
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> QRS Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> S Amplitude </label>
+					</form>
+				</div>
 
-				<table>
-				<tr>
-					<div class="container">
-						<form>
-							<div class="checkbox">
-								<label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
-							</div>
-							<div class="checkbox-inline">
-								<label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
-							</div>
-							<div class="checkbox-inline">
-								<label class="checkbox-inline"><input type="checkbox" value="">Option 3</label>
-							</div>
-						</form>
-					</div>
-				</tr>
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> PR Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> T Amplitude </label>
+					</form>
+				</div>
 
-					<tr>
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> QT Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> Q Amplitude </label>
+					</form>
+				</div>
 
-						<div class="container">
-							<form>
-								<label class="checkbox-inline">
-									<input type="checkbox" value="">Option 1
-								</label>
-								<label class="checkbox-inline">
-									<input type="checkbox" value="">Option 2
-								</label>
-								<label class="checkbox-inline">
-									<input type="checkbox" value="">Option 3
-								</label>
-							</form>
-						</div>
-					</tr>
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> T Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> P Amplitude </label>
+					</form>
+				</div>
 
-				</table>
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> P Interval</label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> R Amplitude </label>
+					</form>
+				</div>
+
 
 			</div>
+
+
 			<div id="Result Page" class = "module">
 				<!-- Result Page goes here -->
 				<h1>Result</h1>
 			</div>
 
         </div>
+	</div>
 
 
-        <button type="button" id="previous_module" class="btn btn-outline-primary">Previous</button>
-        <button type="button" id="next_module" class="btn btn-outline-primary">Next</button>
+	<div style="display:block">
+	<button type="button" id="previous_module" class="btn btn-outline-primary">Previous</button>
+	<button type="button" id="next_module" class="btn btn-outline-primary">Next</button>
+
+	</div>
 
     </div>
     <!-- /.row -->
