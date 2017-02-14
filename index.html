@@ -14,19 +14,21 @@
     
         <!-- Import Statements for CSS files -->
         <link rel="stylesheet" href="./css/sample.css" type="text/css">
-  		<link href="./css/bootstrap.css" rel="stylesheet">
-  		<style type="text/css">
-		      body {
-		        padding-top: 60px;
-		        padding-bottom: 40px;
-		      }
-		</style>
-		<style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
-		<style type="text/css">body {position: static !important; top:0px !important;}</style>
-		
-  	 	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+		<link rel="stylesheet" href="./css/bootstrap-slider.css" type="text/css">
 
-	    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  		<link href="./css/bootstrap.css" rel="stylesheet">
+		<style type="text/css">
+             body {
+               padding-top: 60px;
+               padding-bottom: 40px;
+             }
+       </style>
+       <style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
+       <style type="text/css">body {position: static !important; top:0px !important;}</style>
+
+          <link href="./css/bootstrap-responsive.css" rel="stylesheet">
+
+       <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
       		<script src="js/html5.js"></script>
     	<![endif]-->
@@ -201,7 +203,55 @@
 			</div>
 			<div id="Analysis Page" class = "module">
 				<!-- Analysis Page goes here -->
-				<h1>Analysis</h1>
+				<h3>Select Algorithm Complexity</h3>
+				<b>  Less Accurate/Faster  </b><input id="Slide"/><b>  More Accurate/Slower  </b>
+				<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Advanced Options
+						<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Option 1</a></li>
+						<li><a href="#">Option 2</a></li>
+						<li><a href="#">Option 3</a></li>
+					</ul>
+				</div>
+				<h3>Select Features for Classification</h3>
+
+				<table>
+				<tr>
+					<div class="container">
+						<form>
+							<div class="checkbox">
+								<label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+							</div>
+							<div class="checkbox-inline">
+								<label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+							</div>
+							<div class="checkbox-inline">
+								<label class="checkbox-inline"><input type="checkbox" value="">Option 3</label>
+							</div>
+						</form>
+					</div>
+				</tr>
+
+					<tr>
+
+						<div class="container">
+							<form>
+								<label class="checkbox-inline">
+									<input type="checkbox" value="">Option 1
+								</label>
+								<label class="checkbox-inline">
+									<input type="checkbox" value="">Option 2
+								</label>
+								<label class="checkbox-inline">
+									<input type="checkbox" value="">Option 3
+								</label>
+							</form>
+						</div>
+					</tr>
+
+				</table>
+
 			</div>
 			<div id="Result Page" class = "module">
 				<!-- Result Page goes here -->
@@ -226,8 +276,6 @@
 <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
 
 <script src="js/nav.js"></script>
 
@@ -257,6 +305,8 @@
 	<script src="./js/bootstrap-collapse.js"></script>
 	<script src="./js/bootstrap-carousel.js"></script>
 	<script src="./js/bootstrap-typeahead.js"></script>
+	<script src="./js/bootstrap-slider.js"></script>
+	<script src="./js/slidebar.js"></script>
 	<!-- End Import Statements for JS files-->
 
 	<!-- GoogleAnalytics -->
