@@ -1,0 +1,24 @@
+#next_module{
+    position:absolute;
+    bottom:0px;
+    right:0px;
+}
+
+
+#previous_module{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+}
+
+.app-nav a{
+    background-color: #00274c;
+    color: #ffcb05
+}
+
+#blue_ml_logo{
+    float: left;
+    height: 100px;
+}
+
+
