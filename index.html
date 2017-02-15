@@ -198,25 +198,74 @@
 	<div class="app-interface-container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
+            <div id="Training Data Page" class = "module" >
+				<!-- Training Data Page goes here -->
+                <h1>Select Training Data</h1>
+			</div>
+            <div id="Load Data Page" class = "module">
+				<!-- Load Data Page goes here -->
+                <h1>Upload Your Data</h1>
+			</div>
+			<div id="Analysis Page" class = "module">
+				<!-- Analysis Page goes here -->
+				<h3>Select Algorithm Complexity</h3>
+				<b>  Less Accurate/Faster  </b><input id="Slide"/><b>  More Accurate/Slower  </b>
+				<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Advanced Options
+						<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Option 1</a></li>
+						<li><a href="#">Option 2</a></li>
+						<li><a href="#">Option 3</a></li>
+					</ul>
+				</div>
+				<h3>Select Features for Classification</h3>
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> QRS Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> S Amplitude </label>
+					</form>
+				</div>
 
-				<div id="Training Data Page" class = "module" >
-					<!-- Training Data Page goes here -->
-					<h1>Select Training Data</h1>
-
-				</div>
-				<div id="Load Data Page" class = "module">
-					<!-- Load Data Page goes here -->
-					<h1>Upload Your Data</h1>
-				</div>
-				<div id="Analysis Page" class = "module">
-					<!-- Analysis Page goes here -->
-					<h1>Analysis</h1>
-				</div>
-				<div id="Result Page" class = "module">
-					<!-- Result Page goes here -->
-					<h1>Result</h1>
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> PR Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> T Amplitude </label>
+					</form>
 				</div>
 
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> QT Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> Q Amplitude </label>
+					</form>
+				</div>
+
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> T Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> P Amplitude </label>
+					</form>
+				</div>
+
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> P Interval</label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> R Amplitude </label>
+					</form>
+				</div>
+
+
+			</div>
+
+
+			<div id="Result Page" class = "module">
+				<!-- Result Page goes here -->
+				<h1>Result</h1>
+			</div>
+
+        </div>
+	</div>
 
 				<button type="button" id="previous_module" class="btn btn-outline-primary">Previous</button>
 				<button type="button" id="next_module" class="btn btn-outline-primary">Next</button>
@@ -236,8 +285,6 @@
 <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
 
 <script src="js/nav.js"></script>
 
@@ -267,6 +314,8 @@
 	<script src="./js/bootstrap-collapse.js"></script>
 	<script src="./js/bootstrap-carousel.js"></script>
 	<script src="./js/bootstrap-typeahead.js"></script>
+	<script src="./js/bootstrap-slider.js"></script>
+	<script src="./js/slidebar.js"></script>
 	<!-- End Import Statements for JS files-->
 
 	<!-- GoogleAnalytics -->
