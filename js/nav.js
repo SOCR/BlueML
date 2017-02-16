@@ -52,7 +52,7 @@ $("#previous_module").click(function () {
     $("li.module").css("visibility","hidden");
     $("li.module").removeClass("module");
     $prev_module_page.attr("class", "module");
-    $prev_module.css("visibility","visible")
+    $prev_module.css("visibility","visible");
 
     remove_or_show_nav_buttons()
 
