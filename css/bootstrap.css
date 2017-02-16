@@ -3890,9 +3890,9 @@ input[type="submit"].btn.btn-mini {
 
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover {
-  color: #555555;
+  color: #ffcb05;
   cursor: default;
-  background-color: #ffffff;
+  background-color: #00274c;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }
@@ -3909,8 +3909,8 @@ input[type="submit"].btn.btn-mini {
 
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
-  color: #ffffff;
-  background-color: #0088cc;
+  color: #ffcb05;
+  background-color: #00274c;
 }
 
 .nav-stacked > li {
