@@ -21,6 +21,41 @@
     height: 100px;
 }
 
+#search{
+    float: left;
+    height: 50px;
+}
+
+#search1{
+    float: left;
+    height: 50px;
+}
+
+#folder1{
+    float: right;
+    height: 100px;
+    margin: auto;
+}
+
+#folder2{
+    float: right;
+    height: 100px;
+    margin: auto;
+}
+
+#folder3{
+    float: right;
+    height: 100px;
+    margin: auto;
+}
+
+#folder4{
+    float: right;
+    height: 100px;
+    margin: auto;
+}
+
+
 
 
 
