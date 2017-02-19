@@ -50,8 +50,10 @@ function add_upload_row() {
 
     $deleteBTN = '<button type= "button" class="btn btn-default btn-sm" id = "delete_file_upload"> <span class="glyphicon glyphicon-minus"></span> Remove  </button>';
 
+    console.log($deleteBTN);
     $("#file_upload_table").append('<tr><td>' + currentFile_Num  + '</td><td><input type="file" name="file" id = "file_upload_button"> </td><td> </td> <td>' + $deleteBTN + ' </td></tr>');
-
+    $(".file_upload tr *:nth-child(3)").show();
+    $(".file_upload tr *:nth-child(4)").show();
 
 }
 

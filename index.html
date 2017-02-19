@@ -168,6 +168,7 @@
 		</div>
 	</div>
 
+
 <div class="container">
   <div class="header">
 
@@ -250,11 +251,11 @@
 							</tr>
 							</tbody>
 						</table>
-						<a class="btn btn-info btn-lg"  id = "add_another_upload_button" disabled="disabled">
-							<span class="glyphicon glyphicon-plus"></span> Add Another File
+						<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled">
+							 Add Another File
 						</a>
 
-						<p ><button type="button" class="btn btn-default btn-lg" type='submit' name='Upload_ECG'>Upload ECG File</button>
+						<p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG'>Upload ECG File</button>
 
 					</div>
 				</div>
@@ -331,7 +332,7 @@
 
 				<button type="button" id="previous_module" class="btn btn-outline-primary">Previous</button>
 				<button type="button" id="next_module" class="btn btn-outline-primary">Next</button>
-			</div>
+
 	</div>
 
 
@@ -352,7 +353,8 @@
 
 
 
-	<footer><center>
+	<footer class="footer">
+		<center>
 		<a href="http://www.socr.umich.edu/">SOCR Resource</a>
 		Visitor number <img src="http://counter.digits.net/?counter=SOCR" align="middle" border="0" height="20" hspace="4" vspace="2" width="60">
 		<script type="text/javascript"> var d=new Date();
