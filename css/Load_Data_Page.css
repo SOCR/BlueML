@@ -1,0 +1,9 @@
+.file_upload tr > *:nth-child(3) {
+    display: none;
+}
+.file_upload tr > *:nth-child(4) {
+    display: none;
+}
+
+
+
