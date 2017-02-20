@@ -5,15 +5,18 @@
 
 	  	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	  	<meta charset="utf-8">
-        <title>SOCR BlueML Project</title>
+        <title>BlueML</title>
 	  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  	<meta name="description" content="Statistics Online Computational Resource">
 	  	<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
 		<meta name="keywords" content="Statistics Online Computational Resources">
   		<meta name="google-translate-customization" content="234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e"></meta>
-    
-        <!-- Import Statements for CSS files -->
-	<link href="./css/bootstrap-slider.css" rel="stylesheet">>
+
+		<link rel="icon" type="image/png" href="./static/images/favicon.png">
+
+	<!-- Import Statements for CSS files -->
+
+  		<link href="./css/bootstrap.css" rel="stylesheet">
   		<style type="text/css">
 		      body {
 		        padding-top: 60px;
@@ -25,7 +28,10 @@
 		
   	 	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
 		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link href="css/layout.css" rel="stylesheet" media="screen">
+		<link href="css/bootstrap-slider.css" rel="stylesheet" media="screen">
+
+	<link href="css/layout.css" rel="stylesheet" media="screen">
+	<link href="css/Load_Data_Page.css" rel="stylesheet" media="screen">
 
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -54,6 +60,9 @@
 				 class="icon-bar"></span>
 				</a> 
 				<a class="brand" href="../index.html" rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
+
+
+
 				<div class="nav-collapse collapse">
 					<p class="navbar-text pull-right"> 
 						<a href="feed.rss" class="btn icon rss">
@@ -159,14 +168,16 @@
 		</div>
 	</div>
 
+
 <div class="container">
   <div class="header">
 
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1> <img src="./static/images/blueML_logo.png"> </h1>
+            <h1> <img src="./static/images/blueML_logo.png" id = "blue_ml_logo"> </h1>
             <p class="lead"> a web-based, open source machine learning application designed for wavelet-based analysis of EKG and EEG waveform, intended to diagnose cardiac and neurological disorders.</p>
-            <ul class="list-unstyled">
+
+			<ul class="list-unstyled">
                 <li>Version 1.1</li>
                 <li>by MDP cohort 2017</li>
             </ul>
@@ -203,6 +214,57 @@
             <div id="Load Data Page" class = "module">
 				<!-- Load Data Page goes here -->
                 <h1>Upload Your Data</h1>
+				<!--
+				<div class = "file_upload">
+					<span class="glyphicon glyphicon-plus" id="add_upload_button" aria-hidden="true"></span>
+					<form action="" method='post' enctype='multipart/form-data'>
+					<p><input type='hidden' name='patient_name' value>
+					<p><input type='file' name='file'>
+						<p><button type='submit' name='Upload_ECG'>Upload ECG File</button>
+					</form>
+				</div>
+
+				-->
+
+				<div class="file_upload">
+					<div class="table-responsive">
+						<table class="table table-bordered" id = "file_upload_table">
+							<thead>
+							<tr>
+								<th>File Number</th>
+								<th>File</th>
+								<th>File Name</th>
+								<th>Delete</th>
+
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>1</td>
+								<td> <input type='file' name='file' id = "file_upload_button"> </td>
+								<td></td>
+								<td>
+									<button type="button" class="btn btn-default btn-sm" id = "delete_file_upload">
+										<span class="glyphicon glyphicon-minus"></span> Remove
+									</button>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled">
+							 Add Another File
+						</a>
+
+						<p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG'>Upload ECG File</button>
+
+					</div>
+				</div>
+
+
+
+
+
+
 			</div>
 			<div id="Analysis Page" class = "module">
 				<!-- Analysis Page goes here -->
@@ -256,7 +318,6 @@
 					</form>
 				</div>
 
-
 			</div>
 
 
@@ -270,7 +331,7 @@
 
 				<button type="button" id="previous_module" class="btn btn-outline-primary">Previous</button>
 				<button type="button" id="next_module" class="btn btn-outline-primary">Next</button>
-			</div>
+
 	</div>
 
 
@@ -291,7 +352,8 @@
 
 
 
-	<footer><center>
+	<footer class="footer">
+		<center>
 		<a href="http://www.socr.umich.edu/">SOCR Resource</a>
 		Visitor number <img src="http://counter.digits.net/?counter=SOCR" align="middle" border="0" height="20" hspace="4" vspace="2" width="60">
 		<script type="text/javascript"> var d=new Date();
@@ -316,6 +378,8 @@
 	<script src="./js/bootstrap-carousel.js"></script>
 	<script src="./js/bootstrap-typeahead.js"></script>
 	<script src="./js/bootstrap-slider.js"></script>
+	<script src="./js/slidebar.js"></script>
+	<script src="./js/Load_Data_Page.js"></script>
 	<!-- End Import Statements for JS files-->
 
 	<!-- GoogleAnalytics -->
