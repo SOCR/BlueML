@@ -26,13 +26,6 @@ $(function () {
 
     });
 
-    $("#delete_file_upload").click(function (e) {
-        console.log("clicked");
-        var currentRow = $(e).closest('tr');
-        console.log(currentRow);
-
-    });
-
 
 
 
@@ -48,13 +41,17 @@ function add_upload_row() {
     var currentFile_Num =  $('#file_upload_table tr').length;
     console.log(currentFile_Num);
 
-    $deleteBTN = '<button type= "button" class="btn btn-default btn-sm" id = "delete_file_upload"> <span class="glyphicon glyphicon-minus"></span> Remove  </button>';
+    $deleteBTN = '<button type= "button" class="btn btn-default btn-sm" id = "delete_file_upload" onclick="deletetr(this)">  <span class="glyphicon glyphicon-minus"></span> Remove  </button>';
 
     console.log($deleteBTN);
     $("#file_upload_table").append('<tr><td>' + currentFile_Num  + '</td><td><input type="file" name="file" id = "file_upload_button"> </td><td> </td> <td>' + $deleteBTN + ' </td></tr>');
     $(".file_upload tr *:nth-child(3)").show();
     $(".file_upload tr *:nth-child(4)").show();
 
+}
+
+function deletetr(obj) {
+    $(obj).parents("tr").remove();
 }
 
 
