@@ -202,24 +202,52 @@
 			<div class="col-lg-12 text-center">
             <div id="Training Data Page" class = "module" >
 				<!-- Training Data Page goes here -->
-				<form>
-					<input type="text" placeholder="Search for a dataset" id= "search" required>
-					<input type="button" value="Search" id="search1">
-				</form>
-				<div class="folder">
+				<fieldset class="folders">
 
-					<div id = "folder1"> <img src="./static/images/folder.jpg" >
-						<h2>MIT</h2>
-					</div>
-					<div id = "folder2"> <img src="./static/images/folder.jpg" >
-						<h2>UCI</h2>
-					</div>
-					<div id = "folder3"> <img src="./static/images/folder.jpg" >
-						<h2>Ann Arbor</h2>
-					</div>
-					<div id = "folder4"> <img src="./static/images/folder.jpg" >
-						<h6>Berkeley</h6>
-					</div>
+					<form>
+						<input type="text" placeholder="Search for a dataset" id= "search" required>
+						<input type="button" value="Search" id="search1">
+					</form>
+				</fieldset>
+
+
+				<div class="column">
+					<fieldset class="folders">
+
+
+						<label for="Submit">
+							MIT
+							<input name="Submit" id="Submit" type="image" src="./static/images/folder.jpg"/>
+						</label>
+
+						<button type="submit">
+							<img src="save.gif" alt="Save icon"/>
+							<br/>
+							Save
+						</button>
+
+					</fieldset>
+					<fieldset class="folders">
+
+						<div id = "folder2"> <img src="./static/images/folder.jpg" >
+							<h4>UCI</h4>
+						</div>
+
+					</fieldset>
+					<fieldset class="folders">
+
+						<div id = "folder3"> <img src="./static/images/folder.jpg" >
+							<h4>Ann Arbor</h4>
+						</div>
+
+					</fieldset>
+					<fieldset class="folders">
+
+						<div id = "folder4"> <img src="./static/images/folder.jpg" >
+							<h4>Berkeley</h4>
+						</div>
+
+					</fieldset>
 
 				</div>
 
