@@ -1,10 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+
+	  	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	  	<meta charset="utf-8">
+        <title>BlueML</title>
+	  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  	<meta name="description" content="Statistics Online Computational Resource">
+	  	<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
+		<meta name="keywords" content="Statistics Online Computational Resources">
+  		<meta name="google-translate-customization" content="234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e"></meta>
+
+		<link rel="icon" type="image/png" href="./static/images/favicon.png">
+
+	<!-- Import Statements for CSS files -->
+
+  		<link href="./css/bootstrap.css" rel="stylesheet">
+  		<style type="text/css">
+		      body {
+		        padding-top: 60px;
+		        padding-bottom: 40px;
+		      }
+		</style>
+		<style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
+		<style type="text/css">body {position: static !important; top:0px !important;}</style>
+		
+  	 	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="css/bootstrap-slider.css" rel="stylesheet" media="screen">
+
+	<link href="css/layout.css" rel="stylesheet" media="screen">
+	<link href="css/Load_Data_Page.css" rel="stylesheet" media="screen">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+      		<script src="js/html5.js"></script>
+    	<![endif]-->
+    	
+    	<link rel="shortcut icon" href="../img/SOCR_Web_Icon.ico">
+    	<link rel="alternate" type="application/rss+xml" rel="tooltip" title="SOCR News" href="feed.rss">
+
+		<!-- Import JS files -->
+
+
+
 </head>
+
 <body>
 
+
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid"> 
+				<a class="btn btn-navbar"
+				 data-toggle="collapse" data-target=".nav-collapse"> <span
+				 class="icon-bar"></span> <span class="icon-bar"></span> <span
+				 class="icon-bar"></span>
+				</a> 
+				<a class="brand" href="../index.html" rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
+
+
+
+				<div class="nav-collapse collapse">
+					<p class="navbar-text pull-right"> 
+						<a href="feed.rss" class="btn icon rss">
+							<i class="icon-bullhorn"></i>RSS</a>
+				 	</p>
+					<ul class="nav">
+				  		<!-- <li class="active"><a href="#">Home</a></li>  -->
+				  		<li class="dropdown">
+			                <a class="dropdown-toggle" id="drop5" role="button" 
+			                	data-toggle="dropdown" href="#" rel="tooltip" 
+			                	title="Learn about the SOCR Resource">About<b class="caret"></b></a>
+			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+				                  <li><a tabindex="-1" href="SOCR_About.html">About SOCR</a></li>
+				                  <li><a tabindex="-1" href="http://wiki.socr.umich.edu/index.php/SOCR_News">News and Events</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/people">SOCR Team</a></li>
+				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
+				                  <li><a tabindex="-1" href="SOCR_Contact.html">Contact</a></li>
+				                  <li><a tabindex="-1" href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
+				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
+				                  <li class="divider"></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
+				                  <li><a tabindex="-1" href="http://SOCR.umich.edu/html/SOCR_Support.html">Donations</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
+				                  <li class="divider"></li>
+				                  <li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR Wiki</a></li>
+				                  <li><a tabindex="-1" href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR Servers</a></li>
+				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
+				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language Translation</a></li>
+				                  <li class="divider"></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/Navigators.html" rel="tooltip" title="SOCR Resource Graphical Navigator">
+				                  	SOCR Resource Navigator</a></li>
+				                  
+			                </ul>
+			            </li>
+				  		<li><a href="SOCR_Contact.html" rel="tooltip" title="Contact the SOCR Resource">Contact</a></li>
+				  		<li class="dropdown">
+			                <a class="dropdown-toggle" id="drop5" role="button" 
+			                	data-toggle="dropdown" href="#" rel="tooltip" 
+			                	title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
+			                	Java Applets<b class="caret"></b></a>
+			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+				                  <li><a tabindex="-1" href="#" rel="tooltip" 
+			                		title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java 1.6 Applets</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/mod">Modeler</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/ana">Analyses</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/cha">Charts</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/gam">Games</a></li>
+				                  <li><a tabindex="-1" href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
+				                  <li class="divider"></li>
+				                  <li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/" rel="tooltip" 
+			                		title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy Java 1.5 Applets</a></li>
+				            </ul>
+			            </li>
+			            <li class="dropdown">
+			                <a class="dropdown-toggle" id="drop5" role="button" 
+			                	data-toggle="dropdown" href="#" rel="tooltip" 
+			                	title="A collection of portable modern HTML5 Webapps">Webapps<b class="caret"></b></a>
+			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/MotionChart/">Motion Charts</a></li> <li><a tabindex="-1" href="http://www.distributome.org/V3">Distributome Navigator</a></li>
+				                  <li><a tabindex="-1" href="http://www.distributome.org/tools.html">Distributome Webapps</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate Normal Distribution Calculator</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin Chart</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization and Resampling Webapp</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Tables">Probability Tables</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other SOCR HTML5 Webapps</a></li>
+			                </ul>
+			            </li>
+			            <li class="dropdown">
+			                <a class="dropdown-toggle" id="drop5" role="button" 
+			                	data-toggle="dropdown" href="#" rel="tooltip" 
+			                	title="Additional SOCR Resources">More<b class="caret"></b></a>
+			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision Calculators</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Tables">Probability Tables</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function and Image-Processing Applets</a></li>
+				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other Java Applets</a></li>
+				            </ul>
+			            </li>
+			            <li> <a href="http://nursing.umich.edu" rel="tooltip" 
+								title="University of Michigan School of Nursing">UMSN</a></li>
+						<li><div id="google_translate_element" class="nav-collapse collapse"></div>
+								<script type="text/javascript">
+									function googleTranslateElementInit() {
+								  		new google.translate.TranslateElement({pageLanguage: 'en', 
+									  		layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false,
+									  		gaTrack: true, gaId: 'UA-676559-1'}, 'google_translate_element');
+								}
+								</script>
+								<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+								</script>  
+			            </li>
+					</ul>
+				</div>
+
+				<!--/.nav-collapse --> 
+			</div>
+		</div>
+	</div>
+
+
+<div class="container">
+  <div class="header">
+
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1> <img src="./static/images/blueML_logo.png" id = "blue_ml_logo"> </h1>
+            <p class="lead"> a web-based, open source machine learning application designed for wavelet-based analysis of EKG and EEG waveform, intended to diagnose cardiac and neurological disorders.</p>
+
+			<ul class="list-unstyled">
+                <li>Version 1.1</li>
+                <li>by MDP cohort 2017</li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.row -->
+  </div>
+<!-- /.container -->
+
+<!-- Web App Content -->
+
+<div class="app-container">
+	<div class="app-nav-bar">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<ul class="nav nav-pills nav-justified">
+					 <li id = "training_data_page" role="presentation" class="active" class = "app-nav"><a href="#">Select Training Data</a></li>
+					 <li id = "load_data_page" role="presentation" class = "app-nav"><a href="#">Upload Test Data</a></li>
+					  <li id = "analysis_page" role="presentation" class = "app-nav"><a href="#">Analysis</a></li>
+					<li id = "results_page" role="presentation" class = "app-nav"><a href="#">Results</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="app-interface-container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+            <div id="Training Data Page" class = "module" >
+				<!-- Training Data Page goes here -->
+                <h1>Select Training Data</h1>
+			</div>
+            <div id="Load Data Page" class = "module">
+				<!-- Load Data Page goes here -->
+                <h1>Upload Your Data</h1>
+				<!--
+				<div class = "file_upload">
+					<span class="glyphicon glyphicon-plus" id="add_upload_button" aria-hidden="true"></span>
+					<form action="" method='post' enctype='multipart/form-data'>
+					<p><input type='hidden' name='patient_name' value>
+					<p><input type='file' name='file'>
+						<p><button type='submit' name='Upload_ECG'>Upload ECG File</button>
+					</form>
+				</div>
+
+				-->
+
+				<div class="file_upload">
+					<div class="table-responsive">
+						<table class="table table-bordered" id = "file_upload_table">
+							<thead>
+							<tr>
+								<th>File Number</th>
+								<th>File</th>
+								<th>File Name</th>
+								<th>Delete</th>
+
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>1</td>
+								<td> <input type='file' name='file' id = "file_upload_button"> </td>
+								<td></td>
+								<td>
+									<button type="button" class="btn btn-default btn-sm" id = "delete_file_upload">
+										<span class="glyphicon glyphicon-minus"></span> Remove
+									</button>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled">
+							 Add Another File
+						</a>
+
+						<p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG'>Upload ECG File</button>
+
+					</div>
+				</div>
+
+
+
+
+
+
+			</div>
+			<div id="Analysis Page" class = "module">
+				<!-- Analysis Page goes here -->
+				<h3>Select Algorithm Complexity</h3>
+				<b>  Less Accurate/Faster  </b><input id="Slide"/><b>  More Accurate/Slower  </b>
+				<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Advanced Options
+						<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Option 1</a></li>
+						<li><a href="#">Option 2</a></li>
+						<li><a href="#">Option 3</a></li>
+					</ul>
+				</div>
+
+
+
+
+				<h3>Select Features for Classification</h3>
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> QRS Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> S Amplitude </label>
+					</form>
+				</div>
+
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> PR Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> T Amplitude </label>
+					</form>
+				</div>
+
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> QT Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> Q Amplitude </label>
+					</form>
+				</div>
+
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> T Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> P Amplitude </label>
+					</form>
+				</div>
+
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> P Interval</label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> R Amplitude </label>
+					</form>
+				</div>
+
+			</div>
+
+
+			<div id="Result Page" class = "module">
+				<!-- Result Page goes here -->
+				<h1>Result</h1>
+			</div>
+
+        </div>
+	</div>
+
+				<button type="button" id="previous_module" class="btn btn-outline-primary">Previous</button>
+				<button type="button" id="next_module" class="btn btn-outline-primary">Next</button>
+
+	</div>
+
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+
+
+<!-- jQuery Version 1.11.1 -->
+<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="js/nav.js"></script>
+
+
+
+	<footer class="footer">
+		<center>
+		<a href="http://www.socr.umich.edu/">SOCR Resource</a>
+		Visitor number <img src="http://counter.digits.net/?counter=SOCR" align="middle" border="0" height="20" hspace="4" vspace="2" width="60">
+		<script type="text/javascript"> var d=new Date();
+		document.write(" | "+d.getFullYear()+" | "); </script>
+		<a href="../img/SOCR_Email.png"><img alt="SOCR Email" title="SOCR Email" src="../img/SOCR_Email.png" style="border: 0px solid ;"></a>
+		</center>
+	</footer>
+
+     <!-- Import Statements for JS files, add new files at the end -->
+	<script src="./js/jquery.js"></script>
+	<script src="./js/bootstrap.js"></script>
+	<script src="./js/bootstrap-transition.js"></script>
+	<script src="./js/bootstrap-alert.js"></script>
+	<script src="./js/bootstrap-modal.js"></script>
+	<script src="./js/bootstrap-dropdown.js"></script>
+	<script src="./js/bootstrap-scrollspy.js"></script>
+	<script src="./js/bootstrap-tab.js"></script>
+	<script src="./js/bootstrap-tooltip.js"></script>
+	<script src="./js/bootstrap-popover.js"></script>
+	<script src="./js/bootstrap-button.js"></script>
+	<script src="./js/bootstrap-collapse.js"></script>
+	<script src="./js/bootstrap-carousel.js"></script>
+	<script src="./js/bootstrap-typeahead.js"></script>
+	<script src="./js/bootstrap-slider.js"></script>
+	<script src="./js/slidebar.js"></script>
+	<script src="./js/Load_Data_Page.js"></script>
+	<!-- End Import Statements for JS files-->
+
+	<!-- GoogleAnalytics -->
+		<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> </script>
+		<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
+	<!-- End of GoogleAnalytics Code -->
 </body>
 </html>
