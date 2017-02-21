@@ -45,14 +45,11 @@
     display: block;
     float: left;
 
-
-
 }
 
 #folder3{
     position: relative;
     display: block;
-
     float: left;
 
 }
@@ -60,10 +57,14 @@
 #folder4{
     position: relative;
     display: block;
-
     float: left;
-
 }
+
+.data_buttons{
+    background-color: #00274c;
+    color: white;
+}
+
 
 
 
