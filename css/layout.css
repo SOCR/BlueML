@@ -65,7 +65,7 @@
     color: white;
 }
 
-.pane{
+.grid{
     /*background: linear-gradient(#fafcfe,#fafcfe 95%,#eef1f3);*/
     border: 1px solid #def;
     box-shadow: 0 2px 3px #666;
@@ -75,7 +75,33 @@
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 100px 100px 100px;
-    background-color: #fff;
+}
+
+
+.folder {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+
+}
+
+.a {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.b {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+.c {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+.d {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
 
