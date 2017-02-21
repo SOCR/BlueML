@@ -65,6 +65,19 @@
     color: white;
 }
 
+.pane{
+    /*background: linear-gradient(#fafcfe,#fafcfe 95%,#eef1f3);*/
+    border: 1px solid #def;
+    box-shadow: 0 2px 3px #666;
+    margin: 0 0 2%;
+    padding: 0;
+    text-align: left;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 100px 100px 100px;
+    background-color: #fff;
+}
+
 
 
 
