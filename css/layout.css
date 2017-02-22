@@ -102,16 +102,30 @@
 #mit_data{
     float: left;
     position: relative;
-    display: table-column;
+    margin-right: 40px;
 }
 
 #uci_data{
     float: left;
     position: relative;
-    display: table-column;
+    margin-right: 40px;
+}
+
+#berkeley_data{
+    float: left;
+    position: relative;
+    margin-right: 40px;
+}
+
+#aa_data{
+    float: left;
+    position: relative;
+    margin-right: 40px;
 }
 
 .pane{
+    background-color: #00274c;
+    color: white;
     border: 1px solid #def;
     box-shadow: 0 2px 3px #666;
     margin: 0 0 2%;
@@ -120,6 +134,8 @@
 }
 
 .pane2{
+    background-color: #00274c;
+    color: white;
     border: 1px solid #def;
     box-shadow: 0 2px 3px #666;
     margin: 0 0 2%;
