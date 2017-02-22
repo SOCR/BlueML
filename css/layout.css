@@ -99,8 +99,16 @@
     /*grid-row: 1 / 2;*/
 /*}*/
 
-.meta_data{
+#mit_data{
     float: left;
+    position: relative;
+    display: table-column;
+}
+
+#uci_data{
+    float: left;
+    position: relative;
+    display: table-column;
 }
 
 .pane{

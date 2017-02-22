@@ -222,7 +222,7 @@
 									<img src="./static/images/white.png" width="300" height="200"/>
 								</button>
 							<div class="checkbox">
-								<label><input type="checkbox" value="">Select Dataset</label>
+								<label><input type="checkbox" id="check1">Select Dataset</label>
 							</div>
 						</div>
 						<div class = "span4 folder2">
@@ -232,7 +232,7 @@
 								<img src="./static/images/white.png" width="300" height="200"/>
 							</button>
 							<div class="checkbox">
-								<label><input type="checkbox" value="">Select Dataset</label>
+								<label><input type="checkbox" id="check2">Select Dataset</label>
 							</div>
 						</div>
 					</div>
@@ -244,7 +244,7 @@
 							<img src="./static/images/white.png" width="300" height="200"/>
 							</button>
 							<div class="checkbox">
-								<label><input type="checkbox" value="">Select Dataset</label>
+								<label><input type="checkbox" id="check3">Select Dataset</label>
 							</div>
 						</div>
 						<div class = "span4 folder4">
@@ -254,7 +254,7 @@
 								<img src="./static/images/white.png" width="300" height="200"/>
 							</button>
 							<div class="checkbox">
-								<label><input type="checkbox" value="">Select Dataset</label>
+								<label><input type="checkbox" id="check4">Select Dataset</label>
 							</div>
 						</div>
 					</div>
@@ -262,20 +262,36 @@
 				</div>
 				<div class="pane2">
 					<div class="container">
-						<div class="meta_data">
-							<h2>Select Meta Data</h2>
-							<div class="form-group">
+						<div class="meta_data" id="mit_data" style="display: none">
+							<h3>Select Meta Data(MIT)</h3>
+							<div class="form-group"  id="mit_gen">
 								<label for="sel1">Gender:</label>
 								<select class="form-control" id="sel1">
 									<option>Female</option>
 									<option>Male</option>
 								</select>
 							</div>
-							<div class="form-group">
+							<div class="form-group"  id="mit_age">
 								<label for="pwd">Age: </label>
 								<input type="number" class="form-control" id="pwd">
 							</div>
 						</div>
+						<div class="meta_data" id="uci_data" style="display: none">
+							<h3>Select Meta Data(UCI)</h3>
+							<div class="form-group">
+								<label for="sel2">Gender:</label>
+								<select class="form-control" id="sel2">
+									<option>Female</option>
+									<option>Male</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="pwd2">Age: </label>
+								<input type="number" class="form-control" id="pwd2">
+							</div>
+						</div>
+
+
 					</div>
 				</div>
 				<div class="submit_button">
@@ -413,6 +429,8 @@
 	<script src="./js/bootstrap-slider.js"></script>
 	<script src="./js/slidebar.js"></script>
 	<script src="./js/Load_Data_Page.js"></script>
+	<script src="./js/metadata.js"></script>
+
 	<!-- End Import Statements for JS files-->
 
 	<!-- GoogleAnalytics -->
