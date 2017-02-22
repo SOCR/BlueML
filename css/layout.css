@@ -103,6 +103,22 @@
     float: left;
 }
 
+.pane{
+    border: 1px solid #def;
+    box-shadow: 0 2px 3px #666;
+    margin: 0 0 2%;
+    padding: 0;
+    text-align: left;
+}
+
+.pane2{
+    border: 1px solid #def;
+    box-shadow: 0 2px 3px #666;
+    margin: 0 0 2%;
+    padding: 0;
+    text-align: left;
+}
+
 
 
 
