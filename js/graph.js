@@ -2,25 +2,33 @@ InitChart();
 
 function InitChart() {
 
-    var lineData = [{
-        'x': 1,
-        'y': 5
-    }, {
-        'x': 20,
-        'y': 20
-    }, {
-        'x': 40,
-        'y': 10
-    }, {
-        'x': 60,
-        'y': 40
-    }, {
-        'x': 80,
-        'y': 5
-    }, {
-        'x': 100,
-        'y': 60
-    }];
+    // var lineData = [{
+    //     'x': 1,
+    //     'y': 5
+    // }, {
+    //     'x': 20,
+    //     'y': 20
+    // }, {
+    //     'x': 40,
+    //     'y': 10
+    // }, {
+    //     'x': 60,
+    //     'y': 40
+    // }, {
+    //     'x': 80,
+    //     'y': 5
+    // }, {
+    //     'x': 100,
+    //     'y': 60
+    // }];
+
+
+    var jsondisease = [
+        {"name": "arrhythmia", "value": 88, "cx": 20, "cy": 20},
+        {"name": "bradycardia", "value": 88, "cx": 20, "cy": 20},
+        {"name": "tachycardia", "value": 88, "cx": 20, "cy": 20},
+        {"name": "ischemia", "value": 88, "cx": 20, "cy": 20}];
+
 
     var vis = d3.select("#visualisation"),
         WIDTH = 1000,
@@ -31,19 +39,19 @@ function InitChart() {
             bottom: 20,
             left: 50
         },
-        xRange = d3.scale.linear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([d3.min(lineData, function (d) {
-            return d.x;
+        xRange = d3.scale.linear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([d3.min(jsondisease, function (d) {
+            return d.cy;
         }),
-            d3.max(lineData, function (d) {
-                return d.x;
+            d3.max(jsondisease, function (d) {
+                return d.cx;
             })
         ]),
 
-        yRange = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([d3.min(lineData, function (d) {
-            return d.y;
+        yRange = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([d3.min(jsondisease, function (d) {
+            return d.cy;
         }),
-            d3.max(lineData, function (d) {
-                return d.y;
+            d3.max(jsondisease, function (d) {
+                return d.cx;
             })
         ]),
 
