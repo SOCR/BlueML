@@ -406,13 +406,15 @@
 				<nav class="file-nav-bar">
 					<div class="container-fluid">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="#">File 1</a></li>
-							<li><a href="#">File 2</a></li>
-							<li><a href="#">File 3</a></li>
-							<li><a href="#">File 4</a></li>
+							<li id = "file1_page" role="presentation" class="active"><a href="#">File 1</a></li>
+							<li id = "file2_page" role="presentation"><a href="#">File 2</a></li>
+							<li id = "file3_page" role="presentation"><a href="#">File 3</a></li>
+							<li id = "file4_page" role="presentation"><a href="#">File 4</a></li>
 						</ul>
 					</div>
 				</nav>
+				<svg id="visualisation" width="1000" height="500"></svg>
+
 
         </div>
 	</div>
@@ -465,7 +467,10 @@
 	<script src="./js/bootstrap-carousel.js"></script>
 	<script src="./js/bootstrap-typeahead.js"></script>
 	<script src="./js/bootstrap-slider.js"></script>
+	<!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js"></script>
 	<script src="./js/slidebar.js"></script>
+	<script src="./js/graph.js"></script>
 	<script src="./js/Load_Data_Page.js"></script>
 	<script src="./js/metadata.js"></script>
 
