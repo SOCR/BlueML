@@ -32,7 +32,6 @@
 
 	<link href="css/layout.css" rel="stylesheet" media="screen">
 	<link href="css/Load_Data_Page.css" rel="stylesheet" media="screen">
-
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
       		<script src="js/html5.js"></script>
@@ -49,6 +48,7 @@
 
 <body>
 
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 
 
 	<div class="navbar navbar-inverse navbar-fixed-top">
@@ -223,7 +223,131 @@
 			<div class="col-lg-12 text-center">
             <div id="Training Data Page" class = "module" >
 				<!-- Training Data Page goes here -->
-                <h1>Select Training Data</h1>
+				<fieldset class="folders">
+
+					<form>
+						<input type="text" placeholder="Search for a dataset" id= "search" required>
+						<input type="button" value="Search" id="search1">
+					</form>
+
+				</fieldset>
+
+				<div class="pane">
+				<div class="container">
+					<div class="row-fluid">
+						<div class="span4 folder1">
+								<button type="submit" class="data_buttons">
+									MIT
+									<br/>
+									<img src="./static/images/white.png" width="300" height="200"/>
+								</button>
+							<div class="checkbox">
+								<label><input type="checkbox" id="check1">Select Dataset</label>
+							</div>
+						</div>
+						<div class = "span4 folder2">
+							<button type="submit" class="data_buttons">
+								UCI
+								<br/>
+								<img src="./static/images/white.png" width="300" height="200"/>
+							</button>
+							<div class="checkbox">
+								<label><input type="checkbox" id="check2">Select Dataset</label>
+							</div>
+						</div>
+					</div>
+					<div class="row-fluid">
+						<div class = "span4 folder3">
+							<button type="submit" class="data_buttons">
+							Berkeley
+							<br/>
+							<img src="./static/images/white.png" width="300" height="200"/>
+							</button>
+							<div class="checkbox">
+								<label><input type="checkbox" id="check3">Select Dataset</label>
+							</div>
+						</div>
+						<div class = "span4 folder4">
+							<button type="submit" class="data_buttons">
+								Ann Arbor
+								<br/>
+								<img src="./static/images/white.png" width="300" height="200"/>
+							</button>
+							<div class="checkbox">
+								<label><input type="checkbox" id="check4">Select Dataset</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="pane2">
+					<div class="container">
+						<div class="meta_data" id="mit_data" style="display: none">
+							<h3>Select Meta Data(MIT)</h3>
+							<div class="form-group"  id="mit_gen">
+								<label for="sel1">Gender:</label>
+								<select class="form-control" id="sel1">
+									<option>Female</option>
+									<option>Male</option>
+								</select>
+							</div>
+							<div class="form-group"  id="mit_age">
+								<label for="pwd">Age: </label>
+								<input type="number" class="form-control" id="pwd">
+							</div>
+						</div>
+						<div class="meta_data" id="uci_data" style="display: none">
+							<h3>Select Meta Data(UCI)</h3>
+							<div class="form-group">
+								<label for="sel2">Gender:</label>
+								<select class="form-control" id="sel2">
+									<option>Female</option>
+									<option>Male</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="pwd2">Age: </label>
+								<input type="number" class="form-control" id="pwd2">
+							</div>
+						</div>
+
+						<div class="meta_data" id="berkeley_data" style="display: none">
+							<h3>Select Meta Data(Berkeley)</h3>
+							<div class="form-group">
+								<label for="sel3">Gender:</label>
+								<select class="form-control" id="sel3">
+									<option>Female</option>
+									<option>Male</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="pwd3">Age: </label>
+								<input type="number" class="form-control" id="pwd3">
+							</div>
+						</div>
+
+						<div class="meta_data" id="aa_data" style="display: none">
+							<h3>Select Meta Data(Ann Arbor)</h3>
+							<div class="form-group">
+								<label for="sel4">Gender:</label>
+								<select class="form-control" id="sel4">
+									<option>Female</option>
+									<option>Male</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="pwd4">Age: </label>
+								<input type="number" class="form-control" id="pwd4">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="submit_button">
+					<button type="submit" class="data_buttons">
+						Submit
+					</button>
+				</div>
+				<!-- Training Data END -->
 			</div>
             <div id="Load Data Page" class = "module">
 				<!-- Load Data Page goes here -->
@@ -240,6 +364,8 @@
 
 				-->
 
+				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Please upload your files on this page!"></span>
+				<br/>
 				<div class="file_upload">
 					<div class="table-responsive">
 						<table class="table table-bordered" id = "file_upload_table">
@@ -283,6 +409,8 @@
 			<div id="Analysis Page" class = "module">
 				<!-- Analysis Page goes here -->
 				<h1>Select Algorithm Complexity</h1>
+				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Algorithm is faster with less accuracy"></span>
+				<br/>
 				<b>  Less Accurate/Faster  </b><input id="Slide"/><b>  More Accurate/Slower  </b>
 				<br/><br/>
 				<div class="dropdown" style="width: 125px;margin:auto">
@@ -297,6 +425,8 @@
 
 
 				<h1>Select Features for Classification</h1>
+				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Please select features for classification"></span>
+				<br/>
 				<div class="containerCheck">
 					<form>
 						<label class="checkbox-inline"><input type="checkbox" value=""> QRS Interval </label>
@@ -338,7 +468,18 @@
 			<div id="Result Page" class = "module">
 				<!-- Result Page goes here -->
 				<h1>Result</h1>
-			</div>
+				<nav class="file-nav-bar">
+					<div class="container-fluid">
+						<ul class="nav navbar-nav">
+							<li id = "file1_page" role="presentation" class="active"><a href="#">File 1</a></li>
+							<li id = "file2_page" role="presentation"><a href="#">File 2</a></li>
+							<li id = "file3_page" role="presentation"><a href="#">File 3</a></li>
+							<li id = "file4_page" role="presentation"><a href="#">File 4</a></li>
+						</ul>
+					</div>
+				</nav>
+				<svg id="visualisation" width="1000" height="500"></svg>
+
 
         </div>
 	</div>
@@ -393,8 +534,13 @@
 	<script src="./js/bootstrap-carousel.js"></script>
 	<script src="./js/bootstrap-typeahead.js"></script>
 	<script src="./js/bootstrap-slider.js"></script>
+	<!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js"></script>
 	<script src="./js/slidebar.js"></script>
+	<script src="./js/graph.js"></script>
 	<script src="./js/Load_Data_Page.js"></script>
+	<script src="./js/metadata.js"></script>
+
 	<!-- End Import Statements for JS files-->
 
 	<!-- GoogleAnalytics -->
