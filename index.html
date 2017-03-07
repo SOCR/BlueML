@@ -255,10 +255,10 @@
 							<tbody>
 							<tr>
 								<td>1</td>
-								<td> <input type='file' name='file' id = "file_upload_button"> </td>
+								<td> <input type='file' name='file' id = "file_upload_button_1"> </td>
 								<td></td>
 								<td>
-									<button type="button" class="btn btn-default btn-sm" id = "delete_file_upload">
+									<button type="button" class="btn btn-default btn-sm" id = "delete_file_upload" onclick="deletetr(this)">
 										<span class="glyphicon glyphicon-minus"></span> Remove
 									</button>
 								</td>
@@ -282,9 +282,10 @@
 			</div>
 			<div id="Analysis Page" class = "module">
 				<!-- Analysis Page goes here -->
-				<h3>Select Algorithm Complexity</h3>
+				<h1>Select Algorithm Complexity</h1>
 				<b>  Less Accurate/Faster  </b><input id="Slide"/><b>  More Accurate/Slower  </b>
-				<div class="dropdown">
+				<br/><br/>
+				<div class="dropdown" style="width: 125px;margin:auto">
 					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Advanced Options
 						<span class="caret"></span></button>
 					<ul class="dropdown-menu">
@@ -295,9 +296,7 @@
 				</div>
 
 
-
-
-				<h3>Select Features for Classification</h3>
+				<h1>Select Features for Classification</h1>
 				<div class="containerCheck">
 					<form>
 						<label class="checkbox-inline"><input type="checkbox" value=""> QRS Interval </label>
@@ -344,8 +343,8 @@
         </div>
 	</div>
 
-				<button type="button" id="previous_module" class="btn btn-outline-primary">Previous</button>
-				<button type="button" id="next_module" class="btn btn-outline-primary">Next</button>
+				<button type="button" id="previous_module" class="btn btn-outline-primary btn-lg">Previous</button>
+				<button type="button" id="next_module" class="btn btn-outline-primary btn-lg">Next</button>
 
 	</div>
 
