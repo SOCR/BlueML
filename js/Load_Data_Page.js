@@ -21,7 +21,6 @@ $(function () {
      $('#file_upload_button_' + current_row_num).change(function(e){
         console.log("file selected");
         var fileName = e.target.files[0].name;
-
       //  alert('The file "' + fileName +  '" has been selected.');
       console.log("filename" + fileName);
         $(".file_upload tr *:nth-child(3)").show();
@@ -32,13 +31,9 @@ $(function () {
          fileName = fileName.toString();
          x.innerHTML = fileName;
          console.log("test" + x);
-
-
          $(".file_upload tr *:nth-child(4)").show();
 
-
         $('#add_another_upload_button').attr("disabled", false);
-       
 
     });
 
@@ -50,17 +45,16 @@ $(function () {
 function update_file_name_after_file_selected(current_row_num) {
     console.log("changing");
     console.log(current_row_num);
-     $('#file_upload_button_' + '2').change(function(e){
+     $('#file_upload_button_' + current_row_num).change(function(e){
 
         console.log("file selected");
         var fileName = e.target.files[0].name;
-
-      //  alert('The file "' + fileName +  '" has been selected.');
-      console.log("filename" + fileName);
+        console.log("filename" + fileName);
         $(".file_upload tr *:nth-child(3)").show();
-        $(".file_upload tr td:nth-child(3)").text(fileName);
+         var file_cell = document.getElementById("file_upload_table").rows[current_row_num].cells[2];
+         fileName = fileName.toString();
+         file_cell.innerHTML = fileName;
         $(".file_upload tr *:nth-child(4)").show();
-
 
         $('#add_another_upload_button').attr("disabled", false);
 
@@ -79,22 +73,37 @@ function add_upload_row() {
     $("#file_upload_table").append('<tr><td>' + currentFile_Num  + '</td><td><input type="file" name="file" id = "file_upload_button_' + currentFile_Num  + '"> </td><td> </td> <td>' + $deleteBTN + ' </td></tr>');
     $(".file_upload tr *:nth-child(3)").show();
     $(".file_upload tr *:nth-child(4)").show();
+    $('#add_another_upload_button').attr("disabled", true);
 
     update_file_name_after_file_selected(current_row_num);
     
 }
 
 function deletetr(obj) {
+    var num = $(obj).closest('tr').index() + 1;
     $(obj).parents("tr").remove();
+    console.log("deleting" + num);
     current_row_num -=1;
+    update_file_num(num);
 }
 
 
 
 
 
+function update_file_num(update_num) {
+    console.log("updating file num");
+    var table=document.getElementById("file_upload_table");
+    var r= update_num;
 
+    while(row=table.rows[r++])
+    {
+        var c=0;
+        cell=row.cells[c].innerHTML -=1;
 
+            // do sth with cell
+    }
+}
 
 
 
