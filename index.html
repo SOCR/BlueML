@@ -2,7 +2,19 @@
 <html lang="en">
 
 <head>
-
+	<style>
+		p.dotted {border-style: dotted;}
+		p.dashed {border-style: dashed;}
+		p.solid {border-style: solid;}
+		p.double {border-style: double;}
+		p.groove {border-style: groove;}
+		p.ridge {border-style: ridge;}
+		p.inset {border-style: inset;}
+		p.outset {border-style: outset;}
+		p.none {border-style: none;}
+		p.hidden {border-style: hidden;}
+		p.mix {border-style: dotted dashed solid double;}
+	</style>
 	  	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	  	<meta charset="utf-8">
         <title>BlueML</title>
@@ -187,18 +199,6 @@
   </div>
 <!-- /.container -->
 
-<!-- The Progress Bar -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-	<div class="container">
-		<h2>You are in Progress: </h2>
-		<div class="progress">
-			<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:25%">
-				<span class="sr-only">
-				</span>
-			</div>
-		</div>
-	</div>
 
 
 <!-- Web App Content -->
@@ -216,6 +216,21 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- The Progress Bar -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<div class="container">
+		<h2>You are in Progress: </h2>
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:25%">
+				<span class="sr-only">
+				</span>
+			</div>
+		</div>
+	</div>
+
+
 
 
 	<div class="app-interface-container">
@@ -351,7 +366,8 @@
 			</div>
             <div id="Load Data Page" class = "module">
 				<!-- Load Data Page goes here -->
-                <h1>Upload Your Data</h1>
+				<p class="solid">
+				<h1>Upload Your Data</h1>
 				<!--
 				<div class = "file_upload">
 					<span class="glyphicon glyphicon-plus" id="add_upload_button" aria-hidden="true"></span>
@@ -399,7 +415,9 @@
 
 					</div>
 				</div>
+				</p>
                 <div class="meta-data">
+					<p class="solid">
                     <h1>Meta-data</h1>
                     <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select
@@ -410,6 +428,7 @@
                             <li><a href="#">Tobefilled3</a></li>
                         </ul>
                     </div>
+					</p>
 
                     <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select
