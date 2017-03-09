@@ -32,11 +32,6 @@ var jsondisease = [
 //     //     'y': 60
 //     // }];
 
-    {"name": "arrhythmia", "value": 0.88, "cx": 20, "cy": 20},
-    {"name": "bradycardia", "value": 0.88, "cx": 20, "cy": 20},
-    {"name": "tachycardia", "value": 0.88, "cx": 20, "cy": 20},
-    {"name": "ischemia", "value": 0.88, "cx": 20, "cy": 20}];
-
 
 //
 //
