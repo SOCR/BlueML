@@ -85,6 +85,7 @@ function deletetr(obj) {
     console.log("deleting" + num);
     current_row_num -=1;
     update_file_num(num);
+    if(current_row_num == 0){add_upload_row();}
 }
 
 
