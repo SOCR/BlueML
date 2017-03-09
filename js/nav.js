@@ -46,6 +46,7 @@ $("#previous_module").click(function () {
     var index = $prev_module.index();
     $('.module').eq(index).show().siblings('.module').hide();
 
+
     remove_or_show_nav_buttons()
 
 });
