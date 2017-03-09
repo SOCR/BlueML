@@ -14,19 +14,12 @@ $(function () {
     });
    // check_for_select_file();
 
-   //input[type="file"]
-   //console.log("checking fileNameToChange")
-   //console.log(fileNameToChange);
-   //update_file_name_after_file_selected(fileNameToChange);
      $('#file_upload_button_' + current_row_num).change(function(e){
         console.log("file selected");
         var fileName = e.target.files[0].name;
       //  alert('The file "' + fileName +  '" has been selected.');
-      console.log("filename" + fileName);
+        console.log("filename" + fileName);
         $(".file_upload tr *:nth-child(3)").show();
-      //  $(".file_upload tr td:nth-child(3)").text(fileName);
-      //  $("#file_upload_table").rows[current_row_num].cellIndex[3].text("test");
-         //var x = document.getElementById("file_upload_table").rows[current_row_num].cells[2].firstChild.data;
          var x = document.getElementById("file_upload_table").rows[current_row_num].cells[2];
          fileName = fileName.toString();
          x.innerHTML = fileName;
@@ -46,7 +39,6 @@ function update_file_name_after_file_selected(current_row_num) {
     console.log("changing");
     console.log(current_row_num);
      $('#file_upload_button_' + current_row_num).change(function(e){
-
         console.log("file selected");
         var fileName = e.target.files[0].name;
         console.log("filename" + fileName);
@@ -80,6 +72,7 @@ function add_upload_row() {
 }
 
 function deletetr(obj) {
+    //need to prevent deleting of first row
     var num = $(obj).closest('tr').index() + 1;
     $(obj).parents("tr").remove();
     console.log("deleting" + num);
