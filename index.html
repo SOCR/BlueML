@@ -14,6 +14,45 @@
 		p.none {border-style: none;}
 		p.hidden {border-style: hidden;}
 		p.mix {border-style: dotted dashed solid double;}
+        body {font-family: "Lato", sans-serif;}
+
+        /* Style the tab */
+        div.tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        div.tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        div.tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        div.tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
 	</style>
 	  	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	  	<meta charset="utf-8">
@@ -59,6 +98,7 @@
 </head>
 
 <body>
+
 
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 
@@ -367,24 +407,19 @@
             <div id="Load Data Page" class = "module">
 				<!-- Load Data Page goes here -->
 				<p class="solid">
-				<h1>Upload Your Data</h1>
-				<!--
-				<div class = "file_upload">
-					<span class="glyphicon glyphicon-plus" id="add_upload_button" aria-hidden="true"></span>
-					<form action="" method='post' enctype='multipart/form-data'>
-					<p><input type='hidden' name='patient_name' value>
-					<p><input type='file' name='file'>
-						<p><button type='submit' name='Upload_ECG'>Upload ECG File</button>
-					</form>
-				</div>
-
-				-->
-
+                <h1>Upload Your Data</h1>
 				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Please upload your files on this page!"></span>
 				<br/>
 				<div class="file_upload">
+                    <div style="position: relative">
+                        <a class="btn btn-default btn-lg" id = "add_another_upload_button" disabled="disabled" style="position: absolute; left: 90px">Add Another File</a>
+                    </div>
+                    <div style="padding-bottom: 50px; padding-top: 0; position: relative">
+                        <p><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG' style="position: absolute; right: 85px">Upload ECG File</button>
+                        </p>
+                    </div>
 					<div class="table-responsive">
-						<table class="table table-bordered" id = "file_upload_table">
+                        <table class="table table-bordered" id = "file_upload_table" style="width: 84%; margin-left: 8%; margin-right: 8%">
 							<thead>
 							<tr>
 								<th>File Number</th>
@@ -407,18 +442,67 @@
 							</tr>
 							</tbody>
 						</table>
-						<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled">
-							 Add Another File
-						</a>
-
-						<p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG'>Upload ECG File</button>
+						<!--<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled" style="position: absolute">Add Another File</a>-->
+						<!--<p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG'>Upload ECG File</button>-->
 
 					</div>
 				</div>
 				</p>
+
                 <div class="meta-data">
-					<p class="solid">
-                    <h1>Meta-data</h1>
+
+
+					<table class = "meta" style="width: 84%; height: 200px; border: 2px solid lightgrey; margin-left: 8%; margin-right: 8%">
+						<tr>
+							<th style="text-align: center; height: 50px; border: 2px solid lightgrey">Meta_data_1</th>
+							<th style="text-align: center; height: 50px; border: 2px solid lightgrey">Meta_data_2</th>
+							<th style="text-align: center; height: 50px; border: 2px solid lightgrey">Meta_data_3</th>
+						</tr>
+						<tr>
+							<td style= "vertical-align: top">
+								<div class="dropdown" style="position: relative">
+									<button id = "dd" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
+										<span class="caret"></span></button>
+									<ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
+										<li><a href="#">Tobefilled1</a></li>
+										<li><a href="#">Tobefilled2</a></li>
+										<li><a href="#">Tobefilled3</a></li>
+									</ul>
+								</div>
+							</td>
+
+							<td style= "vertical-align: top">
+								<div class="dropdown">
+									<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
+										<span class="caret"></span></button>
+									<ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
+										<li><a href="#">Tobefilled1</a></li>
+										<li><a href="#">Tobefilled2</a></li>
+										<li><a href="#">Tobefilled3</a></li>
+									</ul>
+								</div>
+							</td>
+
+							<td style= "vertical-align: top">
+								<div class="dropdown">
+									<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
+										<span class="caret"></span></button>
+									<ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
+										<li><a href="#">Tobefilled1</a></li>
+										<li><a href="#">Tobefilled2</a></li>
+										<li><a href="#">Tobefilled3</a></li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+					</table>
+
+				</div>
+			</div>
+
+
+
+                    <!--<h1>Meta-data</h1>
                     <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select
                             <span class="caret"></span></button>
@@ -450,7 +534,16 @@
                         </ul>
                     </div>
                 </div>
-			</div>
+			</div>-->
+
+
+
+
+
+
+
+
+
 
 			<div id="Analysis Page" class = "module">
 				<!-- Analysis Page goes here -->
@@ -516,15 +609,37 @@
 				<h1>Result</h1>
 				<nav class="file-nav-bar">
 					<div class="container-fluid">
-						<ul class="nav navbar-nav">
+                        <div class="tab" style="width: 84%; margin-left: 8%; margin-right: 8%">
+                            <button class="tablinks" onclick="openTab(event, 'file1')">File1</button>
+                            <button class="tablinks" onclick="openTab(event, 'file2')">File2</button>
+                            <button class="tablinks" onclick="openTab(event, 'file3')">File3</button>
+                        </div>
+
+                        <div id="file1" class="tabcontent" style="width: 84%; margin-left: 8%; margin-right: 8%">
+                            <h3>Analysis Result for file 1</h3>
+                            <svg id="visualisation" width="800" height="500"></svg>
+                        </div>
+
+                        <div id="file2" class="tabcontent"  style="width: 84%; margin-left: 8%; margin-right: 8%">
+                            <h3>Analysis Result for file 2</h3>
+                            <svg id="visualisation" width="800" height="500"></svg>
+                        </div>
+
+                        <div id="file3" class="tabcontent"  style="width: 84%; margin-left: 8%; margin-right: 8%">
+                            <h3>Analysis Result for file 3</h3>
+                            <svg id="visualisation" width="800" height="500"></svg>
+                        </div>
+
+
+                        <!--<ul class="nav navbar-nav">
 							<li id = "file1_page" role="presentation" class="active"><a href="#">File 1</a></li>
 							<li id = "file2_page" role="presentation"><a href="#">File 2</a></li>
 							<li id = "file3_page" role="presentation"><a href="#">File 3</a></li>
 							<li id = "file4_page" role="presentation"><a href="#">File 4</a></li>
-						</ul>
+						</ul>-->
 					</div>
 				</nav>
-				<svg id="visualisation" width="1000" height="500"></svg>
+				<!--<svg id="visualisation" width="1000" height="500"></svg>-->
 
 
         </div>
@@ -554,7 +669,7 @@
 
 
 
-	<footer class="footer">
+	<footer class="footer" style="position: relative">
 		<center>
 		<a href="http://www.socr.umich.edu/">SOCR Resource</a>
 		Visitor number <img src="http://counter.digits.net/?counter=SOCR" align="middle" border="0" height="20" hspace="4" vspace="2" width="60">
@@ -586,6 +701,7 @@
 	<script src="./js/graph.js"></script>
 	<script src="./js/Load_Data_Page.js"></script>
 	<script src="./js/metadata.js"></script>
+    <script src="./results.js"></script>
 
 	<!-- End Import Statements for JS files-->
 
