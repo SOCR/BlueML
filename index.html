@@ -406,18 +406,15 @@
 			</div>
             <div id="Load Data Page" class = "module">
 				<!-- Load Data Page goes here -->
-				<p class="solid">
-                <h1>Upload Your Data</h1>
+                <h2 style= "margin-top: -5px; margin-bottom: -15px;">Upload Your Data</h2>
 				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Please upload your files on this page!"></span>
 				<br/>
 				<div class="file_upload">
-                    <div style="position: relative">
-                        <a class="btn btn-default btn-lg" id = "add_another_upload_button" disabled="disabled" style="position: absolute; left: 90px">Add Another File</a>
+                    <div style="position: relative; padding-bottom: 50px; padding-top: 0">
+                        <a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled" style="position: absolute; left: 90px">Add Another File</a>
+                        <p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG' style="position: absolute; right: 85px">Upload ECG File</button></p>
                     </div>
-                    <div style="padding-bottom: 50px; padding-top: 0; position: relative">
-                        <p><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG' style="position: absolute; right: 85px">Upload ECG File</button>
-                        </p>
-                    </div>
+
 					<div class="table-responsive">
                         <table class="table table-bordered" id = "file_upload_table" style="width: 84%; margin-left: 8%; margin-right: 8%">
 							<thead>
@@ -442,8 +439,8 @@
 							</tr>
 							</tbody>
 						</table>
-						<!--<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled" style="position: absolute">Add Another File</a>-->
-						<!--<p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG'>Upload ECG File</button>-->
+						<!--<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled" style="position: absolute">Add Another File</a>
+						<p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG'>Upload ECG File</button>-->
 
 					</div>
 				</div>
@@ -460,7 +457,7 @@
 						</tr>
 						<tr>
 							<td style= "vertical-align: top">
-								<div class="dropdown" style="position: relative">
+								<div class="dropdown" style="position: relative; margin-top: 10px">
 									<button id = "dd" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
 										<span class="caret"></span></button>
 									<ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
@@ -472,7 +469,7 @@
 							</td>
 
 							<td style= "vertical-align: top">
-								<div class="dropdown">
+								<div class="dropdown" style="position: relative; margin-top: 10px">
 									<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
 										<span class="caret"></span></button>
 									<ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
@@ -484,7 +481,7 @@
 							</td>
 
 							<td style= "vertical-align: top">
-								<div class="dropdown">
+								<div class="dropdown" style="position: relative; margin-top: 10px">
 									<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
 										<span class="caret"></span></button>
 									<ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
@@ -535,14 +532,6 @@
                     </div>
                 </div>
 			</div>-->
-
-
-
-
-
-
-
-
 
 
 			<div id="Analysis Page" class = "module">
@@ -709,5 +698,6 @@
 		<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> </script>
 		<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
 	<!-- End of GoogleAnalytics Code -->
+</div>
 </body>
 </html>
