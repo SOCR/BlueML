@@ -61,7 +61,7 @@
 	  	<meta name="description" content="Statistics Online Computational Resource">
 	  	<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
 		<meta name="keywords" content="Statistics Online Computational Resources">
-  		<meta name="google-translate-customization" content="234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e"></meta>
+  		<meta name="google-translate-customization" content="234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e">
 
 		<link rel="icon" type="image/png" href="./static/images/favicon.png">
 
@@ -94,11 +94,11 @@
 		<!-- Import JS files -->
 
 
-
 </head>
 
 <body>
 
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 
@@ -278,6 +278,11 @@
 			<div class="col-lg-12 text-center">
             <div id="Training Data Page" class = "module" >
 				<!-- Training Data Page goes here -->
+
+				<br/>
+				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Please select the training data!"></span>
+				<br/>
+
 				<fieldset class="folders">
 
 					<form>
@@ -406,7 +411,23 @@
 			</div>
             <div id="Load Data Page" class = "module">
 				<!-- Load Data Page goes here -->
+
                 <h2 style= "margin-top: -5px; margin-bottom: -15px;">Upload Your Data</h2>
+
+                <!--  <h1>Upload Your Data</h1>  -->
+				<!--
+				<div class = "file_upload">
+					<span class="glyphicon glyphicon-plus" id="add_upload_button" aria-hidden="true"></span>
+					<form action="" method='post' enctype='multipart/form-data'>
+					<p><input type='hidden' name='patient_name' value>
+					<p><input type='file' name='file'>
+						<p><button type='submit' name='Upload_ECG'>Upload ECG File</button>
+					</form>
+				</div>
+
+				-->
+
+
 				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Please upload your files on this page!"></span>
 				<br/>
 				<div class="file_upload">
@@ -444,7 +465,7 @@
 
 					</div>
 				</div>
-				</p>
+              
 
                 <div class="meta-data">
 
@@ -596,6 +617,7 @@
 			<div id="Result Page" class = "module">
 				<!-- Result Page goes here -->
 				<h1>Result</h1>
+
 				<nav class="file-nav-bar">
 					<div class="container-fluid">
                         <div class="tab" style="width: 84%; margin-left: 8%; margin-right: 8%">
@@ -621,14 +643,28 @@
 
 
                         <!--<ul class="nav navbar-nav">
+
+				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Results"></span>
+				<br/>
+				<nav class="file-nav-bar">
+					<div class="container-fluid">
+						<ul class="nav navbar-nav">
+
 							<li id = "file1_page" role="presentation" class="active"><a href="#">File 1</a></li>
 							<li id = "file2_page" role="presentation"><a href="#">File 2</a></li>
 							<li id = "file3_page" role="presentation"><a href="#">File 3</a></li>
 							<li id = "file4_page" role="presentation"><a href="#">File 4</a></li>
+
+						</ul>
+					</div>
+				</nav>
+				<svg id="visualisation" width="1000" height="500"></svg>
+
+
 						</ul>-->
 					</div>
 				</nav>
-				<!--<svg id="visualisation" width="1000" height="500"></svg>-->
+				<div class = graph><svg id="visualisation" width="1000" height="500"></svg></div>
 
 
         </div>
@@ -690,7 +726,7 @@
 	<script src="./js/graph.js"></script>
 	<script src="./js/Load_Data_Page.js"></script>
 	<script src="./js/metadata.js"></script>
-    <script src="./results.js"></script>
+  <script src="./results.js"></script>
 
 	<!-- End Import Statements for JS files-->
 
