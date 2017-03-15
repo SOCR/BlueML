@@ -1,28 +1,28 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
+
+
 import { AppComponent }  from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
+
+
 import { Training_data_Page }   from './training_data_page.component';
 import { upload_data }   from './upload_data_page.component';
-
-const appRoutes: Routes = [
-  { path: 'trainingData', component: Training_data_Page },
-    { path: 'upload_data', component: upload_data }
+import { PageNotFoundComponent }   from './PageNotFound.component';
 
 
-
-    //{ path: 'heroes', component: HeroListComponent },
-];
 
 
 
 
 @NgModule({
   imports:      [ BrowserModule,
-                  RouterModule.forRoot(appRoutes)],
+      AppRoutingModule],
   declarations: [ AppComponent,
       Training_data_Page,
-      upload_data],
+      upload_data,
+      PageNotFoundComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
