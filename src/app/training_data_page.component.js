@@ -17,13 +17,9 @@ var Training_data_Page = (function () {
     }
     Training_data_Page = __decorate([
         core_1.Component({
-<<<<<<< HEAD
-            template: "<h1>The {{title}}</h1>\n    <p>Datasets:</p>\n    <ul>\n      <li *ngFor=\"let data_set of data_set\">\n        {{ data_set }}\n      </li>\n    </ul>\n    ",
-=======
             selector: 'relative-path',
             templateUrl: './app/pages/page1.component.html',
             styleUrls: ['./app/pages/css/layout.component.css']
->>>>>>> 08bdacade4c14f9662f62cf63a8d10df87607761
         }), 
         __metadata('design:paramtypes', [])
     ], Training_data_Page);

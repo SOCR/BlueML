@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"version":3,"file":"training_data_page.component.js","sourceRoot":"","sources":["training_data_page.component.ts"],"names":[],"mappings":"AAAA;;GAEG;;;;;;;;;;;AAGH,qBAA0B,eAAe,CAAC,CAAA;AAa1C;IAAA;QACI,UAAK,GAAG,oBAAoB,CAAC;QAC7B,cAAS,GAAG,CAAC,WAAW,EAAE,KAAK,EAAE,SAAS,EAAE,KAAK,CAAC,CAAC;IAGvD,CAAC;IAhBD;QAAC,gBAAS,CAAC;YACP,QAAQ,EAAE,8JAOT;SACJ,CAAC;;0BAAA;IAOF,yBAAC;AAAD,CAAC,AALD,IAKC;AALY,0BAAkB,qBAK9B,CAAA"}
-=======
-{"version":3,"file":"training_data_page.component.js","sourceRoot":"","sources":["training_data_page.component.ts"],"names":[],"mappings":"AAAA;;GAEG;;;;;;;;;;;AAGH,qBAA0B,eAAe,CAAC,CAAA;AAS1C;IAAA;IAIA,CAAC;IAXD;QAAC,gBAAS,CAAC;YAEP,QAAQ,EAAE,eAAe;YACzB,WAAW,EAAE,kCAAkC;YAC/C,SAAS,EAAG,CAAC,sCAAsC,CAAC;SACvD,CAAC;;0BAAA;IAMF,yBAAC;AAAD,CAAC,AAJD,IAIC;AAJY,0BAAkB,qBAI9B,CAAA"}
->>>>>>> 08bdacade4c14f9662f62cf63a8d10df87607761
+{"version":3,"file":"training_data_page.component.js","sourceRoot":"","sources":["training_data_page.component.ts"],"names":[],"mappings":"AAAA;;GAEG;;;;;;;;;;;AAGH,qBAA0B,eAAe,CAAC,CAAA;AAU1C;IAAA;IAIA,CAAC;IAZD;QAAC,gBAAS,CAAC;YAGP,QAAQ,EAAE,eAAe;YACzB,WAAW,EAAE,kCAAkC;YAC/C,SAAS,EAAG,CAAC,sCAAsC,CAAC;SACvD,CAAC;;0BAAA;IAMF,yBAAC;AAAD,CAAC,AAJD,IAIC;AAJY,0BAAkB,qBAI9B,CAAA"}
