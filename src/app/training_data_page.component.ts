@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 
 @Component({
 
+
     selector: 'relative-path',
     templateUrl: './app/pages/page1.component.html',
     styleUrls:  ['./app/pages/css/layout.component.css']
