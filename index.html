@@ -61,7 +61,7 @@
 	  	<meta name="description" content="Statistics Online Computational Resource">
 	  	<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
 		<meta name="keywords" content="Statistics Online Computational Resources">
-  		<meta name="google-translate-customization" content="234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e"></meta>
+  		<meta name="google-translate-customization" content="234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e">
 
 		<link rel="icon" type="image/png" href="./static/images/favicon.png">
 
@@ -83,9 +83,13 @@
 
 	<link href="css/layout.css" rel="stylesheet" media="screen">
 	<link href="css/Load_Data_Page.css" rel="stylesheet" media="screen">
+
+
+	<link rel="stylesheet" media="screen" href="assets/css/style.css" />
+
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
-      		<script src="js/html5.js"></script>
+		<script src="js/html5.js"></script>
     	<![endif]-->
     	
     	<link rel="shortcut icon" href="../img/SOCR_Web_Icon.ico">
@@ -94,11 +98,11 @@
 		<!-- Import JS files -->
 
 
-
 </head>
 
-<body>
+<body ng-app="myApp">
 
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 
@@ -221,8 +225,8 @@
 	</div>
 
 
-<div class="container">
-  <div class="header">
+	<div class="container">
+  	<div class="header">
 
     <div class="row">
         <div class="col-lg-12 text-center">
@@ -236,14 +240,15 @@
         </div>
     </div>
     <!-- /.row -->
-  </div>
-<!-- /.container -->
+  	</div>
+	</div>
+	<!-- /.header container -->
 
 
 
 <!-- Web App Content -->
-
 <div class="app-container">
+	<!-- Web App Navbar -->
 	<div class="app-nav-bar">
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -259,7 +264,6 @@
 
 	<!-- The Progress Bar -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
 	<div class="container">
 		<h2>You are in Progress: </h2>
 		<div class="progress">
@@ -270,236 +274,11 @@
 		</div>
 	</div>
 
-
-
-
 	<div class="app-interface-container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-            <div id="Training Data Page" class = "module" >
-				<!-- Training Data Page goes here -->
-				<fieldset class="folders">
-
-					<form>
-						<input type="text" placeholder="Search for a dataset" id= "search" required>
-						<input type="button" value="Search" id="search1">
-					</form>
-
-				</fieldset>
-
-				<div class="pane">
-				<div class="container">
-					<div class="row-fluid">
-						<div class="span4 folder1">
-								<button type="submit" class="data_buttons">
-									MIT
-									<br/>
-									<img src="./static/images/white.png" width="300" height="200"/>
-								</button>
-							<div class="checkbox">
-								<label><input type="checkbox" id="check1">Select Dataset</label>
-							</div>
-						</div>
-						<div class = "span4 folder2">
-							<button type="submit" class="data_buttons">
-								UCI
-								<br/>
-								<img src="./static/images/white.png" width="300" height="200"/>
-							</button>
-							<div class="checkbox">
-								<label><input type="checkbox" id="check2">Select Dataset</label>
-							</div>
-						</div>
-					</div>
-					<div class="row-fluid">
-						<div class = "span4 folder3">
-							<button type="submit" class="data_buttons">
-							Berkeley
-							<br/>
-							<img src="./static/images/white.png" width="300" height="200"/>
-							</button>
-							<div class="checkbox">
-								<label><input type="checkbox" id="check3">Select Dataset</label>
-							</div>
-						</div>
-						<div class = "span4 folder4">
-							<button type="submit" class="data_buttons">
-								Ann Arbor
-								<br/>
-								<img src="./static/images/white.png" width="300" height="200"/>
-							</button>
-							<div class="checkbox">
-								<label><input type="checkbox" id="check4">Select Dataset</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				</div>
-				<div class="pane2">
-					<div class="container">
-						<div class="meta_data" id="mit_data" style="display: none">
-							<h3>Select Meta Data(MIT)</h3>
-							<div class="form-group"  id="mit_gen">
-								<label for="sel1">Gender:</label>
-								<select class="form-control" id="sel1">
-									<option>Female</option>
-									<option>Male</option>
-								</select>
-							</div>
-							<div class="form-group"  id="mit_age">
-								<label for="pwd">Age: </label>
-								<input type="number" class="form-control" id="pwd">
-							</div>
-						</div>
-						<div class="meta_data" id="uci_data" style="display: none">
-							<h3>Select Meta Data(UCI)</h3>
-							<div class="form-group">
-								<label for="sel2">Gender:</label>
-								<select class="form-control" id="sel2">
-									<option>Female</option>
-									<option>Male</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="pwd2">Age: </label>
-								<input type="number" class="form-control" id="pwd2">
-							</div>
-						</div>
-
-						<div class="meta_data" id="berkeley_data" style="display: none">
-							<h3>Select Meta Data(Berkeley)</h3>
-							<div class="form-group">
-								<label for="sel3">Gender:</label>
-								<select class="form-control" id="sel3">
-									<option>Female</option>
-									<option>Male</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="pwd3">Age: </label>
-								<input type="number" class="form-control" id="pwd3">
-							</div>
-						</div>
-
-						<div class="meta_data" id="aa_data" style="display: none">
-							<h3>Select Meta Data(Ann Arbor)</h3>
-							<div class="form-group">
-								<label for="sel4">Gender:</label>
-								<select class="form-control" id="sel4">
-									<option>Female</option>
-									<option>Male</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="pwd4">Age: </label>
-								<input type="number" class="form-control" id="pwd4">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="submit_button">
-					<button type="submit" class="data_buttons">
-						Submit
-					</button>
-				</div>
-				<!-- Training Data END -->
-			</div>
-            <div id="Load Data Page" class = "module">
-				<!-- Load Data Page goes here -->
-                <h2 style= "margin-top: -5px; margin-bottom: -15px;">Upload Your Data</h2>
-				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Please upload your files on this page!"></span>
-				<br/>
-				<div class="file_upload">
-                    <div style="position: relative; padding-bottom: 50px; padding-top: 0">
-                        <a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled" style="position: absolute; left: 90px">Add Another File</a>
-                        <p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG' style="position: absolute; right: 85px">Upload ECG File</button></p>
-                    </div>
-
-					<div class="table-responsive">
-                        <table class="table table-bordered" id = "file_upload_table" style="width: 84%; margin-left: 8%; margin-right: 8%">
-							<thead>
-							<tr>
-								<th>File Number</th>
-								<th>File</th>
-								<th>File Name</th>
-								<th>Delete</th>
-
-							</tr>
-							</thead>
-							<tbody>
-							<tr>
-								<td>1</td>
-								<td> <input type='file' name='file' id = "file_upload_button_1"> </td>
-								<td></td>
-								<td>
-									<button type="button" class="btn btn-default btn-sm" id = "delete_file_upload" onclick="deletetr(this)">
-										<span class="glyphicon glyphicon-minus"></span> Remove
-									</button>
-								</td>
-							</tr>
-							</tbody>
-						</table>
-						<!--<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled" style="position: absolute">Add Another File</a>
-						<p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG'>Upload ECG File</button>-->
-
-					</div>
-				</div>
-				</p>
-
-                <div class="meta-data">
-
-
-					<table class = "meta" style="width: 84%; height: 200px; border: 2px solid lightgrey; margin-left: 8%; margin-right: 8%">
-						<tr>
-							<th style="text-align: center; height: 50px; border: 2px solid lightgrey">Meta_data_1</th>
-							<th style="text-align: center; height: 50px; border: 2px solid lightgrey">Meta_data_2</th>
-							<th style="text-align: center; height: 50px; border: 2px solid lightgrey">Meta_data_3</th>
-						</tr>
-						<tr>
-							<td style= "vertical-align: top">
-								<div class="dropdown" style="position: relative; margin-top: 10px">
-									<button id = "dd" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
-										<span class="caret"></span></button>
-									<ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
-										<li><a href="#">Tobefilled1</a></li>
-										<li><a href="#">Tobefilled2</a></li>
-										<li><a href="#">Tobefilled3</a></li>
-									</ul>
-								</div>
-							</td>
-
-							<td style= "vertical-align: top">
-								<div class="dropdown" style="position: relative; margin-top: 10px">
-									<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
-										<span class="caret"></span></button>
-									<ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
-										<li><a href="#">Tobefilled1</a></li>
-										<li><a href="#">Tobefilled2</a></li>
-										<li><a href="#">Tobefilled3</a></li>
-									</ul>
-								</div>
-							</td>
-
-							<td style= "vertical-align: top">
-								<div class="dropdown" style="position: relative; margin-top: 10px">
-									<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
-										<span class="caret"></span></button>
-									<ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
-										<li><a href="#">Tobefilled1</a></li>
-										<li><a href="#">Tobefilled2</a></li>
-										<li><a href="#">Tobefilled3</a></li>
-									</ul>
-								</div>
-							</td>
-						</tr>
-					</table>
-
-				</div>
-			</div>
-
-
-
-                    <!--<h1>Meta-data</h1>
+				<div ng-view></div>
+				<!--<h1>Meta-data</h1>
                     <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select
                             <span class="caret"></span></button>
@@ -534,117 +313,17 @@
 			</div>-->
 
 
-			<div id="Analysis Page" class = "module">
-				<!-- Analysis Page goes here -->
-				<h1>Select Algorithm Complexity</h1>
-				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Algorithm is faster with less accuracy"></span>
-				<br/>
-				<b>  Less Accurate/Faster  </b><input id="Slide"/><b>  More Accurate/Slower  </b>
-				<br/><br/>
-				<div class="dropdown" style="width: 125px;margin:auto">
-					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Advanced Options
-						<span class="caret"></span></button>
-					<ul class="dropdown-menu">
-						<li><a href="#">Option 1</a></li>
-						<li><a href="#">Option 2</a></li>
-						<li><a href="#">Option 3</a></li>
-					</ul>
-				</div>
-
-
-				<h1>Select Features for Classification</h1>
-				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Please select features for classification"></span>
-				<br/>
-				<div class="containerCheck">
-					<form>
-						<label class="checkbox-inline"><input type="checkbox" value=""> QRS Interval </label>
-						<label class="checkbox-inline"><input type="checkbox" value=""> S Amplitude </label>
-					</form>
-				</div>
-
-				<div class="containerCheck">
-					<form>
-						<label class="checkbox-inline"><input type="checkbox" value=""> PR Interval </label>
-						<label class="checkbox-inline"><input type="checkbox" value=""> T Amplitude </label>
-					</form>
-				</div>
-
-				<div class="containerCheck">
-					<form>
-						<label class="checkbox-inline"><input type="checkbox" value=""> QT Interval </label>
-						<label class="checkbox-inline"><input type="checkbox" value=""> Q Amplitude </label>
-					</form>
-				</div>
-
-				<div class="containerCheck">
-					<form>
-						<label class="checkbox-inline"><input type="checkbox" value=""> T Interval </label>
-						<label class="checkbox-inline"><input type="checkbox" value=""> P Amplitude </label>
-					</form>
-				</div>
-
-				<div class="containerCheck">
-					<form>
-						<label class="checkbox-inline"><input type="checkbox" value=""> P Interval</label>
-						<label class="checkbox-inline"><input type="checkbox" value=""> R Amplitude </label>
-					</form>
-				</div>
-
 			</div>
 
-
-			<div id="Result Page" class = "module">
-				<!-- Result Page goes here -->
-				<h1>Result</h1>
-				<nav class="file-nav-bar">
-					<div class="container-fluid">
-                        <div class="tab" style="width: 84%; margin-left: 8%; margin-right: 8%">
-                            <button class="tablinks" onclick="openTab(event, 'file1')">File1</button>
-                            <button class="tablinks" onclick="openTab(event, 'file2')">File2</button>
-                            <button class="tablinks" onclick="openTab(event, 'file3')">File3</button>
-                        </div>
-
-                        <div id="file1" class="tabcontent" style="width: 84%; margin-left: 8%; margin-right: 8%">
-                            <h3>Analysis Result for file 1</h3>
-                            <svg id="visualisation" width="800" height="500"></svg>
-                        </div>
-
-                        <div id="file2" class="tabcontent"  style="width: 84%; margin-left: 8%; margin-right: 8%">
-                            <h3>Analysis Result for file 2</h3>
-                            <svg id="visualisation" width="800" height="500"></svg>
-                        </div>
-
-                        <div id="file3" class="tabcontent"  style="width: 84%; margin-left: 8%; margin-right: 8%">
-                            <h3>Analysis Result for file 3</h3>
-                            <svg id="visualisation" width="800" height="500"></svg>
-                        </div>
-
-
-                        <!--<ul class="nav navbar-nav">
-							<li id = "file1_page" role="presentation" class="active"><a href="#">File 1</a></li>
-							<li id = "file2_page" role="presentation"><a href="#">File 2</a></li>
-							<li id = "file3_page" role="presentation"><a href="#">File 3</a></li>
-							<li id = "file4_page" role="presentation"><a href="#">File 4</a></li>
-						</ul>-->
-					</div>
-				</nav>
-				<!--<svg id="visualisation" width="1000" height="500"></svg>-->
-
-
-        </div>
-	</div>
-
-				<button type="button" id="previous_module" class="btn btn-outline-primary btn-lg">Previous</button>
-				<button type="button" id="next_module" class="btn btn-outline-primary btn-lg">Next</button>
-
-	</div>
-
-
+			<div ng-controller="pageController">
+				<button type="button" id="previous_module" class="btn btn-outline-primary btn-lg" ng-click="previous()">Previous</button>
+				<button type="button" id="next_module" class="btn btn-outline-primary btn-lg" ng-click="next()">Next</button>
+			</div>
+		</div>
+		<!-- /.row -->
     </div>
-    <!-- /.row -->
-
 </div>
-<!-- /.container -->
+<!-- /.web app container -->
 
 
 
@@ -653,8 +332,8 @@
 
 <!-- Bootstrap Core JavaScript -->
 
-<script src="js/nav.js"></script>
-<script src="js/progress.js"></script>
+<script src="./js/nav.js"></script>
+<script src="./js/progress.js"></script>
 
 
 
@@ -667,6 +346,10 @@
 		<a href="../img/SOCR_Email.png"><img alt="SOCR Email" title="SOCR Email" src="../img/SOCR_Email.png" style="border: 0px solid ;"></a>
 		</center>
 	</footer>
+
+	<!-- Import AngularJS files -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 
      <!-- Import Statements for JS files, add new files at the end -->
 	<script src="./js/jquery.js"></script>
@@ -686,11 +369,14 @@
 	<script src="./js/bootstrap-slider.js"></script>
 	<!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js"></script>
-	<script src="./js/slidebar.js"></script>
+	<script src="./js/slider.js"></script>
 	<script src="./js/graph.js"></script>
 	<script src="./js/Load_Data_Page.js"></script>
 	<script src="./js/metadata.js"></script>
-    <script src="./results.js"></script>
+  	<script src="./js/results.js"></script>
+	<script src="./js/router.js"></script>
+
+
 
 	<!-- End Import Statements for JS files-->
 
