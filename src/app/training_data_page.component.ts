@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
     styleUrls:  ['./app/pages/css/layout.component.css']
 })
 
-export class Training_data_Page  {
+export class TrainingDataComponent  {
 
 
 

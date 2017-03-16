@@ -15,10 +15,14 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var training_data_page_component_1 = require('./training_data_page.component');
 var upload_data_page_component_1 = require('./upload_data_page.component');
+var AnalysisComponent_component_1 = require('./AnalysisComponent.component');
+var ResultsComponent_component_1 = require('./ResultsComponent.component');
 var PageNotFound_component_1 = require('./PageNotFound.component');
 var appRoutes = [
-    { path: 'trainingData', component: training_data_page_component_1.Training_data_Page },
-    { path: 'upload_data', component: upload_data_page_component_1.upload_data },
+    { path: 'trainingData', component: training_data_page_component_1.TrainingDataComponent },
+    { path: 'upload_data', component: upload_data_page_component_1.UploadDataComponent },
+    { path: 'analysis', component: AnalysisComponent_component_1.AnalysisComponent },
+    { path: 'results', component: ResultsComponent_component_1.ResultsComponent },
     { path: '', redirectTo: '/trainingData', pathMatch: 'full' },
     { path: '**', component: PageNotFound_component_1.PageNotFoundComponent }
 ];

@@ -14,6 +14,8 @@ var app_component_1 = require('./app.component');
 var app_routing_module_1 = require('./app-routing.module');
 var training_data_page_component_1 = require('./training_data_page.component');
 var upload_data_page_component_1 = require('./upload_data_page.component');
+var AnalysisComponent_component_1 = require('./AnalysisComponent.component');
+var ResultsComponent_component_1 = require('./ResultsComponent.component');
 var PageNotFound_component_1 = require('./PageNotFound.component');
 var AppModule = (function () {
     function AppModule() {
@@ -23,8 +25,10 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule,
                 app_routing_module_1.AppRoutingModule],
             declarations: [app_component_1.AppComponent,
-                training_data_page_component_1.Training_data_Page,
-                upload_data_page_component_1.upload_data,
+                training_data_page_component_1.TrainingDataComponent,
+                upload_data_page_component_1.UploadDataComponent,
+                AnalysisComponent_component_1.AnalysisComponent,
+                ResultsComponent_component_1.ResultsComponent,
                 PageNotFound_component_1.PageNotFoundComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 

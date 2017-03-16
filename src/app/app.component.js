@@ -17,7 +17,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<h1>The {{project}} project by the {{program}} 2017 team</h1>\n            \n \n    <nav>\n      <a routerLink=\"/trainingData\" routerLinkActive=\"active\">TrainingData</a>\n      <a routerLink=\"/upload_data\" >Upload Data</a>\n   \n    </nav>\n    <router-outlet>\n    \n    </router-outlet>\n    ",
+            template: "<h1>The {{project}} project by the {{program}} 2017 team</h1>\n            \n \n    <nav>\n      <a routerLink=\"/trainingData\" routerLinkActive=\"active\">TrainingData</a>\n      <a routerLink=\"/upload_data\" >Upload Data</a>\n      <a routerLink=\"/analysis\" >Upload Data</a>\n      <a routerLink=\"/results\" >Upload Data</a>\n   \n    </nav>\n    <router-outlet>\n    \n    </router-outlet>\n    ",
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
