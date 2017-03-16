@@ -1,6 +1,3 @@
-/**
- * Created by jakeclose on 3/15/17.
- */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -11,19 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+/**
+ * Created by jakeclose on 3/15/17.
+ */
 var core_1 = require('@angular/core');
-var Training_data_Page = (function () {
-    function Training_data_Page() {
+var PageNotFoundComponent = (function () {
+    function PageNotFoundComponent() {
     }
-    Training_data_Page = __decorate([
+    PageNotFoundComponent = __decorate([
         core_1.Component({
-            selector: 'relative-path',
-            templateUrl: './app/pages/page1.component.html',
-            styleUrls: ['./app/pages/css/layout.component.css']
+            template: '<h2>Page not found</h2>'
         }), 
         __metadata('design:paramtypes', [])
-    ], Training_data_Page);
-    return Training_data_Page;
+    ], PageNotFoundComponent);
+    return PageNotFoundComponent;
 }());
-exports.Training_data_Page = Training_data_Page;
-//# sourceMappingURL=training_data_page.component.js.map
+exports.PageNotFoundComponent = PageNotFoundComponent;
+//# sourceMappingURL=PageNotFound.component.js.map

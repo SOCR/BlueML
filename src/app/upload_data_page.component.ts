@@ -10,10 +10,13 @@ import { Component } from '@angular/core';
     
 
     `,
+
 })
 
 export class upload_data  {
     title = 'Upload Data Page';
+
+
 
 
 
