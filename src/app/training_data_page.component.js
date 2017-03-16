@@ -19,7 +19,7 @@ var Training_data_Page = (function () {
     }
     Training_data_Page = __decorate([
         core_1.Component({
-            template: "<h1>The {{title}}</h1>\n    <p>Datasets:</p>\n    <ul>\n      <li *ngFor=\"let data_set of data_set\">\n        {{ data_set }}\n      </li>\n    </ul>\n\n    ",
+            template: "<h1>The {{title}}</h1>\n    <p>Datasets:</p>\n    <ul>\n      <li *ngFor=\"let data_set of data_set\">\n        {{ data_set }}\n      </li>\n    </ul>\n    ",
         }), 
         __metadata('design:paramtypes', [])
     ], Training_data_Page);

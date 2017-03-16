@@ -5,11 +5,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    template: `<h1>The {{title}}</h1>
-    <h2>Upload Data Here</h2>
-    
-
-    `,
+    templateUrl: './app/pages/page2.component.html'
 })
 
 export class upload_data  {

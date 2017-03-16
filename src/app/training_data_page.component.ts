@@ -13,7 +13,6 @@ import { Component } from '@angular/core';
         {{ data_set }}
       </li>
     </ul>
-
     `,
 })
 

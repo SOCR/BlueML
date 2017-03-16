@@ -18,7 +18,7 @@ var upload_data = (function () {
     }
     upload_data = __decorate([
         core_1.Component({
-            template: "<h1>The {{title}}</h1>\n    <h2>Upload Data Here</h2>\n    \n\n    ",
+            templateUrl: './app/pages/page2.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], upload_data);
