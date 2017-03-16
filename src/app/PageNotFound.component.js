@@ -8,20 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+/**
+ * Created by jakeclose on 3/15/17.
+ */
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.project = 'BlueML';
-        this.program = 'MDP';
+var PageNotFoundComponent = (function () {
+    function PageNotFoundComponent() {
     }
-    AppComponent = __decorate([
+    PageNotFoundComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "<h1>The {{project}} project by the {{program}} 2017 team</h1>\n            \n \n    <nav>\n      <a routerLink=\"/trainingData\" routerLinkActive=\"active\">TrainingData</a>\n      <a routerLink=\"/upload_data\" >Upload Data</a>\n   \n    </nav>\n    <router-outlet>\n    \n    </router-outlet>\n    ",
+            template: '<h2>Page not found</h2>'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], PageNotFoundComponent);
+    return PageNotFoundComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.PageNotFoundComponent = PageNotFoundComponent;
+//# sourceMappingURL=PageNotFound.component.js.map

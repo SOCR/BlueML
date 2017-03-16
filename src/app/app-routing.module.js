@@ -8,29 +8,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+/**
+ * Created by jakeclose on 3/15/17.
+ */
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var app_routing_module_1 = require('./app-routing.module');
+var router_1 = require('@angular/router');
 var training_data_page_component_1 = require('./training_data_page.component');
 var upload_data_page_component_1 = require('./upload_data_page.component');
 var PageNotFound_component_1 = require('./PageNotFound.component');
-var AppModule = (function () {
-    function AppModule() {
+var appRoutes = [
+    { path: 'trainingData', component: training_data_page_component_1.Training_data_Page },
+    { path: 'upload_data', component: upload_data_page_component_1.upload_data },
+    { path: '', redirectTo: '/trainingData', pathMatch: 'full' },
+    { path: '**', component: PageNotFound_component_1.PageNotFoundComponent }
+];
+var AppRoutingModule = (function () {
+    function AppRoutingModule() {
     }
-    AppModule = __decorate([
+    AppRoutingModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule,
-                app_routing_module_1.AppRoutingModule],
-            declarations: [app_component_1.AppComponent,
-                training_data_page_component_1.Training_data_Page,
-                upload_data_page_component_1.upload_data,
-                PageNotFound_component_1.PageNotFoundComponent],
-            bootstrap: [app_component_1.AppComponent]
+            imports: [
+                router_1.RouterModule.forRoot(appRoutes)
+            ],
+            exports: [
+                router_1.RouterModule
+            ]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], AppRoutingModule);
+    return AppRoutingModule;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.AppRoutingModule = AppRoutingModule;
+//# sourceMappingURL=app-routing.module.js.map
