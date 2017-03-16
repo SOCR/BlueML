@@ -14,12 +14,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var Training_data_Page = (function () {
     function Training_data_Page() {
-        this.title = 'Training Data Page';
-        this.data_sets = ['Ann Arbor', 'MIT', 'Berkley', 'UCI'];
     }
     Training_data_Page = __decorate([
         core_1.Component({
-            template: "<h1>The {{title}}</h1>\n    <p>Datasets:</p>\n    <ul>\n      <li *ngFor=\"let data_set of data_set\">\n        {{ data_set }}\n      </li>\n    </ul>\n\n    ",
+            selector: 'relative-path',
+            templateUrl: './app/pages/page1.component.html',
+            styleUrls: ['./app/pages/css/layout.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], Training_data_Page);
