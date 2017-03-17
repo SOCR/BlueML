@@ -6,9 +6,10 @@ import { AppComponent }  from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 
-
-import { Training_data_Page }   from './training_data_page.component';
-import { upload_data }   from './upload_data_page.component';
+import { TrainingDataComponent }   from './training_data_page.component';
+import { UploadDataComponent }   from './upload_data_page.component';
+import { AnalysisComponent }   from './AnalysisComponent.component';
+import { ResultsComponent }   from './ResultsComponent.component';
 import { PageNotFoundComponent }   from './PageNotFound.component';
 
 
@@ -20,8 +21,10 @@ import { PageNotFoundComponent }   from './PageNotFound.component';
   imports:      [ BrowserModule,
       AppRoutingModule],
   declarations: [ AppComponent,
-      Training_data_Page,
-      upload_data,
+      TrainingDataComponent,
+      UploadDataComponent,
+      AnalysisComponent,
+      ResultsComponent,
       PageNotFoundComponent],
   bootstrap:    [ AppComponent ]
 })

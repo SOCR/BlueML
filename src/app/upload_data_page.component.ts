@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
     templateUrl: './app/pages/page2.component.html'
 })
 
-export class upload_data  {
+export class UploadDataComponent  {
     title = 'Upload Data Page';
 
 

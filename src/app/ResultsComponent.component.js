@@ -12,18 +12,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var TrainingDataComponent = (function () {
-    function TrainingDataComponent() {
+var ResultsComponent = (function () {
+    function ResultsComponent() {
+        this.title = 'Results Page';
     }
-    TrainingDataComponent = __decorate([
+    ResultsComponent = __decorate([
         core_1.Component({
-            selector: 'relative-path',
-            templateUrl: './app/pages/page1.component.html',
-            styleUrls: ['./app/pages/css/layout.component.css']
+            template: '<h1> {{title}} </h1>'
         }), 
         __metadata('design:paramtypes', [])
-    ], TrainingDataComponent);
-    return TrainingDataComponent;
+    ], ResultsComponent);
+    return ResultsComponent;
 }());
-exports.TrainingDataComponent = TrainingDataComponent;
-//# sourceMappingURL=training_data_page.component.js.map
+exports.ResultsComponent = ResultsComponent;
+//# sourceMappingURL=ResultsComponent.component.js.map
