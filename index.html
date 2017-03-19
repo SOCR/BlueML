@@ -1,8 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app ="app">
 
-<head>
 
+	<style>
+		p.dotted {border-style: dotted;}
+		p.dashed {border-style: dashed;}
+		p.solid {border-style: solid;}
+		p.double {border-style: double;}
+		p.groove {border-style: groove;}
+		p.ridge {border-style: ridge;}
+		p.inset {border-style: inset;}
+		p.outset {border-style: outset;}
+		p.none {border-style: none;}
+		p.hidden {border-style: hidden;}
+		p.mix {border-style: dotted dashed solid double;}
+        body {font-family: "Lato", sans-serif;}
+
+        /* Style the tab */
+        div.tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        div.tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        div.tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        div.tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+	</style>
 	  	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	  	<meta charset="utf-8">
         <title>BlueML</title>
@@ -10,7 +61,7 @@
 	  	<meta name="description" content="Statistics Online Computational Resource">
 	  	<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
 		<meta name="keywords" content="Statistics Online Computational Resources">
-  		<meta name="google-translate-customization" content="234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e"></meta>
+  		<meta name="google-translate-customization" content="234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e">
 
 		<link rel="icon" type="image/png" href="./static/images/favicon.png">
 
@@ -25,54 +76,66 @@
 		</style>
 		<style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
 		<style type="text/css">body {position: static !important; top:0px !important;}</style>
-		
+
   	 	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
 		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="css/bootstrap-slider.css" rel="stylesheet" media="screen">
 
 	<link href="css/layout.css" rel="stylesheet" media="screen">
 	<link href="css/Load_Data_Page.css" rel="stylesheet" media="screen">
+<<<<<<< Updated upstream
 
+
+	<link rel="stylesheet" media="screen" href="assets/css/style.css" />
+
+=======
+	<link href="feature.css" rel="stylesheet" media="screen">
+>>>>>>> Stashed changes
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
-      		<script src="js/html5.js"></script>
+		<script src="js/html5.js"></script>
     	<![endif]-->
-    	
+
     	<link rel="shortcut icon" href="../img/SOCR_Web_Icon.ico">
     	<link rel="alternate" type="application/rss+xml" rel="tooltip" title="SOCR News" href="feed.rss">
 
 		<!-- Import JS files -->
-
-
+	<script src = "angular.min.js"></script>
+	<script src = "Features.js"></script>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<!--<script src="analysis.js"></script>-->
 
 </head>
 
-<body>
+<body ng-app="myApp">
 
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 
 
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
-			<div class="container-fluid"> 
+			<div class="container-fluid">
 				<a class="btn btn-navbar"
 				 data-toggle="collapse" data-target=".nav-collapse"> <span
 				 class="icon-bar"></span> <span class="icon-bar"></span> <span
 				 class="icon-bar"></span>
-				</a> 
+				</a>
 				<a class="brand" href="../index.html" rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
 
 
 
 				<div class="nav-collapse collapse">
-					<p class="navbar-text pull-right"> 
+					<p class="navbar-text pull-right">
 						<a href="feed.rss" class="btn icon rss">
 							<i class="icon-bullhorn"></i>RSS</a>
 				 	</p>
 					<ul class="nav">
 				  		<!-- <li class="active"><a href="#">Home</a></li>  -->
 				  		<li class="dropdown">
-			                <a class="dropdown-toggle" id="drop5" role="button" 
-			                	data-toggle="dropdown" href="#" rel="tooltip" 
+			                <a class="dropdown-toggle" id="drop5" role="button"
+			                	data-toggle="dropdown" href="#" rel="tooltip"
 			                	title="Learn about the SOCR Resource">About<b class="caret"></b></a>
 			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
 				                  <li><a tabindex="-1" href="SOCR_About.html">About SOCR</a></li>
@@ -98,17 +161,17 @@
 				                  <li class="divider"></li>
 				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/Navigators.html" rel="tooltip" title="SOCR Resource Graphical Navigator">
 				                  	SOCR Resource Navigator</a></li>
-				                  
+
 			                </ul>
 			            </li>
 				  		<li><a href="SOCR_Contact.html" rel="tooltip" title="Contact the SOCR Resource">Contact</a></li>
 				  		<li class="dropdown">
-			                <a class="dropdown-toggle" id="drop5" role="button" 
-			                	data-toggle="dropdown" href="#" rel="tooltip" 
+			                <a class="dropdown-toggle" id="drop5" role="button"
+			                	data-toggle="dropdown" href="#" rel="tooltip"
 			                	title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
 			                	Java Applets<b class="caret"></b></a>
 			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-				                  <li><a tabindex="-1" href="#" rel="tooltip" 
+				                  <li><a tabindex="-1" href="#" rel="tooltip"
 			                		title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java 1.6 Applets</a></li>
 				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
 				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
@@ -118,13 +181,13 @@
 				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/gam">Games</a></li>
 				                  <li><a tabindex="-1" href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
 				                  <li class="divider"></li>
-				                  <li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/" rel="tooltip" 
+				                  <li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/" rel="tooltip"
 			                		title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy Java 1.5 Applets</a></li>
 				            </ul>
 			            </li>
 			            <li class="dropdown">
-			                <a class="dropdown-toggle" id="drop5" role="button" 
-			                	data-toggle="dropdown" href="#" rel="tooltip" 
+			                <a class="dropdown-toggle" id="drop5" role="button"
+			                	data-toggle="dropdown" href="#" rel="tooltip"
 			                	title="A collection of portable modern HTML5 Webapps">Webapps<b class="caret"></b></a>
 			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
 				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/MotionChart/">Motion Charts</a></li> <li><a tabindex="-1" href="http://www.distributome.org/V3">Distributome Navigator</a></li>
@@ -137,8 +200,8 @@
 			                </ul>
 			            </li>
 			            <li class="dropdown">
-			                <a class="dropdown-toggle" id="drop5" role="button" 
-			                	data-toggle="dropdown" href="#" rel="tooltip" 
+			                <a class="dropdown-toggle" id="drop5" role="button"
+			                	data-toggle="dropdown" href="#" rel="tooltip"
 			                	title="Additional SOCR Resources">More<b class="caret"></b></a>
 			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
 				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision Calculators</a></li>
@@ -147,30 +210,30 @@
 				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other Java Applets</a></li>
 				            </ul>
 			            </li>
-			            <li> <a href="http://nursing.umich.edu" rel="tooltip" 
+			            <li> <a href="http://nursing.umich.edu" rel="tooltip"
 								title="University of Michigan School of Nursing">UMSN</a></li>
 						<li><div id="google_translate_element" class="nav-collapse collapse"></div>
 								<script type="text/javascript">
 									function googleTranslateElementInit() {
-								  		new google.translate.TranslateElement({pageLanguage: 'en', 
+								  		new google.translate.TranslateElement({pageLanguage: 'en',
 									  		layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false,
 									  		gaTrack: true, gaId: 'UA-676559-1'}, 'google_translate_element');
 								}
 								</script>
 								<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-								</script>  
+								</script>
 			            </li>
 					</ul>
 				</div>
 
-				<!--/.nav-collapse --> 
+				<!--/.nav-collapse -->
 			</div>
 		</div>
 	</div>
 
 
-<div class="container">
-  <div class="header">
+	<div class="container">
+  	<div class="header">
 
     <div class="row">
         <div class="col-lg-12 text-center">
@@ -184,26 +247,15 @@
         </div>
     </div>
     <!-- /.row -->
-  </div>
-<!-- /.container -->
-
-<!-- The Progress Bar -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-	<div class="container">
-		<h2>You are in Progress: </h2>
-		<div class="progress">
-			<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:25%">
-				<span class="sr-only">
-				</span>
-			</div>
-		</div>
+  	</div>
 	</div>
+	<!-- /.header container -->
+
 
 
 <!-- Web App Content -->
-
 <div class="app-container">
+	<!-- Web App Navbar -->
 	<div class="app-nav-bar">
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -217,32 +269,208 @@
 		</div>
 	</div>
 
+	<!-- The Progress Bar -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<div class="container">
+		<h2>You are in Progress: </h2>
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:25%">
+				<span class="sr-only">
+				</span>
+			</div>
+		</div>
+	</div>
 
 	<div class="app-interface-container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
+<<<<<<< Updated upstream
+				<div ng-view></div>
+				<!--<h1>Meta-data</h1>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Tobefilled1</a></li>
+                            <li><a href="#">Tobefilled2</a></li>
+                            <li><a href="#">Tobefilled3</a></li>
+                        </ul>
+                    </div>
+					</p>
+
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Tobefilled1</a></li>
+                            <li><a href="#">Tobefilled2</a></li>
+                            <li><a href="#">Tobefilled3</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Tobefilled1</a></li>
+                            <li><a href="#">Tobefilled2</a></li>
+                            <li><a href="#">Tobefilled3</a></li>
+                        </ul>
+                    </div>
+                </div>
+			</div>-->
+
+
+			</div>
+
+			<div ng-controller="pageController">
+				<button type="button" id="previous_module" class="btn btn-outline-primary btn-lg" ng-click="previous()">Previous</button>
+				<button type="button" id="next_module" class="btn btn-outline-primary btn-lg" ng-click="next()">Next</button>
+			</div>
+		</div>
+		<!-- /.row -->
+=======
             <div id="Training Data Page" class = "module" >
 				<!-- Training Data Page goes here -->
-                <h1>Select Training Data</h1>
+				<fieldset class="folders">
+
+					<form>
+						<input type="text" placeholder="Search for a dataset" id= "search" required>
+						<input type="button" value="Search" id="search1">
+					</form>
+
+				</fieldset>
+
+				<div class="pane">
+				<div class="container">
+					<div class="row-fluid">
+						<div class="span4 folder1">
+								<button type="submit" class="data_buttons">
+									MIT
+									<br/>
+									<img src="./static/images/white.png" width="300" height="200"/>
+								</button>
+							<div class="checkbox">
+								<label><input type="checkbox" id="check1">Select Dataset</label>
+							</div>
+						</div>
+						<div class = "span4 folder2">
+							<button type="submit" class="data_buttons">
+								UCI
+								<br/>
+								<img src="./static/images/white.png" width="300" height="200"/>
+							</button>
+							<div class="checkbox">
+								<label><input type="checkbox" id="check2">Select Dataset</label>
+							</div>
+						</div>
+					</div>
+					<div class="row-fluid">
+						<div class = "span4 folder3">
+							<button type="submit" class="data_buttons">
+							Berkeley
+							<br/>
+							<img src="./static/images/white.png" width="300" height="200"/>
+							</button>
+							<div class="checkbox">
+								<label><input type="checkbox" id="check3">Select Dataset</label>
+							</div>
+						</div>
+						<div class = "span4 folder4">
+							<button type="submit" class="data_buttons">
+								Ann Arbor
+								<br/>
+								<img src="./static/images/white.png" width="300" height="200"/>
+							</button>
+							<div class="checkbox">
+								<label><input type="checkbox" id="check4">Select Dataset</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="pane2">
+					<div class="container">
+						<div class="meta_data" id="mit_data" style="display: none">
+							<h3>Select Meta Data(MIT)</h3>
+							<div class="form-group"  id="mit_gen">
+								<label for="sel1">Gender:</label>
+								<select class="form-control" id="sel1">
+									<option>Female</option>
+									<option>Male</option>
+								</select>
+							</div>
+							<div class="form-group"  id="mit_age">
+								<label for="pwd">Age: </label>
+								<input type="number" class="form-control" id="pwd">
+							</div>
+						</div>
+						<div class="meta_data" id="uci_data" style="display: none">
+							<h3>Select Meta Data(UCI)</h3>
+							<div class="form-group">
+								<label for="sel2">Gender:</label>
+								<select class="form-control" id="sel2">
+									<option>Female</option>
+									<option>Male</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="pwd2">Age: </label>
+								<input type="number" class="form-control" id="pwd2">
+							</div>
+						</div>
+
+						<div class="meta_data" id="berkeley_data" style="display: none">
+							<h3>Select Meta Data(Berkeley)</h3>
+							<div class="form-group">
+								<label for="sel3">Gender:</label>
+								<select class="form-control" id="sel3">
+									<option>Female</option>
+									<option>Male</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="pwd3">Age: </label>
+								<input type="number" class="form-control" id="pwd3">
+							</div>
+						</div>
+
+						<div class="meta_data" id="aa_data" style="display: none">
+							<h3>Select Meta Data(Ann Arbor)</h3>
+							<div class="form-group">
+								<label for="sel4">Gender:</label>
+								<select class="form-control" id="sel4">
+									<option>Female</option>
+									<option>Male</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="pwd4">Age: </label>
+								<input type="number" class="form-control" id="pwd4">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="submit_button">
+					<button type="submit" class="data_buttons">
+						Submit
+					</button>
+				</div>
+				<!-- Training Data END -->
 			</div>
             <div id="Load Data Page" class = "module">
 				<!-- Load Data Page goes here -->
-                <h1>Upload Your Data</h1>
-				<!--
-				<div class = "file_upload">
-					<span class="glyphicon glyphicon-plus" id="add_upload_button" aria-hidden="true"></span>
-					<form action="" method='post' enctype='multipart/form-data'>
-					<p><input type='hidden' name='patient_name' value>
-					<p><input type='file' name='file'>
-						<p><button type='submit' name='Upload_ECG'>Upload ECG File</button>
-					</form>
-				</div>
-
-				-->
-
+                <h2 style= "margin-top: -5px; margin-bottom: -15px;">Upload Your Data</h2>
+				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Please upload your files on this page!"></span>
+				<br/>
 				<div class="file_upload">
+                    <div style="position: relative; padding-bottom: 50px; padding-top: 0">
+                        <a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled" style="position: absolute; left: 90px">Add Another File</a>
+                        <p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG' style="position: absolute; right: 85px">Upload ECG File</button></p>
+                    </div>
+
 					<div class="table-responsive">
-						<table class="table table-bordered" id = "file_upload_table">
+                        <table class="table table-bordered" id = "file_upload_table" style="width: 84%; margin-left: 8%; margin-right: 8%">
 							<thead>
 							<tr>
 								<th>File Number</th>
@@ -255,7 +483,7 @@
 							<tbody>
 							<tr>
 								<td>1</td>
-								<td> <input type='file' name='file' id = "file_upload_button"> </td>
+								<td> <input type='file' name='file' id = "file_upload_button_1"> </td>
 								<td></td>
 								<td>
 									<button type="button" class="btn btn-default btn-sm" id = "delete_file_upload" onclick="deletetr(this)">
@@ -265,24 +493,69 @@
 							</tr>
 							</tbody>
 						</table>
-						<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled">
-							 Add Another File
-						</a>
-
-						<p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG'>Upload ECG File</button>
+						<!--<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled" style="position: absolute">Add Another File</a>
+						<p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG'>Upload ECG File</button>-->
 
 					</div>
 				</div>
+				</p>
+
+                <div class="meta-data">
 
 
+					<table class = "meta" style="width: 84%; height: 200px; border: 2px solid lightgrey; margin-left: 8%; margin-right: 8%">
+						<tr>
+							<th style="text-align: center; height: 50px; border: 2px solid lightgrey">Meta_data_1</th>
+							<th style="text-align: center; height: 50px; border: 2px solid lightgrey">Meta_data_2</th>
+							<th style="text-align: center; height: 50px; border: 2px solid lightgrey">Meta_data_3</th>
+						</tr>
+						<tr>
+							<td style= "vertical-align: top">
+								<div class="dropdown" style="position: relative; margin-top: 10px">
+									<button id = "dd" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
+										<span class="caret"></span></button>
+									<ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
+										<li><a href="#">Tobefilled1</a></li>
+										<li><a href="#">Tobefilled2</a></li>
+										<li><a href="#">Tobefilled3</a></li>
+									</ul>
+								</div>
+							</td>
 
+							<td style= "vertical-align: top">
+								<div class="dropdown" style="position: relative; margin-top: 10px">
+									<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
+										<span class="caret"></span></button>
+									<ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
+										<li><a href="#">Tobefilled1</a></li>
+										<li><a href="#">Tobefilled2</a></li>
+										<li><a href="#">Tobefilled3</a></li>
+									</ul>
+								</div>
+							</td>
 
+							<td style= "vertical-align: top">
+								<div class="dropdown" style="position: relative; margin-top: 10px">
+									<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
+										<span class="caret"></span></button>
+									<ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
+										<li><a href="#">Tobefilled1</a></li>
+										<li><a href="#">Tobefilled2</a></li>
+										<li><a href="#">Tobefilled3</a></li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+					</table>
 
-
+				</div>
 			</div>
+
 			<div id="Analysis Page" class = "module">
 				<!-- Analysis Page goes here -->
 				<h1>Select Algorithm Complexity</h1>
+				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Algorithm is faster with less accuracy"></span>
+				<br/>
 				<b>  Less Accurate/Faster  </b><input id="Slide"/><b>  More Accurate/Slower  </b>
 				<br/><br/>
 				<div class="dropdown" style="width: 125px;margin:auto">
@@ -297,7 +570,21 @@
 
 
 				<h1>Select Features for Classification</h1>
-				<div class="containerCheck">
+				<span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Please select features for classification"></span>
+				<br/>
+
+				<div ng-controller="SimpleArrayCtrl" style="width = 300px; height = 200px">
+            <div class="form-group">
+              <label ng-repeat="featureName in featuresArray" class="checkbox-inline" ng-style = "padding-bottom:30px">
+                <input type="checkbox" value="{{featureName}}" ng-checked="selection.indexOf(featureName) > -1" ng-click="toggleSelection(featureName)"> {{featureName}}
+              </label>
+          </div>
+			</div>
+
+
+
+
+				<!-- <div class="containerCheck">
 					<form>
 						<label class="checkbox-inline"><input type="checkbox" value=""> QRS Interval </label>
 						<label class="checkbox-inline"><input type="checkbox" value=""> S Amplitude </label>
@@ -330,30 +617,61 @@
 						<label class="checkbox-inline"><input type="checkbox" value=""> P Interval</label>
 						<label class="checkbox-inline"><input type="checkbox" value=""> R Amplitude </label>
 					</form>
-				</div>
+				</div> -->
 
 			</div>
-
 
 			<div id="Result Page" class = "module">
 				<!-- Result Page goes here -->
 				<h1>Result</h1>
-			</div>
+				<nav class="file-nav-bar">
+					<div class="container-fluid">
+                        <div class="tab" style="width: 84%; margin-left: 8%; margin-right: 8%">
+                            <button class="tablinks" onclick="openTab(event, 'file1')">File1</button>
+                            <button class="tablinks" onclick="openTab(event, 'file2')">File2</button>
+                            <button class="tablinks" onclick="openTab(event, 'file3')">File3</button>
+                        </div>
+
+                        <div id="file1" class="tabcontent" style="width: 84%; margin-left: 8%; margin-right: 8%">
+                            <h3>Analysis Result for file 1</h3>
+                            <svg id="visualisation" width="800" height="500"></svg>
+                        </div>
+
+                        <div id="file2" class="tabcontent"  style="width: 84%; margin-left: 8%; margin-right: 8%">
+                            <h3>Analysis Result for file 2</h3>
+                            <svg id="visualisation" width="800" height="500"></svg>
+                        </div>
+
+                        <div id="file3" class="tabcontent"  style="width: 84%; margin-left: 8%; margin-right: 8%">
+                            <h3>Analysis Result for file 3</h3>
+                            <svg id="visualisation" width="800" height="500"></svg>
+                        </div>
+
+
+                        <!--<ul class="nav navbar-nav">
+							<li id = "file1_page" role="presentation" class="active"><a href="#">File 1</a></li>
+							<li id = "file2_page" role="presentation"><a href="#">File 2</a></li>
+							<li id = "file3_page" role="presentation"><a href="#">File 3</a></li>
+							<li id = "file4_page" role="presentation"><a href="#">File 4</a></li>
+						</ul>-->
+					</div>
+				</nav>
+				<!--<svg id="visualisation" width="1000" height="500"></svg>-->
+
 
         </div>
 	</div>
 
-				<button type="button" id="previous_module" class="btn btn-outline-primary">Previous</button>
-				<button type="button" id="next_module" class="btn btn-outline-primary">Next</button>
+				<button type="button" id="previous_module" class="btn btn-outline-primary btn-lg">Previous</button>
+				<button type="button" id="next_module" class="btn btn-outline-primary btn-lg">Next</button>
 
 	</div>
 
 
+>>>>>>> Stashed changes
     </div>
-    <!-- /.row -->
-
 </div>
-<!-- /.container -->
+<!-- /.web app container -->
 
 
 
@@ -362,12 +680,12 @@
 
 <!-- Bootstrap Core JavaScript -->
 
-<script src="js/nav.js"></script>
-<script src="js/progress.js"></script>
+<script src="./js/nav.js"></script>
+<script src="./js/progress.js"></script>
 
 
 
-	<footer class="footer">
+	<footer class="footer" style="position: relative">
 		<center>
 		<a href="http://www.socr.umich.edu/">SOCR Resource</a>
 		Visitor number <img src="http://counter.digits.net/?counter=SOCR" align="middle" border="0" height="20" hspace="4" vspace="2" width="60">
@@ -376,6 +694,10 @@
 		<a href="../img/SOCR_Email.png"><img alt="SOCR Email" title="SOCR Email" src="../img/SOCR_Email.png" style="border: 0px solid ;"></a>
 		</center>
 	</footer>
+
+	<!-- Import AngularJS files -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 
      <!-- Import Statements for JS files, add new files at the end -->
 	<script src="./js/jquery.js"></script>
@@ -393,13 +715,23 @@
 	<script src="./js/bootstrap-carousel.js"></script>
 	<script src="./js/bootstrap-typeahead.js"></script>
 	<script src="./js/bootstrap-slider.js"></script>
-	<script src="./js/slidebar.js"></script>
+	<!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js"></script>
+	<script src="./js/slider.js"></script>
+	<script src="./js/graph.js"></script>
 	<script src="./js/Load_Data_Page.js"></script>
+	<script src="./js/metadata.js"></script>
+  	<script src="./js/results.js"></script>
+	<script src="./js/router.js"></script>
+
+
+
 	<!-- End Import Statements for JS files-->
 
 	<!-- GoogleAnalytics -->
 		<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> </script>
 		<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
 	<!-- End of GoogleAnalytics Code -->
+</div>
 </body>
 </html>
