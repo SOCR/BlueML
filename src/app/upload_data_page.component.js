@@ -12,17 +12,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var upload_data = (function () {
-    function upload_data() {
+var UploadDataComponent = (function () {
+    function UploadDataComponent() {
         this.title = 'Upload Data Page';
     }
-    upload_data = __decorate([
+    UploadDataComponent = __decorate([
         core_1.Component({
             templateUrl: './app/pages/page2.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], upload_data);
-    return upload_data;
+    ], UploadDataComponent);
+    return UploadDataComponent;
 }());
-exports.upload_data = upload_data;
+exports.UploadDataComponent = UploadDataComponent;
 //# sourceMappingURL=upload_data_page.component.js.map

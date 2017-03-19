@@ -1,6 +1,9 @@
 /**
  * Created by jakeclose on 3/15/17.
  */
+/**
+ * Created by jakeclose on 3/15/17.
+ */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -12,18 +15,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var TrainingDataComponent = (function () {
-    function TrainingDataComponent() {
+var AnalysisComponent = (function () {
+    function AnalysisComponent() {
+        this.title = 'Analysis Page';
     }
-    TrainingDataComponent = __decorate([
+    AnalysisComponent = __decorate([
         core_1.Component({
             selector: 'relative-path',
-            templateUrl: './app/pages/page1.component.html',
-            styleUrls: ['./app/pages/css/layout.component.css']
+            templateUrl: './app/pages/page3.component.html',
+            styleUrls: ['./app/pages/css/bootstrap-slider.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], TrainingDataComponent);
-    return TrainingDataComponent;
+    ], AnalysisComponent);
+    return AnalysisComponent;
 }());
-exports.TrainingDataComponent = TrainingDataComponent;
-//# sourceMappingURL=training_data_page.component.js.map
+exports.AnalysisComponent = AnalysisComponent;
+//# sourceMappingURL=AnalysisComponent.component.js.map
