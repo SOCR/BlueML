@@ -8,11 +8,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-    template: '<h1> {{title}} </h1>'
-    /*
-     templateUrl: '',
-     styleUrls:  ['']
-     */
+    selector: 'relative-path',
+    templateUrl: './app/pages/page3.component.html',
+    styleUrls:  ['./app/pages/css/bootstrap-slider.css']
 })
 
 export class AnalysisComponent  {
