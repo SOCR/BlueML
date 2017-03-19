@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://null.jsbin.com/runner -->
+<html ng-app="app" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){window.__blocked={methods:["open","print","alert","prompt","confirm"],old:{}};for(var m in __blocked.methods){try {__blocked.old[m]=window[m];window[m]=function(){};}catch(e){}}})()</script>
+
+
+  
+    
+    <title>How can AngularJS bind to list of checkbox values?</title>
+    <script src="./angular.min.js"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\:form{display:block;}</style>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+  <style id="jsbin-css">
+
+</style>
+</head>
+
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1><a href="http://stackoverflow.com/q/14514461/697154">How can AngularJS bind to list of checkbox values?</a></h1>
+      </div>
+
+      <div ng-controller="SimpleArrayCtrl" class="ng-scope">
+        <h3>With a simple array as input data</h3>
+
+        <dl>
+          <dt>Pros</dt>
+          <dd>simple data structure and toggling by name is easy to handle</dd>
+
+          <dt>Cons</dt>
+          <dd>add/remove is cumbersome as two lists (the input and selection) have to be managed</dd>
+        </dl>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h4>selectables</h4>
+            <div class="form-group">
+              <!-- ngRepeat: fruitName in fruits --><label ng-repeat="fruitName in fruits" class="checkbox-inline ng-scope ng-binding">
+                <input type="checkbox" name="selectedFruits[]" value="apple" ng-checked="selection.indexOf(fruitName) &gt; -1" ng-click="toggleSelection(fruitName)" checked="checked"> apple
+              </label><label ng-repeat="fruitName in fruits" class="checkbox-inline ng-scope ng-binding">
+                <input type="checkbox" name="selectedFruits[]" value="orange" ng-checked="selection.indexOf(fruitName) &gt; -1" ng-click="toggleSelection(fruitName)"> orange
+              </label><label ng-repeat="fruitName in fruits" class="checkbox-inline ng-scope ng-binding">
+                <input type="checkbox" name="selectedFruits[]" value="pear" ng-checked="selection.indexOf(fruitName) &gt; -1" ng-click="toggleSelection(fruitName)" checked="checked"> pear
+              </label><label ng-repeat="fruitName in fruits" class="checkbox-inline ng-scope ng-binding">
+                <input type="checkbox" name="selectedFruits[]" value="naartjie" ng-checked="selection.indexOf(fruitName) &gt; -1" ng-click="toggleSelection(fruitName)"> naartjie
+              </label>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <p><strong>Toggling</strong> by name is easy in this case, because the needed helper method can be reused.</p>
+            <button class="btn btn-default" ng-click="toggleSelection(&#39;naartjie&#39;)">Toggle <em>naartjie</em></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h4>selection</h4>
+            <pre class="ng-binding">[
+  "apple",
+  "pear"
+]</pre>
+          </div>
+
+          <div class="col-md-6">
+            <h4>input</h4>
+            <pre class="ng-binding">[
+  "apple",
+  "orange",
+  "pear",
+  "naartjie"
+]</pre>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div ng-controller="ObjectArrayCtrl" class="ng-scope">
+        <h3>With an object array as input data</h3>
+
+        <dl>
+          <dt>Pros</dt>
+          <dd>add/remove is very easy</dd>
+
+          <dt>Cons</dt>
+          <dd>somewhat more complex data structure and toggling by name is cumbersome or requires a helper method</dd>
+        </dl>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h4>selectables</h4>
+            <div class="form-group">
+              <!-- ngRepeat: fruit in fruits --><label ng-repeat="fruit in fruits" class="checkbox-inline ng-scope">
+                <!--
+                  - use `value="{{fruit.name}}"` to give the input a real value, in case the form gets submitted
+                    traditionally
+
+                  - use `ng-checked="fruit.selected"` to have the checkbox checked based on some angular expression
+                    (no two-way-data-binding)
+
+                  - use `ng-model="fruit.selected"` to utilize two-way-data-binding. Note that `.selected`
+                    is arbitrary. The property name could be anything and will be created on the object if not present.
+                -->
+                <input type="checkbox" name="selectedFruits[]" value="" ng-model="fruit.selected" class="ng-pristine ng-valid">
+              </label><label ng-repeat="fruit in fruits" class="checkbox-inline ng-scope">
+                <!--
+                  - use `value="{{fruit.name}}"` to give the input a real value, in case the form gets submitted
+                    traditionally
+
+                  - use `ng-checked="fruit.selected"` to have the checkbox checked based on some angular expression
+                    (no two-way-data-binding)
+
+                  - use `ng-model="fruit.selected"` to utilize two-way-data-binding. Note that `.selected`
+                    is arbitrary. The property name could be anything and will be created on the object if not present.
+                -->
+                <input type="checkbox" name="selectedFruits[]" value="" ng-model="fruit.selected" class="ng-pristine ng-valid">
+              </label><label ng-repeat="fruit in fruits" class="checkbox-inline ng-scope">
+                <!--
+                  - use `value="{{fruit.name}}"` to give the input a real value, in case the form gets submitted
+                    traditionally
+
+                  - use `ng-checked="fruit.selected"` to have the checkbox checked based on some angular expression
+                    (no two-way-data-binding)
+
+                  - use `ng-model="fruit.selected"` to utilize two-way-data-binding. Note that `.selected`
+                    is arbitrary. The property name could be anything and will be created on the object if not present.
+                -->
+                <input type="checkbox" name="selectedFruits[]" value="" ng-model="fruit.selected" class="ng-pristine ng-valid">
+              </label><label ng-repeat="fruit in fruits" class="checkbox-inline ng-scope">
+                <!--
+                  - use `value="{{fruit.name}}"` to give the input a real value, in case the form gets submitted
+                    traditionally
+
+                  - use `ng-checked="fruit.selected"` to have the checkbox checked based on some angular expression
+                    (no two-way-data-binding)
+
+                  - use `ng-model="fruit.selected"` to utilize two-way-data-binding. Note that `.selected`
+                    is arbitrary. The property name could be anything and will be created on the object if not present.
+                -->
+                <input type="checkbox" name="selectedFruits[]" value="" ng-model="fruit.selected" class="ng-pristine ng-valid">
+              </label>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <p><strong>Toggling</strong> by name is not so easy in this case, because the the code is either rather ugly, or a helper method is needed.</p>
+            <button class="btn btn-default" ng-click="(fruits|filter:{name:&#39;naartjie&#39;})[0].selected = !(fruits|filter:{name:&#39;naartjie&#39;})[0].selected">Toggle <em>naartjie</em></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h4>selection as simple array using $watch</h4>
+            <pre class="ng-binding">[
+  "apple",
+  "pear"
+]</pre>
+
+            <h4>selection as simple array using a custom filter</h4>
+            <pre class="ng-binding">[
+  "apple",
+  "pear"
+]</pre>
+
+            <h4>selection using the default filter</h4>
+            <pre class="ng-binding">[
+  {
+    "name": "apple",
+    "selected": true
+  },
+  {
+    "name": "pear",
+    "selected": true
+  }
+]</pre>
+
+            <h4>selection using a helper function</h4>
+            <pre class="ng-binding">[
+  {
+    "name": "apple",
+    "selected": true
+  },
+  {
+    "name": "pear",
+    "selected": true
+  }
+]</pre>
+          </div>
+
+          <div class="col-md-6">
+            <h4>input</h4>
+            <pre class="ng-binding">[
+  {
+    "name": "apple",
+    "selected": true
+  },
+  {
+    "name": "orange",
+    "selected": false
+  },
+  {
+    "name": "pear",
+    "selected": true
+  },
+  {
+    "name": "naartjie",
+    "selected": false
+  }
+]</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script>try {(function (app) {
+  'use strict';
+  
+  app.controller('SimpleArrayCtrl', ['$scope', function SimpleArrayCtrl($scope) {
+    // fruits
+    $scope.fruits = ['apple', 'orange', 'pear', 'naartjie'];
+    
+    // selected fruits
+    $scope.selection = ['apple', 'pear'];
+    
+    // toggle selection for a given fruit by name
+    $scope.toggleSelection = function toggleSelection(fruitName) {
+      var idx = $scope.selection.indexOf(fruitName);
+      
+      // is currently selected
+      if (idx > -1) {
+        $scope.selection.splice(idx, 1);
+      }
+      
+      // is newly selected
+      else {
+        $scope.selection.push(fruitName);
+      }
+    };
+  }]);
+  
+  app.controller('ObjectArrayCtrl', ['$scope', 'filterFilter', function ObjectArrayCtrl($scope, filterFilter) {
+    // fruits
+    $scope.fruits = [
+      { name: 'apple',    selected: true },
+      { name: 'orange',   selected: false },
+      { name: 'pear',     selected: true },
+      { name: 'naartjie', selected: false }
+    ];
+    
+    // selected fruits
+    $scope.selection = [];
+    
+    // helper method
+    $scope.selectedFruits = function selectedFruits() {
+      return filterFilter($scope.fruits, { selected: true });
+    };
+    
+    // watch fruits for changes
+    $scope.$watch('fruits|filter:{selected:true}', function (nv) {
+      $scope.selection = nv.map(function (fruit) {
+        return fruit.name;
+      });
+    }, true);
+  }]);
+  
+  /**
+   * custom filter
+   */
+  app.filter('fruitSelection', ['filterFilter', function (filterFilter) {
+    return function fruitSelection(input, prop) {
+      return filterFilter(input, { selected: true }).map(function (fruit) {
+        return fruit[prop];
+      });
+    };
+  }]);
+})(angular.module('app', []));
+} catch (error) { throw error; }
+
+//# sourceURL=ImAqUC.js
+</script>
+
+
+<!--jsbin live harness--><script>(function(){for(var m in __blocked.methods){try{window[m]=__blocked.old[m];delete __blocked;}catch(e){}};})()</script></body></html>

@@ -1,0 +1,5 @@
+document.getElementById('bsaapi').innerHTML = '<a href="//srv.buysellads.com/ads/click/x/GTND423YF6SDK5QNC6SLYKQWFTAIKK7YCEBD6Z3JCEADL27JCEBDE53KC6BDE5QNF6ADTK3EHJNCLSIZ" target="_blank">Create a new app, free.: Azure: Have an app idea and want to see if it&#x27;ll fly?</a><img src="https://ad.atdmt.com/i/img;p=11087210530757;a=11087210553845;idfa=;aaid=;idfa_lat=;aaid_lat=;cache=" height=1 width=1 border=0 style="display:none">';
+$('body').addClass('bsaapi');
+$('#bsaapi a').click(function () {
+  jsbin.analytics.track('ad', 'click', 'bsa');
+});
