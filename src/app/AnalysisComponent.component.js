@@ -21,7 +21,9 @@ var AnalysisComponent = (function () {
     }
     AnalysisComponent = __decorate([
         core_1.Component({
-            template: '<h1> {{title}} </h1>'
+            selector: 'relative-path',
+            templateUrl: './app/pages/page3.component.html',
+            styleUrls: ['./app/pages/css/bootstrap-slider.css']
         }), 
         __metadata('design:paramtypes', [])
     ], AnalysisComponent);
