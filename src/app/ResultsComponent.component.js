@@ -15,10 +15,12 @@ var core_1 = require('@angular/core');
 var ResultsComponent = (function () {
     function ResultsComponent() {
         this.title = 'Results Page';
+        this.students = ['Jake', 'Tem', 'Syed'];
     }
     ResultsComponent = __decorate([
         core_1.Component({
-            template: '<h1> {{title}} </h1>'
+            selector: 'relative-path',
+            templateUrl: './app/pages/ResultsComponent.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], ResultsComponent);

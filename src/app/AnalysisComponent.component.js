@@ -23,7 +23,7 @@ var AnalysisComponent = (function () {
         core_1.Component({
             selector: 'relative-path',
             templateUrl: './app/pages/page3.component.html',
-            styleUrls: ['./app/pages/css/bootstrap-slider.css']
+            styleUrls: ['./app/pages/css/bootstrap-slider.css', './app/pages/css/layout.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], AnalysisComponent);
