@@ -1,0 +1,106 @@
+<!-- Upload Data Page goes here -->
+<div id="Load Data Page" class = "module">
+    <h1>Upload Your Data</h1>
+
+    <!--  <h1>Upload Your Data</h1>  -->
+    <!--
+    <div class = "file_upload">
+        <span class="glyphicon glyphicon-plus" id="add_upload_button" aria-hidden="true"></span>
+        <form action="" method='post' enctype='multipart/form-data'>
+        <p><input type='hidden' name='patient_name' value>
+        <p><input type='file' name='file'>
+            <p><button type='submit' name='Upload_ECG'>Upload ECG File</button>
+        </form>
+    </div>
+
+    -->
+
+    <span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Please upload your files on this page!"></span>
+    <br/>
+    <div class="file_upload">
+        <div style="position: relative; padding-bottom: 50px; padding-top: 0">
+            <a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled" style="position: absolute; left: 90px">Add Another File</a>
+            <p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG' style="position: absolute; right: 85px">Upload ECG File</button></p>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered" id = "file_upload_table" style="width: 84%; margin-left: 8%; margin-right: 8%">
+                <thead>
+                <tr>
+                    <th>File Number</th>
+                    <th>File</th>
+                    <th>File Name</th>
+                    <th>Delete</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td> <input type='file' name='file' id = "file_upload_button_1"> </td>
+                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-default btn-sm" id = "delete_file_upload" onclick="deletetr(this)">
+                            <span class="glyphicon glyphicon-minus"></span> Remove
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!--<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled" style="position: absolute">Add Another File</a>
+            <p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG'>Upload ECG File</button>-->
+
+        </div>
+    </div>
+
+
+    <div class="meta-data">
+
+
+        <table class = "meta" style="width: 84%; height: 200px; border: 2px solid lightgrey; margin-left: 8%; margin-right: 8%">
+            <tr>
+                <th style="text-align: center; height: 50px; border: 2px solid lightgrey">Meta_data_1</th>
+                <th style="text-align: center; height: 50px; border: 2px solid lightgrey">Meta_data_2</th>
+                <th style="text-align: center; height: 50px; border: 2px solid lightgrey">Meta_data_3</th>
+            </tr>
+            <tr>
+                <td style= "vertical-align: top">
+                    <div class="dropdown" style="position: relative; margin-top: 10px">
+                        <button id = "dd" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
+                            <li><a href="#">Tobefilled1</a></li>
+                            <li><a href="#">Tobefilled2</a></li>
+                            <li><a href="#">Tobefilled3</a></li>
+                        </ul>
+                    </div>
+                </td>
+
+                <td style= "vertical-align: top">
+                    <div class="dropdown" style="position: relative; margin-top: 10px">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
+                            <li><a href="#">Tobefilled1</a></li>
+                            <li><a href="#">Tobefilled2</a></li>
+                            <li><a href="#">Tobefilled3</a></li>
+                        </ul>
+                    </div>
+                </td>
+
+                <td style= "vertical-align: top">
+                    <div class="dropdown" style="position: relative; margin-top: 10px">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select your MetaData
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu" style="position: absolute; margin-left: 80px">
+                            <li><a href="#">Tobefilled1</a></li>
+                            <li><a href="#">Tobefilled2</a></li>
+                            <li><a href="#">Tobefilled3</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
