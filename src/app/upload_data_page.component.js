@@ -18,7 +18,8 @@ var UploadDataComponent = (function () {
     }
     UploadDataComponent = __decorate([
         core_1.Component({
-            templateUrl: './app/pages/page2.component.html'
+            templateUrl: './app/pages/page2.component.html',
+            styleUrls: ['./app/pages/css/Load_Data_Page.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], UploadDataComponent);
