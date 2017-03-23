@@ -14,7 +14,7 @@ export class UploadDataComponent  {
     title = 'Upload Data Page';
 
 
-
+    
 
 
 }
