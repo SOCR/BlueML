@@ -12,14 +12,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var formData_service_1 = require('./../app/data/formData.service');
 var TrainingDataComponent = (function () {
     function TrainingDataComponent() {
     }
+    TrainingDataComponent.prototype.ngOnInit = function () {
+    };
     TrainingDataComponent = __decorate([
         core_1.Component({
             selector: 'relative-path',
             templateUrl: './app/pages/page1.component.html',
-            styleUrls: ['./app/pages/css/layout.component.css']
+            styleUrls: ['./app/pages/css/layout.component.css'],
+            providers: [formData_service_1.FormDataService]
         }), 
         __metadata('design:paramtypes', [])
     ], TrainingDataComponent);

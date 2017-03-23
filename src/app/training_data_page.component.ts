@@ -4,14 +4,18 @@
 
 
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { FormDataService }            from './data/formData.service';
+import { FormDataService } from './../app/data/formData.service';
 
 @Component({
     selector: 'relative-path',
     templateUrl: './app/pages/page1.component.html',
-    styleUrls:  ['./app/pages/css/layout.component.css']
+    styleUrls:  ['./app/pages/css/layout.component.css'],
+    providers: [FormDataService]
 })
 
 export class TrainingDataComponent implements OnInit, onDestroy  {
+    ngOnInit(){
 
+    }
+    
 }
