@@ -1,5 +1,5 @@
 /**
- * Created by jakeclose on 3/15/17.
+ * Created by Temuulen on 3/23/2017.
  */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -12,22 +12,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var formData_service_1 = require('./../app/data/formData.service');
-var TrainingDataComponent = (function () {
-    function TrainingDataComponent() {
+var formData_model_1 = require('./formData.model');
+var FormDataService = (function () {
+    function FormDataService() {
+        this.formData = new formData_model_1.FormData();
     }
-    TrainingDataComponent.prototype.ngOnInit = function () {
+    FormDataService.prototype.getData = function () {
+        return this.formData;
     };
-    TrainingDataComponent = __decorate([
-        core_1.Component({
-            selector: 'relative-path',
-            templateUrl: './app/pages/page1.component.html',
-            styleUrls: ['./app/pages/css/layout.component.css'],
-            providers: [formData_service_1.FormDataService]
-        }), 
+    FormDataService.prototype.setData = function (formData) {
+        this.formData = formData;
+    };
+    FormDataService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], TrainingDataComponent);
-    return TrainingDataComponent;
+    ], FormDataService);
+    return FormDataService;
 }());
-exports.TrainingDataComponent = TrainingDataComponent;
-//# sourceMappingURL=training_data_page.component.js.map
+exports.FormDataService = FormDataService;
+//# sourceMappingURL=formData.service.js.map
