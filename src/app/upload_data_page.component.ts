@@ -14,7 +14,58 @@ export class UploadDataComponent  {
     title = 'Upload Data Page';
 
 
-    
+    /*@Input() meta_data = 0;
+        { key:"Age",
+        value:"29"
+        },
+        { key:"Gender",
+            value:"Male"
+        },
+        { key:"Weight",
+        value:"135"
+        },
+        { key:"School",
+        value:"Umich"
+        },
+        { key:"Major",
+        value:"Math"
+        }
+    @Output() meta_data = EventEmitter<number>();
 
+    meda_data = [
+    { key:"Age",
+        value:"29"
+    },
+    { key:"Gender",
+        value:"Male"
+    },
+    { key:"Weight",
+        value:"135"
+    },
+    { key:"School",
+        value:"Umich"
+    },
+    { key:"Major",
+        value:"Math"
+    }
 
+];
+*//*
+    patientMetaData = [{ key:"Age",
+            value:"29"
+        },
+{ key:"Gender",
+    value:"Male"
+},
+    {key:"Weight",
+    value:"135"
+    },
+        {key:"School",
+        value:"Umich"},
+        {key: "Major",
+        value: "Math"}
+    ]
+    firstItem1 = document.getElementById("firstItem").value = "Johnny Bravo";
+    Try it Yourself »
+*/
 }
