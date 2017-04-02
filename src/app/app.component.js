@@ -9,20 +9,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var ui_router_ng2_1 = require("ui-router-ng2");
+var formData_service_1 = require('./pages/data/formData.service');
 var AppComponent = (function () {
-    function AppComponent() {
-        this.project = 'BlueML';
-        this.program = 'MDP';
+    function AppComponent(formDataService) {
+        this.formDataService = formDataService;
+        this.title = 'Blue_ML';
     }
+    AppComponent.prototype.ngOnInit = function () {
+        this.formData = this.formDataService.getData();
+        console.log(this.title + ' loaded!');
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], AppComponent.prototype, "formData", void 0);
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<h1>The {{project}} project by the {{program}} 2017 team</h1>\n            \n \n    <nav>\n      <a routerLink=\"/trainingData\" routerLinkActive=\"active\">TrainingData</a>\n      <a routerLink=\"/upload_data\" >Upload Data</a>\n      <a routerLink=\"/analysis\" >Analysis</a>\n      <a routerLink=\"/results\" >Result</a>\n    </nav>\n    \n    <router-outlet>\n    \n    </router-outlet>\n    ",
+            directives: [ui_router_ng2_1.UIROUTER_DIRECTIVES],
+            templateUrl: 'app/app.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [formData_service_1.FormDataService])
     ], AppComponent);
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
-22;
+/*
+export class AppComponent  {
+  project = 'BlueML';
+  program = 'MDP';
+
+
+}
+*/ 
 //# sourceMappingURL=app.component.js.map
