@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.1
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle blueML@1.0.0~prestart: blueML@1.0.0
+6 silly lifecycle blueML@1.0.0~prestart: no script for prestart, continuing
+7 info lifecycle blueML@1.0.0~start: blueML@1.0.0
+8 verbose lifecycle blueML@1.0.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle blueML@1.0.0~start: PATH: C:\Program Files (x86)\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Users\Temuulen\Desktop\blueML-NG\ng-app\node_modules\.bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\MiKTeX 2.9\miktex\bin\;C:\Program Files (x86)\nodejs\;C:\Program Files (x86)\Git\cmd;C:\Program Files\New folder\miktex\bin\x64\;C:\Users\Temuulen\AppData\Roaming\npm
+10 verbose lifecycle blueML@1.0.0~start: CWD: C:\Users\Temuulen\Desktop\blueML-NG\ng-app
+11 silly lifecycle blueML@1.0.0~start: Args: [ '/d /s /c',
+11 silly lifecycle   'tsc && concurrently "npm run tsc:w" "npm run lite" ' ]
+12 silly lifecycle blueML@1.0.0~start: Returned: code: 2  signal: null
+13 info lifecycle blueML@1.0.0~start: Failed to exec start script
+14 verbose stack Error: blueML@1.0.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite" `
+14 verbose stack Exit status 2
+14 verbose stack     at EventEmitter.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\lifecycle.js:255:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:886:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+15 verbose pkgid blueML@1.0.0
+16 verbose cwd C:\Users\Temuulen\Desktop\blueML-NG\ng-app\app
+17 error Windows_NT 6.3.9600
+18 error argv "C:\\Program Files (x86)\\nodejs\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
+19 error node v6.10.1
+20 error npm  v3.10.10
+21 error code ELIFECYCLE
+22 error blueML@1.0.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite" `
+22 error Exit status 2
+23 error Failed at the blueML@1.0.0 start script 'tsc && concurrently "npm run tsc:w" "npm run lite" '.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the blueML package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     tsc && concurrently "npm run tsc:w" "npm run lite"
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs blueML
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls blueML
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
