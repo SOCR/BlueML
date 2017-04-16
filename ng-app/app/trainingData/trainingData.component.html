@@ -1,0 +1,52 @@
+<div class="tab-pane fade in active">
+    <h4 class="head text-center">{{title}}</h4>
+    <br/>
+    <div class='row'>
+        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+            <div class="row">
+
+
+                <div id = 'training_data'>
+
+
+                    <li  *ngFor="let dataset of datasets" >
+                    <button (click)="addSelect(dataset.id)" >
+                        <img src='./app/trainingData/white.png' width="200" height="100"/>
+                    </button>
+
+                    <span class="id">{{dataset.id}}</span> {{dataset.name}}
+
+                    </li>
+
+
+                </div>
+
+                <div>
+                    <div id= "training_data_meta" class="form-group">
+                        <li *ngFor="let list of listSelected">
+                            <div [hidden] = "!datasets[list.id].selected" >
+                                <label>{{datasets[list.id].name}} dataset!</label>
+                                <br>
+                                <label>Gender</label>
+                                <div class="radio" *ngFor="let gender of genders">
+                                    <label>
+                                        <input type="radio" name="gender" [(ngModel)]="user.gender" [value]="gender.value">
+                                        {{gender.display}}
+                                    </label>
+                                </div>
+                                <label>Age</label>
+                                <input type="number" class="form-control" name="age" [(ngModel)]="user.age">
+                            </div>
+                        </li>
+                    </div>
+                </div>
+
+
+
+            <div class="form-group text-center">
+                <a uiSref="uploadData" class="btn btn-success btn-outline-rounded btn-info"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
