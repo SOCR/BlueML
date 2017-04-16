@@ -12,12 +12,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var formData_service_1 = require('./../app/data/formData.service');
+var formData_service_1 = require('./data/formData.service');
 var TrainingDataComponent = (function () {
-    function TrainingDataComponent() {
+    function TrainingDataComponent(formDataService) {
+        this.formDataService = formDataService;
     }
     TrainingDataComponent.prototype.ngOnInit = function () {
+        this.formData = this.formDataService.getData();
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], TrainingDataComponent.prototype, "formData", void 0);
     TrainingDataComponent = __decorate([
         core_1.Component({
             selector: 'relative-path',
@@ -25,7 +31,7 @@ var TrainingDataComponent = (function () {
             styleUrls: ['./app/pages/css/layout.component.css'],
             providers: [formData_service_1.FormDataService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [formData_service_1.FormDataService])
     ], TrainingDataComponent);
     return TrainingDataComponent;
 }());
