@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-{"version":3,"file":"app.component.js","sourceRoot":"","sources":["app.component.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAA2C,eAAe,CAAC,CAAA;AAE3D,8BAAsC,eAAe,CAAC,CAAA;AAEtD,iCAA2C,+BAE3C,CAAC,CAFyE;AA4B1E;IAIE,sBAAoB,eAAgC;QAAhC,oBAAe,GAAf,eAAe,CAAiB;QAHpD,UAAK,GAAG,SAAS,CAAC;IAIlB,CAAC;IAED,+BAAQ,GAAR;QACE,IAAI,CAAC,QAAQ,GAAG,IAAI,CAAC,eAAe,CAAC,OAAO,EAAE,CAAC;QAC/C,OAAO,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,GAAG,UAAU,CAAC,CAAC;IACvC,CAAC;IARD;QAAC,YAAK,EAAE;;kDAAA;IA5BV;QAAC,gBAAS,CAAC;YACT,QAAQ,EAAE,QAAQ;YAClB,UAAU,EAAG,CAAE,mCAAmB,CAAE;YACpC,WAAW,EAAE,wBAAwB;SAkBtC,CAAC;;oBAAA;IAgBF,mBAAC;AAAD,CAAC,AAXD,IAWC;AAXY,oBAAY,eAWxB,CAAA;AAED;;;;;;;EAOE"}
-=======
-{"version":3,"file":"app.component.js","sourceRoot":"","sources":["app.component.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAA0B,eAAe,CAAC,CAAA;AAmB1C;IAAA;QACE,YAAO,GAAG,QAAQ,CAAC;QACnB,YAAO,GAAG,KAAK,CAAC;IAGlB,CAAC;IAtBD;QAAC,gBAAS,CAAC;YACT,QAAQ,EAAE,QAAQ;YAClB,QAAQ,EAAE,8YAaP;SACJ,CAAC;;oBAAA;IAMF,mBAAC;AAAD,CAAC,AALD,IAKC;AALY,oBAAY,eAKxB,CAAA"}
->>>>>>> parent of a676681... Working with test result page
-=======
-{"version":3,"file":"app.component.js","sourceRoot":"","sources":["app.component.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAA0B,eAAe,CAAC,CAAA;AAmB1C;IAAA;QACE,YAAO,GAAG,QAAQ,CAAC;QACnB,YAAO,GAAG,KAAK,CAAC;IAGlB,CAAC;IAtBD;QAAC,gBAAS,CAAC;YACT,QAAQ,EAAE,QAAQ;YAClB,QAAQ,EAAE,8YAaP;SACJ,CAAC;;oBAAA;IAMF,mBAAC;AAAD,CAAC,AALD,IAKC;AALY,oBAAY,eAKxB,CAAA;AACD,EAAE,CAAA"}
->>>>>>> parent of f7e8316... added the new project strucutre in the ng-app, will need to convert
+{"version":3,"file":"app.component.js","sourceRoot":"","sources":["app.component.ts"],"names":[],"mappings":";;;;;;;AAAA,sCAA0C;AAmB1C,IAAa,YAAY;IAjBzB;QAkBE,YAAO,GAAG,QAAQ,CAAC;QACnB,YAAO,GAAG,KAAK,CAAC;IAGlB,CAAC;IAAD,mBAAC;AAAD,CAAC,AALD,IAKC;AALY,YAAY;IAjBxB,gBAAS,CAAC;QACT,QAAQ,EAAE,QAAQ;QAClB,QAAQ,EAAE,8YAaP;KACJ,CAAC;GACW,YAAY,CAKxB;AALY,oCAAY;AAMzB,EAAE,CAAA"}

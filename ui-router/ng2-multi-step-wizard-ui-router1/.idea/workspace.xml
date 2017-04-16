@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dee4aeb4-dcb9-422e-bed3-496717346678" name="Default" comment="" />
-    <ignored path="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/.tmp/" />
-    <ignored path="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/temp/" />
-    <ignored path="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/tmp/" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,37 +33,37 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/analysis/personal.component.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/result/result.component.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/app.component.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/result/result.component.html" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/app.states.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/app.router.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/homepage/home.component.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/homepage/home.component.html" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/analysis/analysis.component.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/navbar/navbar.component.html" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/package.json" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/app.module.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/uploadData/uploadData.component.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/analysis/analysis.component.html" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/index.html" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/systemjs.config.js" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/trainingData/trainingData.component.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/trainingData/Dataset.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/uploadData/uploadData.component.html" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/data/formData.model.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/trainingData/trainingData.component.html" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/content/css/riliwan-rabo.css" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/app/uploadData/uploadData.component.html" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/app/trainingData/Dataset.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/app/trainingData/trainingData.component.ts" />
-        <option value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/app/trainingData/trainingData.component.html" />
+        <option value="$PROJECT_DIR$/app/analysis/personal.component.ts" />
+        <option value="$PROJECT_DIR$/app/result/result.component.ts" />
+        <option value="$PROJECT_DIR$/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/app/result/result.component.html" />
+        <option value="$PROJECT_DIR$/app/app.states.ts" />
+        <option value="$PROJECT_DIR$/app/app.router.ts" />
+        <option value="$PROJECT_DIR$/app/homepage/home.component.ts" />
+        <option value="$PROJECT_DIR$/app/homepage/home.component.html" />
+        <option value="$PROJECT_DIR$/app/analysis/analysis.component.ts" />
+        <option value="$PROJECT_DIR$/app/navbar/navbar.component.html" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/app/uploadData/uploadData.component.ts" />
+        <option value="$PROJECT_DIR$/app/analysis/analysis.component.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/systemjs.config.js" />
+        <option value="$PROJECT_DIR$/app/trainingData/trainingData.component.ts" />
+        <option value="$PROJECT_DIR$/app/trainingData/Dataset.ts" />
+        <option value="$PROJECT_DIR$/app/uploadData/uploadData.component.html" />
+        <option value="$PROJECT_DIR$/app/data/formData.model.ts" />
+        <option value="$PROJECT_DIR$/app/trainingData/trainingData.component.html" />
+        <option value="$PROJECT_DIR$/ng-app/content/css/riliwan-rabo.css" />
+        <option value="$PROJECT_DIR$/ng-app/app/uploadData/uploadData.component.html" />
+        <option value="$PROJECT_DIR$/ng-app/app/trainingData/Dataset.ts" />
+        <option value="$PROJECT_DIR$/ng-app/app/trainingData/trainingData.component.ts" />
+        <option value="$PROJECT_DIR$/ng-app/app/trainingData/trainingData.component.html" />
       </list>
     </option>
   </component>
@@ -174,7 +174,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -183,8 +183,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/content/js" />
-      <recent name="$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/homepage/" />
+      <recent name="$PROJECT_DIR$/content/js" />
+      <recent name="$PROJECT_DIR$/app/homepage/" />
     </key>
   </component>
   <component name="RunManager">
@@ -265,34 +265,35 @@
       <workItem from="1490569257177" duration="2150000" />
       <workItem from="1490726533701" duration="6523000" />
       <workItem from="1490839350404" duration="3233000" />
+      <workItem from="1491766464461" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17365000" />
+    <option name="totallyTimeSpent" value="17380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15462612" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -328,133 +329,56 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/uploadData/uploadData.component.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/homepage/home.component.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/analysis/analysis.component.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/app.component.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/app.component.html" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/result/result.component.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/result/result.component.html" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/navbar/navbar.component.html" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/navbar/navbar.component.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/homepage/home.component.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/homepage/home.component.html" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/result/result.component.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/main.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/LICENSE" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/README.md" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/screen-address.png" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/screen-personal.png" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/screen-result.png" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/navbar/navbar.component.html" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/app.component.html" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/content/js/bootstrap-slider.js" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/content/js/slider.js" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/index.html" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/uploadData/uploadData.component.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/analysis/analysis.component.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/data/formData.service.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/result/result.component.html" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/trainingData/Dataset.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/analysis/analysis.component.html" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/data/formData.model.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/trainingData/trainingData.component.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/trainingData/trainingData.component.html" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/uploadData/uploadData.component.html" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/package.json" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/tsconfig.json" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/systemjs.config.js" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/app.states.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/app.router.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/app.module.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/app/app.component.ts" />
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/app/uploadData/uploadData.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/content/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/content/css/riliwan-rabo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/app/uploadData/uploadData.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="78" lean-forward="false" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/app/trainingData/trainingData.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/app/trainingData/trainingData.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/app/trainingData/Dataset.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/MDP/BlueML/ui-router/ng2-multi-step-wizard-ui-router1/ng-app/app/trainingData/dataset.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/uploadData/uploadData.component.ts" />
+    <entry file="file://$PROJECT_DIR$/app/homepage/home.component.ts" />
+    <entry file="file://$PROJECT_DIR$/app/analysis/analysis.component.ts" />
+    <entry file="file://$PROJECT_DIR$/app/app.component.ts" />
+    <entry file="file://$PROJECT_DIR$/app/app.component.html" />
+    <entry file="file://$PROJECT_DIR$/app/result/result.component.ts" />
+    <entry file="file://$PROJECT_DIR$/app/result/result.component.html" />
+    <entry file="file://$PROJECT_DIR$/app/navbar/navbar.component.html" />
+    <entry file="file://$PROJECT_DIR$/app/navbar/navbar.component.ts" />
+    <entry file="file://$PROJECT_DIR$/app/homepage/home.component.ts" />
+    <entry file="file://$PROJECT_DIR$/app/homepage/home.component.html" />
+    <entry file="file://$PROJECT_DIR$/app/result/result.component.ts" />
+    <entry file="file://$PROJECT_DIR$/app/main.ts" />
+    <entry file="file://$PROJECT_DIR$/LICENSE" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/screen-address.png" />
+    <entry file="file://$PROJECT_DIR$/screen-personal.png" />
+    <entry file="file://$PROJECT_DIR$/screen-result.png" />
+    <entry file="file://$PROJECT_DIR$/app/navbar/navbar.component.html" />
+    <entry file="file://$PROJECT_DIR$/app/app.component.html" />
+    <entry file="file://$PROJECT_DIR$/content/js/bootstrap-slider.js" />
+    <entry file="file://$PROJECT_DIR$/content/js/slider.js" />
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/app/uploadData/uploadData.component.ts" />
+    <entry file="file://$PROJECT_DIR$/app/analysis/analysis.component.ts" />
+    <entry file="file://$PROJECT_DIR$/app/data/formData.service.ts" />
+    <entry file="file://$PROJECT_DIR$/app/result/result.component.html" />
+    <entry file="file://$PROJECT_DIR$/app/trainingData/Dataset.ts" />
+    <entry file="file://$PROJECT_DIR$/app/analysis/analysis.component.html" />
+    <entry file="file://$PROJECT_DIR$/app/data/formData.model.ts" />
+    <entry file="file://$PROJECT_DIR$/app/trainingData/trainingData.component.ts" />
+    <entry file="file://$PROJECT_DIR$/app/trainingData/trainingData.component.html" />
+    <entry file="file://$PROJECT_DIR$/app/uploadData/uploadData.component.html" />
+    <entry file="file://$PROJECT_DIR$/package.json" />
+    <entry file="file://$PROJECT_DIR$/tsconfig.json" />
+    <entry file="file://$PROJECT_DIR$/systemjs.config.js" />
+    <entry file="file://$PROJECT_DIR$/app/app.states.ts" />
+    <entry file="file://$PROJECT_DIR$/app/app.router.ts" />
+    <entry file="file://$PROJECT_DIR$/app/app.module.ts" />
+    <entry file="file://$PROJECT_DIR$/app/app.component.ts" />
+    <entry file="file://$PROJECT_DIR$/ng-app/tsconfig.json" />
+    <entry file="file://$PROJECT_DIR$/ng-app/index.html" />
+    <entry file="file://$PROJECT_DIR$/ng-app/app/uploadData/uploadData.component.ts" />
+    <entry file="file://$PROJECT_DIR$/ng-app/content/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/ng-app/.gitattributes" />
+    <entry file="file://$PROJECT_DIR$/ng-app/content/css/riliwan-rabo.css" />
+    <entry file="file://$PROJECT_DIR$/ng-app/app/uploadData/uploadData.component.html" />
+    <entry file="file://$PROJECT_DIR$/ng-app/app/trainingData/trainingData.component.ts" />
+    <entry file="file://$PROJECT_DIR$/ng-app/app/trainingData/trainingData.component.html" />
+    <entry file="file://$PROJECT_DIR$/ng-app/app/trainingData/Dataset.ts" />
+    <entry file="file://$PROJECT_DIR$/ng-app/app/trainingData/dataset.js" />
   </component>
 </project>
