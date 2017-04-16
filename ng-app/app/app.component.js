@@ -1,9 +1,3 @@
-/**
- * Created by jakeclose on 3/15/17.
- */
-/**
- * Created by jakeclose on 3/15/17.
- */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -15,19 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AnalysisComponent = (function () {
-    function AnalysisComponent() {
-        this.title = 'Analysis Page';
+var formData_service_1 = require('./data/formData.service');
+var AppComponent = (function () {
+    function AppComponent(formDataService) {
+        this.formDataService = formDataService;
+        this.title = 'BlueML';
     }
-    AnalysisComponent = __decorate([
+    AppComponent.prototype.ngOnInit = function () {
+        this.formData = this.formDataService.getData();
+        console.log(this.title + ' loaded!');
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], AppComponent.prototype, "formData", void 0);
+    AppComponent = __decorate([
         core_1.Component({
-            selector: 'relative-path',
-            templateUrl: './app/pages/page3.component.html',
-            styleUrls: ['./app/pages/css/bootstrap-slider.css']
+            selector: 'blue-ml-app',
+            templateUrl: 'app/app.component.html'
         }), 
-        __metadata('design:paramtypes', [])
-    ], AnalysisComponent);
-    return AnalysisComponent;
+        __metadata('design:paramtypes', [formData_service_1.FormDataService])
+    ], AppComponent);
+    return AppComponent;
 }());
-exports.AnalysisComponent = AnalysisComponent;
-//# sourceMappingURL=AnalysisComponent.component.js.map
+exports.AppComponent = AppComponent;
+//# sourceMappingURL=app.component.js.map

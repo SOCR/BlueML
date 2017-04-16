@@ -5,15 +5,18 @@
 import { Component } from '@angular/core';
 
 @Component({
-    template: '<h1> {{title}} </h1>'
-    /*
-    templateUrl: '',
-    styleUrls:  ['']
-    */
+    selector: 'relative-path',
+    templateUrl: './app/pages/ResultsComponent.component.html'
+
 })
 
 export class ResultsComponent  {
     title = 'Results Page';
+
+    students = ['Jake', 'Tem', 'Syed'];
+
+
+
 
 
 }
