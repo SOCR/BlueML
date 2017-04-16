@@ -3,8 +3,8 @@
  */
 
 
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { FormDataService } from './../app/data/formData.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormDataService } from './data/formData.service';
 
 @Component({
     selector: 'relative-path',
@@ -13,9 +13,17 @@ import { FormDataService } from './../app/data/formData.service';
     providers: [FormDataService]
 })
 
-export class TrainingDataComponent implements OnInit, onDestroy  {
-    ngOnInit(){
 
+
+export class TrainingDataComponent implements OnInit{
+
+    @Input() formData;
+
+    constructor(private formDataService: FormDataService) {
     }
-    
+
+    ngOnInit(){
+        this.formData = this.formDataService.getData();
+    }
+
 }
