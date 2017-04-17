@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"file":"training_data_page.component.js","sourceRoot":"","sources":["training_data_page.component.ts"],"names":[],"mappings":"AAAA;;GAEG;;;;;;;;;;;AAGH,qBAAoD,eAAe,CAAC,CAAA;AACpE,iCAAgC,gCAAgC,CAAC,CAAA;AASjE;IAAA;IAKA,CAAC;IAJG,wCAAQ,GAAR;IAEA,CAAC;IAVL;QAAC,gBAAS,CAAC;YACP,QAAQ,EAAE,eAAe;YACzB,WAAW,EAAE,kCAAkC;YAC/C,SAAS,EAAG,CAAC,sCAAsC,CAAC;YACpD,SAAS,EAAE,CAAC,kCAAe,CAAC;SAC/B,CAAC;;6BAAA;IAOF,4BAAC;AAAD,CAAC,AALD,IAKC;AALY,6BAAqB,wBAKjC,CAAA"}
+=======
+{"version":3,"file":"training_data_page.component.js","sourceRoot":"","sources":["training_data_page.component.ts"],"names":[],"mappings":"AAAA;;GAEG;;;;;;;;AAGH,sCAA0C;AAU1C,IAAa,qBAAqB;IAAlC;IAIA,CAAC;IAAD,4BAAC;AAAD,CAAC,AAJD,IAIC;AAJY,qBAAqB;IARjC,gBAAS,CAAC;QAGP,QAAQ,EAAE,eAAe;QACzB,WAAW,EAAE,kCAAkC;QAC/C,SAAS,EAAG,CAAC,sCAAsC,CAAC;KACvD,CAAC;GAEW,qBAAqB,CAIjC;AAJY,sDAAqB"}
+>>>>>>> 46de5f178e45a82464302273597ab4c9f40c4c17

@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"file":"upload_data_page.component.js","sourceRoot":"","sources":["upload_data_page.component.ts"],"names":[],"mappings":"AAAA;;GAEG;;;;;;;;;;;AAEH,qBAA0B,eAAe,CAAC,CAAA;AAQ1C;IAAA;QACI,UAAK,GAAG,kBAAkB,CAAC;IAyD/B,CAAC;IAhED;QAAC,gBAAS,CAAC;YACP,WAAW,EAAE,kCAAkC;YAC/C,SAAS,EAAG,CAAC,8CAA8C,CAAC;SAE/D,CAAC;;2BAAA;IA4DF,0BAAC;AAAD,CAAC,AA1DD,IA0DC;AA1DY,2BAAmB,sBA0D/B,CAAA"}
+=======
+{"version":3,"file":"upload_data_page.component.js","sourceRoot":"","sources":["upload_data_page.component.ts"],"names":[],"mappings":"AAAA;;GAEG;;;;;;;;AAEH,sCAA0C;AAQ1C,IAAa,mBAAmB;IANhC;QAOI,UAAK,GAAG,kBAAkB,CAAC;IAM/B,CAAC;IAAD,0BAAC;AAAD,CAAC,AAPD,IAOC;AAPY,mBAAmB;IAN/B,gBAAS,CAAC;QACP,WAAW,EAAE,kCAAkC;QAC/C,SAAS,EAAG,CAAC,8CAA8C,CAAC;KAE/D,CAAC;GAEW,mBAAmB,CAO/B;AAPY,kDAAmB"}
+>>>>>>> 46de5f178e45a82464302273597ab4c9f40c4c17

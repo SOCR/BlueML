@@ -1,0 +1,75 @@
+<div class="tab-pane fade in active">
+    <div class="form-horizontal">
+        <h4 class="head text-center">{{title}}</h4>
+        <br/>
+        <div class='row'>
+            <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+                <span class="glyphicon glyphicon-question-sign pull-right" data-toggle="tooltip" title="Algorithm is faster with less accuracy"></span>
+               <br/>
+
+                 <b>  Less Accurate/Faster  </b>
+                 <input id="algorithm_parameters" type="range" name = 'w' min="0" max="10" step="1" #algorithm (change)="changeAlgo(algorithm.value)" />
+                 <b>  More Accurate/Slower  </b>
+
+
+                <h3> selected algorithm {{formData.algorithm}} </h3>
+                 <br/><br/>
+                <!---
+                <div class="dropdown" style="width: 125px;margin:auto">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Advanced Options
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                        <li><a href="#">Option 3</a></li>
+                    </ul>
+                </div>
+            </div>
+            -->
+
+            <!--<div class="checkbox" *ngFor="let dataset of datasets">-->
+            <!--<div class="col-sm-4">-->
+            <!--<label>-->
+            <!--<input type="checkbox" value="{{dataset.id}}" (change)="onSelect(dataset)">-->
+            <!--{{dataset.name}}-->
+
+            <!--</label>-->
+            <!--</div>-->
+
+
+                <button class="btn btn-primary dropdown-toggle" type="button"  (click) = "selectAdvance()"  > Advanced Options </button>
+                <div *ngIf="selected_advanced_options">
+            <div class="form-group">
+                <label for="algorithm">Advanced Selection</label>
+                <select class="form-control" class="btn btn-primary dropdown-toggle"  id="algorithm"
+                        [(ngModel)]="formData.algorithm" name="feature">
+                    <option *ngFor="let algorithm of available_algorithms" [value]="algorithm">{{algorithm}}</option>
+                </select>
+            </div>
+
+                </div>
+
+
+                <h2>Select Features for algorithm</h2>
+            <div class="form-group" id="feature_list">
+
+                    <li *ngFor="let feature of available_features">
+
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="feature" value = {{feature}}   (click) = "selectFeature(feature)"  > {{feature}} </button>
+                    </li>
+
+            </div>
+
+
+
+
+
+        <div class="form-group text-center">
+            <a uiSref="uploadData" class="btn btn-outline-rounded btn-default"> <span style="margin-right:10px;" class="glyphicon glyphicon-arrow-left"></span> Previous</a>
+            <a uiSref="result" class="btn btn-outline-rounded btn-info"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></a>
+        </div>
+    </div>
+</div>
+
+
+

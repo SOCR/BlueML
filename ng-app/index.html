@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <base href="." />
+    <title>BlueML</title>
+    <!-- CSS Files -->
+    <link rel="icon" type="image/png" href="content/images/favicon.ico" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="content/css/riliwan-rabo.css" />
+    <link rel="stylesheet" href="content/css/style.css" />
+    <link rel="stylesheet" href="content/css/loading-bars.css" />
+
+      <!-- js file -->
+
+
+      <!-- IE required polyfills, in this exact order -->
+      <script src="node_modules/chart.js/src/chart.js"></script>
+      <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+    System.import('app')
+      .catch(console.error.bind(console));
+  </script>
+  </head>
+
+  <body>
+    <blue-ml-app>
+      <!-- Show simple splash screen-->
+      <div class="splash">
+          <div class="color-line"></div>
+              <div class="splash-title">
+                  <h1>BlueML test</h1>
+                  <img src="content/images/loading-bars.svg" width="64" height="64" />
+              </div>
+          </div>
+      </div>
+    </blue-ml-app>
+  </body>
+
+</html>

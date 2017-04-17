@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+<<<<<<< HEAD
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
@@ -27,7 +28,20 @@ var TrainingDataComponent = (function () {
         }), 
         __metadata('design:paramtypes', [])
     ], TrainingDataComponent);
+=======
+var core_1 = require("@angular/core");
+var TrainingDataComponent = (function () {
+    function TrainingDataComponent() {
+    }
+>>>>>>> 46de5f178e45a82464302273597ab4c9f40c4c17
     return TrainingDataComponent;
 }());
+TrainingDataComponent = __decorate([
+    core_1.Component({
+        selector: 'relative-path',
+        templateUrl: './app/pages/page1.component.html',
+        styleUrls: ['./app/pages/css/layout.component.css']
+    })
+], TrainingDataComponent);
 exports.TrainingDataComponent = TrainingDataComponent;
 //# sourceMappingURL=training_data_page.component.js.map
