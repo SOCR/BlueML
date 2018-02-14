@@ -5793,3 +5793,10 @@ a.badge:hover {
 .goog-te-gadget-simple {
   width: 156px !important;
 }
+
+#drop_zone {
+  margin: auto;
+  width: 80%;
+  border: 5px solid #00274c;
+  height: 100px;
+}

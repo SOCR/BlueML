@@ -42,6 +42,9 @@
     	<link rel="alternate" type="application/rss+xml" rel="tooltip" title="SOCR News" href="feed.rss">
 
 		<!-- Import JS files -->
+	<!-- Ignite UI Required Combined CSS Files -->
+	<link href="http://cdn-na.infragistics.com/igniteui/2017.2/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+	<link href="http://cdn-na.infragistics.com/igniteui/2017.2/latest/css/structure/infragistics.css" rel="stylesheet" />
 
 
 
@@ -224,6 +227,91 @@
             <div id="Training Data Page" class = "module" >
 				<!-- Training Data Page goes here -->
                 <h1>Select Training Data</h1>
+
+				<div class="file_upload">
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+							<tr>
+								<th>File Number</th>
+								<th>File</th>
+								<th>File Name</th>
+								<th>Delete</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>1</td>
+								<td> <input type='file' name='file'> </td>
+								<td></td>
+								<td>
+									<button type="button" class="btn btn-default btn-sm" onclick="deletetr(this)">
+										<span class="glyphicon glyphicon-minus"></span> Remove
+									</button>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<!-- Upload Info: To Be Added -->
+
+						<!--div id="igUpload"></div>
+						<div class="container-info">
+							<label>
+								Average Speed:
+								<span id="speed">0</span>
+								KB/S
+							</label>
+						</div>
+						<div class="container-info">
+							<label>
+								Uploaded Files:
+								<span id="uploadedFiles">0</span>
+							</label>
+						</div>
+						<div class="container-info">
+							<label>
+								Uploaded:
+								<span id="uploaded">0</span>
+								KB
+							</label>
+						</div>
+						<div class="container-info">
+							<label>
+								To be uploaded:
+								<span id="toUpload">0</span>
+								KB
+							</label>
+						</div>
+						<div class="container-info">
+							<label>
+								Time Elapsed:
+								<span id="timeElapsed">0</span>
+								sec
+							</label>
+						</div>
+						<div class="container-info">
+							<label>
+								Time Left:
+								<span id="timeLeft">0</span>
+								sec
+							</label>
+						</div>
+						<div id="error" class="error-info">
+							You cannot upload files larger than 1 MB
+						</div>
+						<input type="hidden" id="hdnStartTimer" value="false" /-->
+
+						<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled">
+							Add Another File
+						</a>
+
+						<p ><button title="This feature is disabled in the current release" type="button" class="btn btn-default btn-lg" type="submit" id="upload_button" name="Upload_ECG" disabled="disabled">
+							Upload ECG File
+						</button>
+
+					</div>
+				</div>
 			</div>
             <div id="Load Data Page" class = "module">
 				<!-- Load Data Page goes here -->
@@ -273,11 +361,6 @@
 
 					</div>
 				</div>
-
-
-
-
-
 
 			</div>
 			<div id="Analysis Page" class = "module">
