@@ -597,10 +597,24 @@ p {
 }
 
 .lead {
-  margin-bottom: 20px;
+  margin: 5px;
   font-size: 21px;
   font-weight: 200;
   line-height: 30px;
+}
+
+nav {
+  float: left;
+  max-width: 250px;
+  margin: 0;
+  padding: 1em;
+}
+
+article {
+  border-style: double;
+  border-color: #00274c;
+  padding: 0.4em;
+  overflow: hidden;
 }
 
 small {
@@ -803,7 +817,6 @@ abbr.initialism {
 }
 
 blockquote {
-  padding: 0 0 0 15px;
   margin: 0 0 20px;
   border-left: 5px solid #eeeeee;
 }
