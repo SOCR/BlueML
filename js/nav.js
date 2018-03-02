@@ -7,7 +7,12 @@ $(function () {
     $('#Slide').slider({});
 });
 
-
+$("ul li").click(function() {
+    var index = $(this).index();
+    $("li.active").removeClass("active");
+    $(this).attr("class", "active");
+    $('.module').eq(index).show().siblings('.module').hide();
+});
 
 
 
