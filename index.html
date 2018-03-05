@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="BlueML">
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -308,46 +308,12 @@
 							</ul>
 						</div>
 						<h1>Select Features for Classification</h1>
-						<div class="containerCheck">
-							<form>
-								<label class="form-check-inline">
-									<input type="checkbox" value="">QRS Interval</label>
-								<label class="form-check-inline">
-									<input type="checkbox" value="">S Amplitude</label>
-							</form>
+						<div class="containerCheck" ng-controller="FeatureCtrl">
+							<label class="form-check" ng-repeat="(feature,enabled) in features">
+								<input type="checkbox" ng-model="features[feature]" /> {{feature}}
+							</label>
 						</div>
-						<div class="containerCheck">
-							<form>
-								<label class="form-check-inline">
-									<input type="checkbox" value="">PR Interval</label>
-								<label class="form-check-inline">
-									<input type="checkbox" value="">T Amplitude</label>
-							</form>
-						</div>
-						<div class="containerCheck">
-							<form>
-								<label class="form-check-inline">
-									<input type="checkbox" value="">QT Interval</label>
-								<label class="form-check-inline">
-									<input type="checkbox" value="">Q Amplitude</label>
-							</form>
-						</div>
-						<div class="containerCheck">
-							<form>
-								<label class="form-check-inline">
-									<input type="checkbox" value="">T Interval</label>
-								<label class="form-check-inline">
-									<input type="checkbox" value="">P Amplitude</label>
-							</form>
-						</div>
-						<div class="containerCheck">
-							<form>
-								<label class="form-check-inline">
-									<input type="checkbox" value="">P Interval</label>
-								<label class="form-check-inline">
-									<input type="checkbox" value="">R Amplitude</label>
-							</form>
-						</div>
+
 					</div>
 					<div id="Result Page" class="module">
 						<!-- Result Page goes here -->
@@ -396,6 +362,8 @@
 <script src="./js/bootstrap-carousel.js"></script>
 <script src="./js/bootstrap-typeahead.js"></script>
 <script src="./js/bootstrap-slider.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="./js/classificationFeatures.js"></script>
 <!-- <script src="./js/slider.js"></script> -->
 <script src="./js/Load_Data_Page.js"></script>
 <!-- End Import Statements for JS files-->
