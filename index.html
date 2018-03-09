@@ -42,12 +42,18 @@
     	<link rel="alternate" type="application/rss+xml" rel="tooltip" title="SOCR News" href="feed.rss">
 
 		<!-- Import JS files -->
+	<!-- Ignite UI Required Combined CSS Files -->
+	<link href="http://cdn-na.infragistics.com/igniteui/2017.2/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+	<link href="http://cdn-na.infragistics.com/igniteui/2017.2/latest/css/structure/infragistics.css" rel="stylesheet" />
 
 
 
 </head>
 
 <body>
+
+
+
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid"> 
@@ -166,219 +172,270 @@
 	</div>
 
 
-<!-- fluid container for adding sidebar -->
-<div class="row-fluid">
-        <!-- Left Panel -->
-        <div class="span3">
-            <div class="well sidebar-nav">
-                <ul class="nav nav-list">
-                    <li class="nav-header">Get Started</li>
-                    <!-- to make an item highlighted:  <li class="active">  -->
-                    <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_Videos">Videos</a></li>
-                    <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_Help_Pages">Help Pages</a></li>
-                    <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials">Activities</a></li>
-                    <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_Courses">Courses</a></li>
-                    <li class="nav-header">Webapps and Resources</li>
-                    <li><a href="http://socr.umich.edu/Applets/index.html#Tables" title="Probaiblity Distribution Tables">Tables</a></li>
-                    <li><a href="http://socr.umich.edu/HTML5/" title="Modern browser embedded web-applications">New Webapps</a></li>
-                    <li><a href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators" title="High-Precision Distribution Calculators">Precision Calculators</a></li>
-                    <li class="nav-header">Java Applets</li>
-                    <li><a href="http://socr.umich.edu/html/dist/" title="Probability Distribution Calculators">Distributions</a></li>
-                    <li><a href="http://socr.umich.edu/html/exp" title="Virtual Computer Experiments and Simulations">Experiments</a></li>
-                    <li><a href="http://socr.umich.edu/html/ana/">Analyses</a></li>
-                    <li><a href="http://socr.umich.edu/html/mod">Data Modeler</a></li>
-                    <li><a href="http://socr.umich.edu/html/cha">Charts and Graphs</a></li>
-                    <li><a href="http://socr.umich.edu/html/gam">Games</a></li>
-                    <li class="nav-header">Learning Materials</li>
-                    <li><a href="http://wiki.socr.umich.edu/index.php/EBook">EBook</a></li>
-                    <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_Data">Datasets</a></li>
-                    <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials" title="Learning Modules and Hands-on Activities">Activities</a></li>
-                    <li class="nav-header">Contribute to SOCR</li>
-                    <li><a href="http://www.SOCR.umich.edu/html/SOCR_Support.html" title="Consider making donations of any size to support SOCR student stipends and instructors training">Donations</a></li>
-                    <li><a href="http://wiki.socr.umich.edu/index.php/Available_SOCR_Development_Projects">
-                        SOCR Projects</a></li>
-                    <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_News">Events</a></li>
-                    <li><a href="http://forums.stat.ucla.edu/socr">Forum</a></li>
-                    <li><a href="http://www.socr.umich.edu/html/SOCR_Feedback.html">Survey</a></li>
-                </ul>
-            </div>
-            <!--/.well -->
+<div class="container">
+  <div class="header">
+
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1> <img src="./static/images/blueML_logo.png" id = "blue_ml_logo"> </h1>
+            <p class="lead"> a web-based, open source machine learning application designed for wavelet-based analysis of EKG and EEG waveform, intended to diagnose cardiac and neurological disorders.</p>
+
+			<ul class="list-unstyled">
+                <li>Version 1.1</li>
+                <li>by MDP cohort 2017</li>
+            </ul>
         </div>
-        <!-- Header -->
-        <div class="span8">
-            <div class="header">
+    </div>
+    <!-- /.row -->
+  </div>
+<!-- /.container -->
 
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h1> <img src="./static/images/blueML_logo.png" id = "blue_ml_logo"> </h1>
-                        <p class="lead"> a web-based, open source machine learning application designed for wavelet-based analysis of EKG and EEG waveform, intended to diagnose cardiac and neurological disorders.</p>
+<!-- The Progress Bar -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-                        <ul class="list-unstyled">
-                            <li>Version 1.1</li>
-                            <li>by MDP cohort 2017</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /.row -->
-            </div>
+	<div class="container">
+		<h2>You are in Progress: </h2>
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:25%">
+				<span class="sr-only">
+				</span>
+			</div>
+		</div>
+	</div>
+
+
+<!-- Web App Content -->
+
+<div class="app-container">
+	<div class="app-nav-bar">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<ul class="nav nav-pills nav-justified">
+					 <li id = "training_data_page" role="presentation" class="active" class = "app-nav"><a href="#">Select Training Data</a></li>
+					 <li id = "load_data_page" role="presentation" class = "app-nav"><a href="#">Upload Test Data</a></li>
+					  <li id = "analysis_page" role="presentation" class = "app-nav"><a href="#">Analysis</a></li>
+					<li id = "results_page" role="presentation" class = "app-nav"><a href="#">Results</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="app-interface-container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+            <div id="Training Data Page" class = "module" >
+				<!-- Training Data Page goes here -->
+                <h1>Select Training Data</h1>
+
+				<div class="file_upload">
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+							<tr>
+								<th>File Number</th>
+								<th>File</th>
+								<th>File Name</th>
+								<th>Delete</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>1</td>
+								<td> <input type='file' name='file'> </td>
+								<td></td>
+								<td>
+									<button type="button" class="btn btn-default btn-sm" onclick="deletetr(this)">
+										<span class="glyphicon glyphicon-minus"></span> Remove
+									</button>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<!-- Upload Info: To Be Added -->
+
+						<!--div id="igUpload"></div>
+						<div class="container-info">
+							<label>
+								Average Speed:
+								<span id="speed">0</span>
+								KB/S
+							</label>
+						</div>
+						<div class="container-info">
+							<label>
+								Uploaded Files:
+								<span id="uploadedFiles">0</span>
+							</label>
+						</div>
+						<div class="container-info">
+							<label>
+								Uploaded:
+								<span id="uploaded">0</span>
+								KB
+							</label>
+						</div>
+						<div class="container-info">
+							<label>
+								To be uploaded:
+								<span id="toUpload">0</span>
+								KB
+							</label>
+						</div>
+						<div class="container-info">
+							<label>
+								Time Elapsed:
+								<span id="timeElapsed">0</span>
+								sec
+							</label>
+						</div>
+						<div class="container-info">
+							<label>
+								Time Left:
+								<span id="timeLeft">0</span>
+								sec
+							</label>
+						</div>
+						<div id="error" class="error-info">
+							You cannot upload files larger than 1 MB
+						</div>
+						<input type="hidden" id="hdnStartTimer" value="false" /-->
+
+						<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled">
+							Add Another File
+						</a>
+
+						<p ><button title="This feature is disabled in the current release" type="button" class="btn btn-default btn-lg" type="submit" id="upload_button" name="Upload_ECG" disabled="disabled">
+							Upload ECG File
+						</button>
+
+					</div>
+				</div>
+			</div>
+            <div id="Load Data Page" class = "module">
+				<!-- Load Data Page goes here -->
+                <h1>Upload Your Data</h1>
+				<!--
+				<div class = "file_upload">
+					<span class="glyphicon glyphicon-plus" id="add_upload_button" aria-hidden="true"></span>
+					<form action="" method='post' enctype='multipart/form-data'>
+					<p><input type='hidden' name='patient_name' value>
+					<p><input type='file' name='file'>
+						<p><button type='submit' name='Upload_ECG'>Upload ECG File</button>
+					</form>
+				</div>
+
+				-->
+
+				<div class="file_upload">
+					<div class="table-responsive">
+						<table class="table table-bordered" id = "file_upload_table">
+							<thead>
+							<tr>
+								<th>File Number</th>
+								<th>File</th>
+								<th>File Name</th>
+								<th>Delete</th>
+
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>1</td>
+								<td> <input type='file' name='file' id = "file_upload_button"> </td>
+								<td></td>
+								<td>
+									<button type="button" class="btn btn-default btn-sm" id = "delete_file_upload" onclick="deletetr(this)">
+										<span class="glyphicon glyphicon-minus"></span> Remove
+									</button>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						<a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled">
+							 Add Another File
+						</a>
+
+						<p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG'>Upload ECG File</button>
+
+					</div>
+				</div>
+
+			</div>
+			<div id="Analysis Page" class = "module">
+				<!-- Analysis Page goes here -->
+				<h1>Select Algorithm Complexity</h1>
+				<b>  Less Accurate/Faster  </b><input id="Slide"/><b>  More Accurate/Slower  </b>
+				<br/><br/>
+				<div class="dropdown" style="width: 125px;margin:auto">
+					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Advanced Options
+						<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Option 1</a></li>
+						<li><a href="#">Option 2</a></li>
+						<li><a href="#">Option 3</a></li>
+					</ul>
+				</div>
+
+
+				<h1>Select Features for Classification</h1>
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> QRS Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> S Amplitude </label>
+					</form>
+				</div>
+
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> PR Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> T Amplitude </label>
+					</form>
+				</div>
+
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> QT Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> Q Amplitude </label>
+					</form>
+				</div>
+
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> T Interval </label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> P Amplitude </label>
+					</form>
+				</div>
+
+				<div class="containerCheck">
+					<form>
+						<label class="checkbox-inline"><input type="checkbox" value=""> P Interval</label>
+						<label class="checkbox-inline"><input type="checkbox" value=""> R Amplitude </label>
+					</form>
+				</div>
+
+			</div>
+
+
+			<div id="Result Page" class = "module">
+				<!-- Result Page goes here -->
+				<h1>Result</h1>
+			</div>
+
         </div>
-        <!-- The Progress Bar -->
-        <div class="span8">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</div>
 
-            <div class="span12">
-                <h2>You are in Progress: </h2>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:25%">
-            <span class="sr-only">
-            </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Web App Content -->
-        <div class="span8">
-            <div class="app-container">
-                <div class="app-nav-bar">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <ul class="nav nav-pills nav-justified">
-                                <li id = "training_data_page" role="presentation" class="active" class = "app-nav"><a href="#">Select Training Data</a></li>
-                                <li id = "load_data_page" role="presentation" class = "app-nav"><a href="#">Upload Test Data</a></li>
-                                <li id = "analysis_page" role="presentation" class = "app-nav"><a href="#">Analysis</a></li>
-                                <li id = "results_page" role="presentation" class = "app-nav"><a href="#">Results</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+				<button type="button" id="previous_module" class="btn btn-outline-primary">Previous</button>
+				<button type="button" id="next_module" class="btn btn-outline-primary">Next</button>
+
+	</div>
 
 
-                <div class="app-interface-container">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <div id="Training Data Page" class = "module" >
-                                <!-- Training Data Page goes here -->
-                                <h1>Select Training Data</h1>
-                            </div>
-                            <div id="Load Data Page" class = "module">
-                                <!-- Load Data Page goes here -->
-                                <h1>Upload Your Data</h1>
-                                <!--
-                                <div class = "file_upload">
-                                    <span class="glyphicon glyphicon-plus" id="add_upload_button" aria-hidden="true"></span>
-                                    <form action="" method='post' enctype='multipart/form-data'>
-                                    <p><input type='hidden' name='patient_name' value>
-                                    <p><input type='file' name='file'>
-                                        <p><button type='submit' name='Upload_ECG'>Upload ECG File</button>
-                                    </form>
-                                </div>
-                                -->
-
-                                <div class="file_upload">
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered" id = "file_upload_table">
-                                            <thead>
-                                            <tr>
-                                                <th>File Number</th>
-                                                <th>File</th>
-                                                <th>File Name</th>
-                                                <th>Delete</th>
-
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td> <input type='file' name='file' id = "file_upload_button"> </td>
-                                                <td></td>
-                                                <td>
-                                                    <button type="button" class="btn btn-default btn-sm" id = "delete_file_upload" onclick="deletetr(this)">
-                                                        <span class="glyphicon glyphicon-minus"></span> Remove
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                        <a class="btn btn-default btn-lg"  id = "add_another_upload_button" disabled="disabled">
-                                            Add Another File
-                                        </a>
-
-                                        <p ><button type="button" class="btn btn-default btn-lg" type='submit' id="upload_button" name='Upload_ECG'>Upload ECG File</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="Analysis Page" class = "module">
-                                <!-- Analysis Page goes here -->
-                                <h1>Select Algorithm Complexity</h1>
-                                <b>  Less Accurate/Faster  </b><input id="Slide"/><b>  More Accurate/Slower  </b>
-                                <br/><br/>
-                                <div class="dropdown" style="width: 125px;margin:auto">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Advanced Options
-                                        <span class="caret"></span></button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Option 1</a></li>
-                                        <li><a href="#">Option 2</a></li>
-                                        <li><a href="#">Option 3</a></li>
-                                    </ul>
-                                </div>
-
-
-                                <h1>Select Features for Classification</h1>
-                                <div class="containerCheck">
-                                    <form>
-                                        <label class="checkbox-inline"><input type="checkbox" value=""> QRS Interval </label>
-                                        <label class="checkbox-inline"><input type="checkbox" value=""> S Amplitude </label>
-                                    </form>
-                                </div>
-
-                                <div class="containerCheck">
-                                    <form>
-                                        <label class="checkbox-inline"><input type="checkbox" value=""> PR Interval </label>
-                                        <label class="checkbox-inline"><input type="checkbox" value=""> T Amplitude </label>
-                                    </form>
-                                </div>
-
-                                <div class="containerCheck">
-                                    <form>
-                                        <label class="checkbox-inline"><input type="checkbox" value=""> QT Interval </label>
-                                        <label class="checkbox-inline"><input type="checkbox" value=""> Q Amplitude </label>
-                                    </form>
-                                </div>
-
-                                <div class="containerCheck">
-                                    <form>
-                                        <label class="checkbox-inline"><input type="checkbox" value=""> T Interval </label>
-                                        <label class="checkbox-inline"><input type="checkbox" value=""> P Amplitude </label>
-                                    </form>
-                                </div>
-
-                                <div class="containerCheck">
-                                    <form>
-                                        <label class="checkbox-inline"><input type="checkbox" value=""> P Interval</label>
-                                        <label class="checkbox-inline"><input type="checkbox" value=""> R Amplitude </label>
-                                    </form>
-                                </div>
-
-                            </div>
-
-
-                            <div id="Result Page" class = "module">
-                                <!-- Result Page goes here -->
-                                <h1>Result</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" id="previous_module" class="btn btn-outline-primary">Previous</button>
-                    <button type="button" id="next_module" class="btn btn-outline-primary">Next</button>
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
+    </div>
+    <!-- /.row -->
 
 </div>
-<!--/Left Panel-->
-
 <!-- /.container -->
 
 
@@ -393,14 +450,14 @@
 
 
 
-	<footer class="site-footer">
-        <center>
-            <a href="http://www.socr.umich.edu/">SOCR Resource</a>
-            Visitor number <img src="http://counter.digits.net/?counter=SOCR" align="middle" border="0" height="20" hspace="4" vspace="2" width="60">
-            <script type="text/javascript"> var d=new Date();
-            document.write(" | "+d.getFullYear()+" | "); </script>
-            <a href="../img/SOCR_Email.png"><img alt="SOCR Email" title="SOCR Email" src="../img/SOCR_Email.png" style="border: 0px solid ;"></a>
-        </center>
+	<footer class="footer">
+		<center>
+		<a href="http://www.socr.umich.edu/">SOCR Resource</a>
+		Visitor number <img src="http://counter.digits.net/?counter=SOCR" align="middle" border="0" height="20" hspace="4" vspace="2" width="60">
+		<script type="text/javascript"> var d=new Date();
+		document.write(" | "+d.getFullYear()+" | "); </script>
+		<a href="../img/SOCR_Email.png"><img alt="SOCR Email" title="SOCR Email" src="../img/SOCR_Email.png" style="border: 0px solid ;"></a>
+		</center>
 	</footer>
 
      <!-- Import Statements for JS files, add new files at the end -->
@@ -429,3 +486,4 @@
 	<!-- End of GoogleAnalytics Code -->
 </body>
 </html>
+

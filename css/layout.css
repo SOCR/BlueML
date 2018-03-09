@@ -1,14 +1,14 @@
 #next_module{
     position:absolute;
-    bottom:10px;
+    bottom:60px;
     right:0px;
 }
 
 
 #previous_module{
     position:absolute;
-    bottom:10px;
-    left:25%;
+    bottom:60px;
+    left:0px;
 }
 
 .app-nav a{
@@ -29,4 +29,16 @@
     height: 60px;
     background-color: #f5f5f5;
 
+}
+
+.text-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.centered {
+    font-family: sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align:center;
 }

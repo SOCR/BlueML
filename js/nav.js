@@ -62,6 +62,7 @@ function  remove_or_show_nav_buttons() {
     else{
         $("#previous_module").show()
     }
+
     //load data page
     if($("li.active").attr('id') == "load_data_page"){
         //if data uploaded
