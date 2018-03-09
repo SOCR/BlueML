@@ -62,7 +62,28 @@ function  remove_or_show_nav_buttons() {
     else{
         $("#previous_module").show()
     }
-    if(! $("li.active").next('li')[0] ) {
+
+    //load data page
+    if($("li.active").attr('id') == "load_data_page"){
+        //if data uploaded
+        if($('input[type="file"]').val() !== ''){
+            $("#next_module").show();
+        }
+        else{
+            $("#next_module").hide();
+        }
+    }
+    /*//if analysis page
+    else if($("li.active").attr('id') == "analysis_page"){
+        if($()){
+            $("#next_module").hide();
+        }
+        else{
+            $("#next_module").show();
+        }
+    }*/
+    //if nothing next
+    else if(! $("li.active").next('li')[0] ) {
         $("#next_module").hide();
     }
     else{
