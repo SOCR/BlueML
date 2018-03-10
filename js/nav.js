@@ -1,3 +1,4 @@
+
 $(function () {
 
     $('.module').eq(0).show().siblings('.module').hide();
@@ -49,7 +50,16 @@ function  remove_or_show_nav_buttons() {
     else{
         $("#previous_module").show();
     }
-    if(! $("li.table-active").next('li')[0] ) {
+    if($("li.table-active").attr('id') == "load_data_page"){
+        //if data uploaded
+        if($('input[type="file"]').val() !== ''){
+            $("#next_module").show();
+        }
+        else{
+            $("#next_module").hide();
+        }
+    }
+    else if(! $("li.table-active").next('li')[0] ) {
         $("#next_module").hide();
     }
     else{
@@ -58,3 +68,4 @@ function  remove_or_show_nav_buttons() {
 
 
 }
+
