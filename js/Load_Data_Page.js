@@ -19,7 +19,7 @@ $(function () {
         $(".file_upload tr :nth-child(3)").text(fileName);
         $(".file_upload tr *:nth-child(4)").show();
 
-
+        remove_or_show_nav_buttons()
         $('#add_another_upload_button').attr("disabled", false);
 
 

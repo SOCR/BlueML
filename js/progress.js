@@ -21,12 +21,12 @@ $(function() {
 
     function update_progress_bar() {
 
-        var index_here = $("li.active").index();
+        var index_here = $("li.table-active").index();
         var new_progress = "" + (index_here + 1) * 25 + "%";
         console.log(new_progress);
 
         $("#current_progress").html = index_here;
-        $('.progress-bar').attr('aria-valuenow', new_progress).css('width',new_progress)
+        $('.progress-bar').attr('aria-valuenow', new_progress).css('width',new_progress);
 
     }
 
