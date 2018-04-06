@@ -13,6 +13,12 @@ $(function () {
 
     $('input[type="file"]').change(function(e){
         var fileName = e.target.files[0].name;
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          var rawData = reader.result; //rawData holds binary information
+        }
+
+        reader.readAsBinaryString(e.target.files[0]);
 
       //  alert('The file "' + fileName +  '" has been selected.');
         $(".file_upload tr *:nth-child(3)").show();
@@ -31,10 +37,6 @@ $(function () {
 
 
 });
-
-
-
-
 
 
 function add_upload_row() {
