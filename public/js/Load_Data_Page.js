@@ -51,10 +51,10 @@ function add_upload_row() {
 }
 
 function deletetr(obj) {
-    if ($('#file_upload_table tr').length > 2) {
+    if ($('#file_upload_table tr').length > 2) { // If more than one row, remove it
         $(obj).parents("tr").remove();
     }
-    else if ($('#file_upload_table tr').length == 2){
+    else if ($('#file_upload_table tr').length == 2){ // If only one row left, clean it
         $(obj).parents("tr").remove();
         add_upload_row();
     }
