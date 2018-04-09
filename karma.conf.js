@@ -8,8 +8,11 @@ module.exports = function(config) {
       basePath: '',
 
 
-      // frameworks to use: Jasmine
-      // Jasmine is a testing framework
+      // frameworks to use: Jasmine, a testing framework
+      // Manually running Jasmine tetss by freshing a browser tab in different browsers is tiresome, 
+      // so we use Karma to let us spawn brosers and run Jasmine tests inside of them all from the 
+      // CLI. The results of the tests are also shown on the CLI.
+    
       // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
       frameworks: ['jasmine'],
 
