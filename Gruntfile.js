@@ -8,13 +8,15 @@ module.exports = function(grunt) {
             }
         },
         mochaTest: {
-            //src: watchFiles.mochaTests,
+            //
+            //src: watchFiles.mochaTests
             options: {
                 reporter: 'spec',
                 require: 'test/test_mocha.js'
             }
         },
         karma: {
+            // Karma is a JavaScript test runner
             unit: {
                 configFile: 'karma.conf.js'
             }
