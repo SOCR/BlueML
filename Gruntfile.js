@@ -8,7 +8,7 @@ module.exports = function(grunt) {
             }
         },
         mochaTest: {
-            //
+            // Mocha is a Node.js testing frameworks
             //src: watchFiles.mochaTests
             options: {
                 reporter: 'spec',
