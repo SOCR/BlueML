@@ -8,12 +8,12 @@ module.exports = function(grunt) {
             }
         },
         mochaTest: {
-            //
             //src: watchFiles.mochaTests
             options: {
+                globals: ['expect'],
                 reporter: 'spec',
-                require: 'test/test_mocha.js'
-            }
+            },
+            all: ['test/test_mocha.js']
         },
         karma: {
             // Karma is a JavaScript test runner
