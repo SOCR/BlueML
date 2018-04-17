@@ -70,15 +70,6 @@
       $.support.transition && this.$element[dimension](this.$element[0][scroll])
     }
 
-  , hide: function () {
-      var dimension
-      if (this.transitioning) return
-      dimension = this.dimension()
-      this.reset(this.$element[dimension]())
-      this.transition('removeClass', $.Event('hide'), 'hidden')
-      this.$element[dimension](0)
-    }
-
   , reset: function (size) {
       var dimension = this.dimension()
 
@@ -112,11 +103,6 @@
         this.$element.one($.support.transition.end, complete) :
         complete()
     }
-
-  , toggle: function () {
-      this[this.$element.hasClass('in') ? 'hide' : 'show']()
-    }
-
   }
 
 
