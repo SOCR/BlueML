@@ -41,5 +41,8 @@
     "karma-firefox-launcher": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-safari-launcher": "^1.0.0"
+    "mongoose": "*",
+    "mongoskin": "*",
+    "jquery": "*"
   }
 }
