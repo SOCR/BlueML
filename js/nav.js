@@ -1,3 +1,4 @@
+var nextCount = 0;
 
 $(function () {
 
@@ -18,12 +19,21 @@ $("#next_module").click(function () {
     var index = $next_module_tab.index();
     $('.module').eq(index).show().siblings('.module').hide();
 
-
+    update_progress_bar();
     remove_or_show_nav_buttons();
 
-
+    nextCount += 1;
+    $("nextCount").innerHTML = nextCount;
 });
 
+$("#next_module").mouseover(function() {
+    if ($('#file_upload_button').val() == '') {
+	if(nextCount == 1) {
+		this.style.cursor='not-allowed';
+		this.disabled="true";
+	}
+    }
+});
 
 
 $("#previous_module").click(function () {
@@ -34,8 +44,32 @@ $("#previous_module").click(function () {
     var index = $prev_module.index();
     $('.module').eq(index).show().siblings('.module').hide();
 
-
+    update_progress_bar();
     remove_or_show_nav_buttons();
+
+});
+
+$("#add_another_upload_button").click(function () {
+        if( $('input[type="file"]').val() !== '') {
+            add_upload_row();
+        }
+        console.log("no upload")
+});
+// check_for_select_file();
+
+
+$('input[type="file"]').change(function(e){
+     var fileName = e.target.files[0].name;
+
+      //  alert('The file "' + fileName +  '" has been selected.');
+      $(".file_upload tr *:nth-child(3)").show();
+      $(".file_upload tr :nth-child(3)").text(fileName);
+      $(".file_upload tr *:nth-child(4)").show();
+
+      remove_or_show_nav_buttons()
+      $('#add_another_upload_button').attr("disabled", false);
+
+      $('next_module').attr("disabled", false);
 
 });
 
@@ -65,7 +99,17 @@ function  remove_or_show_nav_buttons() {
     else{
         $("#next_module").show();
     }
+}
 
+function update_progress_bar() {
+
+    var index_here = $("li.table-active").index();
+    var new_progress = "" + (index_here + 1) * 25 + "%";
+    console.log(new_progress);
+
+    $("#current_progress").html = index_here;
+    $('.progress-bar').attr('aria-valuenow', new_progress).css('width',new_progress);
 
 }
+
 
