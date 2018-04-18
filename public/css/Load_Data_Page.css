@@ -9,17 +9,15 @@
 
 #add_another_upload_button {
     position: fixed;
-    left: 100px;
-    bottom: 10%;
+    left: 50px;
     background-color: #00274c;
-    color: #ffcb05;
+    color: #ffcb05
 }
 
 
 #upload_button{
     position: fixed;
-    right: 100px;
-    bottom: 10%;
+    right:50px;
     background-color: #00274c;
-    color: #ffcb05;
+    color: #ffcb05
 }
