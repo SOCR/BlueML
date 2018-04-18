@@ -7,7 +7,12 @@ router.get('/new', function(req, res) {
 
 /* GET home page. */
 router.get('/', function(req, res) {
+  //res.status(200);
   res.render('index', { title: 'SOCR Analytics Dashboard', mode:'location' });
+});
+
+router.get('/heartbeat', function(req, res) {
+    res.status(200);
 });
 
 
