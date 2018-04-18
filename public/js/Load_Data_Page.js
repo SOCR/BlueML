@@ -54,7 +54,19 @@ function deletetr(obj) {
     $(obj).parents("tr").remove();
 }
 
+function get_training_data() {
+    var request = new XMLHttpRequest();
+    var url = "https://~/rest/training/Datasets";
 
+    request.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            var response = JSON.parse(this.responseText);
+            display_traing_data(response);
+        }
+    }
+    request.open("GET", url, true);
+    request.send();
+}
 
 
 

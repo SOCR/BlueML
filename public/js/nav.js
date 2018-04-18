@@ -38,8 +38,18 @@ $("#previous_module").click(function () {
     remove_or_show_nav_buttons();
 
 });
-
-
+/*
+$('input[type=checkbox]').change(function () {
+    console.log("wtf  " + $("input[type=checkbox]:checked").length);
+    if(!$("input[type=checkbox]:checked").length) {
+        $("#next_module").hide();
+    }
+    else {
+        $("#next_module").show();
+    }
+    }
+);
+*/
 //Checks to see if at beginning or end of modules, if so, hides the appropriate buttons.
 function  remove_or_show_nav_buttons() {
 
@@ -52,11 +62,23 @@ function  remove_or_show_nav_buttons() {
     }
     if($("li.table-active").attr('id') == "load_data_page"){
         //if data uploaded
+        console.log("wtf0")
         if($('input[type="file"]').val() !== ''){
             $("#next_module").show();
         }
         else{
             $("#next_module").hide();
+        }
+    }
+
+    else if($("li.table-active").attr('id') == "analysis_page"){
+        console.log("wtf  " + $("input[type=checkbox]:checked").length);
+        $("input[type=checkbox]").removeAttr('checked');
+        if(!$("input[type=checkbox]:checked").length) {
+            $("#next_module").hide();
+        }
+        else{
+            $("#next_module").show();
         }
     }
     else if(! $("li.table-active").next('li')[0] ) {
