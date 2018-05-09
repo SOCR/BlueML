@@ -1,7 +1,7 @@
 #next_module{
     position:absolute;
     bottom:3.75rem;
-    right:0rem;
+    left: 53%;
 
 }
 
@@ -9,7 +9,7 @@
 #previous_module{
     position:absolute;
     bottom:3.75rem;
-    left:0rem;
+    right: 47%;
 }
 
 .app-nav a{
