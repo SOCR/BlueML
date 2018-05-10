@@ -31,6 +31,8 @@ app.use(function(req, res, next){
 	req.db=db;
 	next();
 })
+
+//basic routing table
 app.use('/', routes);
 app.use('/users', users);
 app.use('/api', api);
