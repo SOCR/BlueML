@@ -4,7 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongo=require('mongoskin')
+var mongo=require('mongoskin');
+var mongoose = require('mongoose');
 var db=mongo.db("mongodb://localhost:27017/variables", {native_parser:true});
 
 var routes = require('./routes/index');
@@ -22,6 +23,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+mongoose.Promise = require('bluebird');
+mongoose.connect('mongodb://localhost:27017/variables');
 
 app.use(function(req, res, next){
 	req.db=db;
