@@ -18,6 +18,7 @@ $("#next_module").click(function () {
     var index = $next_module_tab.index();
     $('.module').eq(index).show().siblings('.module').hide();
 
+    update_progress_bar();
 
     remove_or_show_nav_buttons();
 
@@ -34,6 +35,7 @@ $("#previous_module").click(function () {
     var index = $prev_module.index();
     $('.module').eq(index).show().siblings('.module').hide();
 
+    update_progress_bar();
 
     remove_or_show_nav_buttons();
 
@@ -65,7 +67,17 @@ function  remove_or_show_nav_buttons() {
     else{
         $("#next_module").show();
     }
+}
 
+function update_progress_bar() {
+
+        var index_here = $("li.table-active").index();
+        var new_progress = "" + (index_here + 1) * 25 + "%";
+        console.log(new_progress);
+
+        $("#current_progress").html = index_here;
+        $('.progress-bar').attr('aria-valuenow', new_progress).css('width',new_progress);
 
 }
+
 
