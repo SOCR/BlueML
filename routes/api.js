@@ -30,6 +30,8 @@ router.get('/features', function(req,res){
 	}
 });
 
-
+router.post('/features', function(req, res){
+    res.send(200);
+});
 
 module.exports = router;
