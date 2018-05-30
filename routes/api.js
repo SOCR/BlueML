@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Feature = require('../public/js/features.js');
+var Feature = require('../public/js/featureListSchema.js');
 
 
 router.get('/request', function(req, res){
