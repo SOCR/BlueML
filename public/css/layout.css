@@ -38,3 +38,12 @@
     background-color: #f5f5f5;
 
 }
+
+#available-data-options {
+    background-color: #00274c; /* Green background */
+    border: 1px solid white; /* white border */
+    color: #ffcb05; /* Yellow text */
+    padding: 0px 50px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    display: block; /* Make the buttons appear below each other */
+}
