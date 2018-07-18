@@ -7,7 +7,7 @@ function httpGet(siteUrl) {
     http.get(siteUrl, function(response) {
 
         // var bodyString = '';
-    
+
         response.setEncoding('utf8');
 
         // response.on("data", function(chunk) {
