@@ -88,4 +88,11 @@ gulp.task('connect', function() {
 	})
 });
 
+gulp.task('ETL', function() {
+	exec('node public/js/ETL.js', function (err, stdout, stderr) {
+		console.log(stdout);
+	});
+});
+
 gulp.task('default', ['nodestart', 'styles', 'scripts', 'images', 'watch', 'webserver', 'connect']);
+gulp.task('startup',['ETL']);
