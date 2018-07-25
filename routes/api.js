@@ -67,7 +67,7 @@ router.get('/training/datasets', function(req, res){
 router.post('/upload', function(req,res) {
     var request = req.query;
     var tList = [];
-    for (var lis in request) {
+    for (var lis in request.list) {
         tList.append({name: lis.name, data: lis.data});
     }
     TrainingList.create({
