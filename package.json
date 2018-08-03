@@ -32,10 +32,12 @@
     "mongoose": "*",
     "mongoskin": "*",
     "morgan": "~1.0.0",
+    "papaparse": "^4.6.0",
     "protractor": "^5.3.2",
     "pug": "^2.0.3",
     "serve-favicon": "*",
-    "static-favicon": "~1.0.0"
+    "static-favicon": "~1.0.0",
+    "papaparse": "^4.6.0"
   },
   "devDependencies": {
     "grunt": "^0.4.1",
