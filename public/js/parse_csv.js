@@ -21,19 +21,5 @@ function upload(evt) {
 };
 
 //function parse_csv_server(path) {
-//        var data = null;
-//	var file = evt.target.files[0];
-//	var reader = new FileReader();
-//	reader.readAsText(file);
-//	reader.onload = function(event) {
-//		var csvData = event.target.result;
-//		
-//		data = Papa.parse(csvData, {header : true});
-//		
-//		console.log(data);
-//		
-//	};
-//	reader.onerror = function() {
-//		alert('Unable to read ' + file.fileName);
-//	};
+//  var data_set = Papa.parse(path, {header : true});
 //};
