@@ -89,7 +89,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('ETL', function() {
-	exec('node public/js/ETL.js', function (err, stdout, stderr) {
+	exec('node ETL.js', function (err, stdout, stderr) {
 		console.log(stdout);
 	});
 });
