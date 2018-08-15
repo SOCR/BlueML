@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 // var multer = require('multer');
 var FeatureList = require('../public/js/featureListSchema.js');
-var TrainingList = require('../public/js/trainingListSchema.js');
+var TrainingSet = require('../public/js/trainingListSchema.js');
 
 router.get('/request', function(req, res){
  	process.on('uncaughtException', function (err) {
@@ -13,43 +13,61 @@ router.get('/request', function(req, res){
 });
 
 router.get('/features', function(req,res){
-	console.log('get features');
+	console.log('get features list');
 
 	var request = req.query;
-	for(var ftr in request) {
-		FeatureList.findOne({feature: request[ftr]}, function(feat, err) {
-			if(err) {
-				res.send(err);
-			} else {
-				if(!feat) {
-					res.send("feature " + ftr + " does not exist");
-				} else {
-					res.json(feat);
-				}
-			}
-		});
-	}
+
+	FeatureList.findOne({name: request[0]}, function(err, result) {
+		if (err) { res.send(err); }
+		else {
+			if (!result) res.send("List " + request[0] + "does not exist");
+			else res.json(result);
+		}
+	});
+
+	//this is what I had when I thought this grabbed individual features from a list whoops
+	// for(var ftr in request) {
+	// 	FeatureList.findOne({feature: request[ftr]}, function(feat, err) {
+	// 		if(err) {
+	// 			res.send(err);
+	// 		} else {
+	// 			if(!feat) {
+	// 				res.send("feature " + ftr + " does not exist");
+	// 			} else {
+	// 				res.json(feat);
+	// 			}
+	// 		}
+	// 	});
+	// }
 });
 
 router.post('/features', function(req, res){
-	//post feature(s) in req to list in DB
-	var request = req.query;
-	var fList = [];
-	for (var ftr in request) {
-		fList.append({name: ftr.name, minValue: ftr.min, maxValue: ftr.max});
-	}
 	FeatureList.create({
-		list: fList
-	}).then(featList =>{
-		res.json(featList)
+		name: req.body.name,
+		data: req.body.data
+	}).then(result =>{
+		res.json(result)
 	});
+
+	//this was back when i thought we posted individual features
+	// //post feature(s) in req to list in DB
+	// var request = req.query;
+	// var fList = [];
+	// for (var ftr in request) {
+	// 	fList.append({name: ftr.name, minValue: ftr.min, maxValue: ftr.max});
+	// }
+	// FeatureList.create({
+	// 	list: fList
+	// }).then(featList =>{
+	// 	res.json(featList)
+	// });
 });
 
 router.get('/training/datasets', function(req, res){
 	var request = req.query;
 	var tList = [];
 	for (var lis in request) {
-        TrainingList.findOne({trainingSet: lis}, function (set, err) {
+        TrainingSet.findOne({name: lis}, function (set, err) {
             if (err) {
                 res.send(err);
             } else {
@@ -65,12 +83,11 @@ router.get('/training/datasets', function(req, res){
 });
 
 router.post('/upload', function(req,res) {
-    var request = req.query;
     var tList = [];
-    for (var lis in request.list) {
+    for (var lis in req.body.list) {
         tList.append({name: lis.name, data: lis.data});
     }
-    TrainingList.create({
+    TrainingSet.create({
         list: tList
     }).then(trainList =>{
         res.json(trainList)
