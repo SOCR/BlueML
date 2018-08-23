@@ -54,6 +54,7 @@ describe('API Network Layer', function(){
             let fl = {name: 'empty', data: {}};
             var dbAdd = sinon.fake.returns({name: 'empty', data: {}});
             sinon.replace(FeatureList, 'add', dbAdd);
+            stub.returns({name: 'empty', data: {}});
             chai.request(server).post('/features').send(fl).end(function(err, res) {
                 res.should.have.status(200);
                 res.body.should.be.a('object');
@@ -66,39 +67,50 @@ describe('API Network Layer', function(){
 
     describe('training data', function() {
        it('should get a training dataset', function() {
+           var dbGet = sinon.fake.returns({name: 'test', data: {}});
+           sinon.replace(TrainingSet, 'get', dbGet);
            chai.request(server).get('/training/datasets').end(function(err, res) {
                res.should.have.status(200);
                res.body.should.be.a('object');
-               res.should.have.property('list');
+               res.body.should.have.property('name');
+               res.body.should.have.property('data');
                done();
            });
        });
 
        it('should post a training dataset', function() {
-           let td = {};
-           chai.request(server).post('/upload').send()
+           let td = {name: 'empty', data: {}};
+           var dbAdd = sinon.fake.returns({name: 'empty', data: {}});
+           sinon.replace(TrainingSet, 'add', dbAdd);
+           chai.request(server).post('/upload').send(td).end(function(err, res) {
+               res.should.have.status(200);
+               res.body.should.be.a('object');
+               res.body.should.have.property('name').eql('empty');
+               res.body.should.have.property('data').eql({});
+               done();
+           });
        });
     });
 });
 
 
-describe('Database Layer (MongoDB)', function() {
-   describe('features list getter', function() {
-
-   });
-
-   describe('features list add', function() {
-
-   });
-
-   describe('training set get', function() {
-
-   });
-
-   describe('training set add', function() {
-
-   });
-});
+// describe('Database Layer (MongoDB)', function() {
+//    describe('features list getter', function() {
+//
+//    });
+//
+//    describe('features list add', function() {
+//
+//    });
+//
+//    describe('training set get', function() {
+//
+//    });
+//
+//    describe('training set add', function() {
+//
+//    });
+// });
 
 
 // network layer (API)

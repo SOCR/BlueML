@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 // TODO: set trainingSchema.data to location of dataset with trainingSchema.name
 const trainingSchema = new Schema({name: String, data: Object});
 
-function get(list) {
+trainingSchema.statics.get = function(list) {
     trainingSchema.findOne({name: list}, function(err, result) {
         if (err) { throw err; }
         else {
@@ -15,7 +15,7 @@ function get(list) {
     });
 }
 
-function add(name, data) {
+trainingSchema.statics.add = function(name, data) {
     trainingSchema.create({
         name: name,
         data: data
@@ -24,6 +24,6 @@ function add(name, data) {
     });
 }
 
-const trainingSet = mongoose.model('Set', trainingSchema);
+const trainingSet = mongoose.model('TrainingSet', trainingSchema);
 
 module.exports = trainingSet;

@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 //const featureListSchema  = new Schema({list: [{name: String, minValue: Number, maxValue: Number}]});
 const featureListSchema  = new Schema({name: String, data: Object});
 
-function get(name) {
+featureListSchema.statics.get = function(name) {
     featureListSchema.findOne({name: name}, function(err, result) {
         if (err) { throw err; }
         else {
@@ -16,7 +16,7 @@ function get(name) {
     });
 }
 
-function add(name, data) {
+featureListSchema.statics.add = function(name, data) {
     featureListSchema.create({
         name: name,
         data: data
@@ -26,6 +26,6 @@ function add(name, data) {
 }
 
 
-const FeatureList = mongoose.model('Feature', featureListSchema);
+const FeatureList = mongoose.model('FeatureList', featureListSchema);
 
 module.exports = FeatureList;
