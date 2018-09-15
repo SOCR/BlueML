@@ -263,6 +263,27 @@ html(lang='en', ng-app='BlueML')
               .module(id='Training Data Page')
                 // Training Data Page goes here
                 h1 Select Training Data
+                div.btn-group-vertical#available-data(ng-controller='adCntrl')
+                  button#available-data-options.btn-group(type='button' ng-repeat='x in dataset') {{x}} dataset
+                 // button#available-data-options.btn-group(type='button' ng-repeat='x in datasetSelected') {{x}}
+                //div(ng-app='availData' ng-controller='adCntrl')
+                  //input(type='radio', name='ad', ng-model='selectSet', value='mit') 
+                  //|&nbsp;MIT <br>
+                  //input(type='radio', name='ad', ng-model='selectSet', value='stan') 
+                  //|&nbsp;Stanford <br>
+                  //input(type='radio', name='ad', ng-model='selectSet', value='physbank') 
+                  //|&nbsp;Physiobank <br>
+                //div(ng-switch='selectSet')
+                  //div(ng-switch-when='mit')
+                  //div(ng-switch-when='stan')
+                  //div(ng-switch-when='physbank')
+                //.switch(ng-switch='selectSet')
+                  //.switch(ng-switch-when='mit')
+                    //h1 hi
+                  //.switch(ng-switch-when='stan')
+                    //h1 hi
+                  //.switch(ng-switch-when='physbank')
+                    //h1 hi
               .module(id='Load Data Page')
                 // Load Data Page goes here
                 h1 Upload Your Data
@@ -353,14 +374,17 @@ html(lang='en', ng-app='BlueML')
     script(src='./js/bootstrap-typeahead.js')
     script(src='./js/bootstrap-slider.js')
     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js')
-    script(src='./js/classificationFeatures.js')
+    script(src='./js/featureCtrl.js')
     // <script src="./js/slider.js"></script>
     script(src='./js/Load_Data_Page.js')
     script(src='./js/parser.js')
+    script(src='./js/datalist.js')
     // End Import Statements for JS files
     // GoogleAnalytics
     script(src='http://www.google-analytics.com/urchin.js', type='text/javascript')
     script(type='text/javascript').
       _uacct = "UA-676559-1"; urchinTracker();
+    script(src='./js/parse_csv.js')
+    script(src='./js/papaparse.min.js')
     // End of GoogleAnalytics Code
 

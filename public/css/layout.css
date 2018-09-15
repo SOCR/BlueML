@@ -1,7 +1,7 @@
 #next_module{
     position:absolute;
     bottom:3.75rem;
-    right:0rem;
+    left: 53%;
 
 }
 
@@ -9,7 +9,7 @@
 #previous_module{
     position:absolute;
     bottom:3.75rem;
-    left:0rem;
+    right: 47%;
 }
 
 .app-nav a{
@@ -37,4 +37,13 @@
     height: 3.75rem;
     background-color: #f5f5f5;
 
+}
+
+#available-data-options {
+    background-color: #00274c; /* Green background */
+    border: 1px solid white; /* white border */
+    color: #ffcb05; /* Yellow text */
+    padding: 0px 50px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    display: block; /* Make the buttons appear below each other */
 }
