@@ -1,4 +1,4 @@
-/**
+ /**
  * Created by jakeclose on 2/14/17.
  * Edited by thematthewchen in March 2018
  */
@@ -13,6 +13,7 @@ $(function () {
 
 
     $('input[type="file"]').change(function(e){
+	$('next_module').disabled = false;
         var fileName = e.target.files[0].name;
         var reader = new FileReader();
         reader.onload = function(e) {

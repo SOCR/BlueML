@@ -352,6 +352,10 @@
 				this.step*100/this.diff
 			];
 			this.layout();
+		},
+
+		formatter: function(val) {
+			return 'Current value: ' + this.value;
 		}
 	};
 
