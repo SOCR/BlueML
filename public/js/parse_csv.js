@@ -20,6 +20,3 @@ function upload(evt) {
 
 };
 
-//function parse_csv_server(path) {
-//  var data_set = Papa.parse(path, {header : true});
-//};
