@@ -1,4 +1,5 @@
 var fs = require('fs');
+var Papa = require('papaparse');
 
 const BinaryFile = require('binary-file');
 
@@ -47,5 +48,8 @@ function accessChunk(loc,len, bf) {
 //
 // }
 
+function parse_csv_server(path) {
+    var data_set = Papa.parse(path, {header : true});
+};
 
 
