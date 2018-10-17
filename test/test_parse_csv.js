@@ -26,12 +26,12 @@ describe('Test file upload', function() {
 
     // Pick out some rows in the sample.csv to check equality.
     assert.equal(result[0], ['fips', 'Mal', 'Femal', 'Income_Per_Capita_New']);
-    assert.equal(result[1], [1000, 4833722, 4817528, 4779758]);
-    assert.equal(result[2], [1001, 55246, 55265, 54571]);
-    assert.equal(result[10], [1001, 1, 55265, 54571]);
-    assert.equal(result[25], [1022, 55246, 55265, 54571]);
-    assert.equal(result[222], [1221, 55246, 55265, 54571]);
-    assert.equal(result[223], [1222, 55246, 55265, 54571]);
+    assert.equal(result[1], ["1000", "4833722", "4817528", "4779758"]);
+    assert.equal(result[2], ["1001", "55246", "55265", "54571"]);
+    assert.equal(result[10], ["1001", "1", "55265", "54571"]);
+    assert.equal(result[25], ["1022", "55246", "55265", "54571"]);
+    assert.equal(result[222], ["1221", "55246", "55265", "54571"]);
+    assert.equal(result[223], ["1222", "55246", "55265", "54571"]);
   });
 });
 
@@ -75,7 +75,7 @@ describe('Basic Test', function() {
     assert.equal(result[1], ['1-1', '1-2', '1-3', '1-4']);
     assert.equal(result[2], ['2-1', '2-2', '2-3', '2-4']);
     assert.equal(result[3], ['3-1', '3-2', '3-3', '3-4']);
-    assert.equal(result[4], [4,5,6,7]);
+    assert.equal(result[4], ['4', '5', '6', '7']);
   });
 });
 
