@@ -64,6 +64,8 @@ Modify the correct input path, output path and output node name in config.json
 "output_node_names":"MobilenetV1/Predictions/Reshape_1"
 ```
 
+If any of the input data is not in the correct format, please see the matlab folder to convert the input to wav format, and the python program will further convert it into csv format. Later, we will unify the input version to csv format.
+
 Build a feature vector from the raw data and train the CNN
 ```
 >> python deepheart/train_model.py <path_to_physionet_data> <do load previously saved data>
