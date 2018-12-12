@@ -1,0 +1,5 @@
+load sample.mat
+
+filename = 'sample.wav';
+audiowrite(filename,y,Fs);
+clear y Fs

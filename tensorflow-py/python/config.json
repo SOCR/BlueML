@@ -1,0 +1,9 @@
+{
+	"config":{
+		"output":{
+			"saved_model_dir":"/mnt/d/tensorflow-backend/saved-model/",
+			"output_dir":"/mnt/d/tensorflow-backend/tfjs-model/",
+			"output_node_names":"cost/cost/Reshape"
+		}
+	}
+}
