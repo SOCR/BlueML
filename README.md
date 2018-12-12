@@ -10,9 +10,23 @@ BlueML
 
 3. navigate to selected address in browser to launch webapp (default is [http://localhost:8080/](http://localhost:8080/))
 
-BlueML Offline Training
+BlueML Offline Training (Javascript)
 ===========================
- See tensorflow-py file. This is the backend asynchronous Tensorflow application for BlueML. The project is based on DeepHeart (https://github.com/jisaacso/DeepHeart) in predicting
+ See tensorflow-js folder. This is the backend asynchronous Tensorflow JS application for BlueML. Currently, It intakes raw csv data and pass them to a rather shallow CNN model.
+
+Install Tensorflow JS for Node.js
+```
+>> npm install @tensorflow/tfjs-node
+```
+
+Train a model and save the model in the current direcory with the name "my-model-1"
+```
+>> node script.js
+```
+
+BlueML Offline Training (Python)
+===========================
+ See tensorflow-py folder. This is the backend asynchronous Tensorflow application for BlueML. The project is based on DeepHeart (https://github.com/jisaacso/DeepHeart) in predicting
  cardiac abnormalities from phonocardiogram (PCG) data. It is difficult to predict patient health from PCG data 
  because of noise from several sources: talking, breathing, intestinal 
  sounds, etc.
@@ -51,10 +65,15 @@ Download the physionet dataset
 
 ```
 
-Download Tensorflow and Tensorflow JS
+Install Tensorflow and Tensorflow JS for Python
 ```
 >> apt-get install tensorflow
 >> apt-get install tensorflowjs
+```
+
+Install Tensorflow JS for Node.js
+```
+>> npm install @tensorflow/tfjs-node
 ```
 
 Modify the correct input path, output path and output node name in config.json
