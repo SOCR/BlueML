@@ -1,4 +1,9 @@
 
+function parse(data) {
+	var result = Papa.parse(data, {header: false});
+	return result;
+}
+
 document.getElementById('file_upload_button').addEventListener('change', upload);
 function upload(evt) {
         console.log("uploading")
@@ -9,14 +14,16 @@ function upload(evt) {
 	reader.onload = function(event) {
 		var csvData = event.target.result;
 		
-		data = Papa.parse(csvData, {header : true});
+		data = parse(csvData);
 		
 		console.log(data);
 		
+		return data;
 	};
 	reader.onerror = function() {
 		alert('Unable to read ' + file.fileName);
 	};
 
 };
+
 
