@@ -1,0 +1,547 @@
+<html lang="en" ng-app="BlueML">
+<head></head>
+<body style="background-color:#f4f4f4">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/> -->
+<meta charset="utf-8"/>
+<title>BlueML</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Statistics Online Computational Resource"/>
+<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu"/>
+<meta name="keywords" content="Statistics Online Computational Resources"/>
+<meta name="google-translate-customization" content="234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e"/>
+<link rel="icon" type="image/png" href="./static/images/favicon.png"/>
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/css/bootstrap-slider.css" rel="stylesheet"/> -->
+<!-- Import Statements for CSS files-->
+<link href="./css/bootstrap.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="./css/stylesheet.css" media="screen"/>
+<style>
+    /* Center the loader */
+    #loader {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        z-index: 1;
+        width: 50px;
+        height: 50px;
+        margin: -75px 0 0 -75px;
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 50px;
+        height: 50px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    /* Add animation to "page content" */
+    .animate-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s
+    }
+    @-webkit-keyframes animatebottom {
+        from { bottom:-100px; opacity:0 }
+        to { bottom:0px; opacity:1 }
+    }
+    @keyframes animatebottom {
+        from{ bottom:-100px; opacity:0 }
+        to{ bottom:0; opacity:1 }
+    }
+    #myDiv {
+        display: none;
+        text-align: center;
+    }
+</style>
+<style type="text/css">
+     body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+</style>
+<style type="text/css">
+    iframe.goog-te-banner-frame {
+        display: none !important;
+    }
+</style>
+<style type="text/css">
+    body {
+        position: static !important;
+        top: 0px !important;
+    }
+</style>
+<link href="./css/bootstrap-responsive.css" rel="stylesheet"/>
+<link href="css/bootstrap.css" rel="stylesheet" media="screen"/>
+<link href="css/bootstrap-slider.css" rel="stylesheet" media="screen"/>
+<link href="css/layout.css" rel="stylesheet" media="screen"/>
+<link href="css/Load_Data_Page.css" rel="stylesheet" media="screen"/>
+<link rel="shortcut icon" href="../img/SOCR_Web_Icon.ico"/>
+<link rel="alternate" type="application/rss+xml" title="SOCR News" href="feed.rss"/>
+<div ng-controller="resultsController">
+<div id="loader" style="display:none"></div>
+<nav class="navbar fixed-top navbar-dark bg-primary"><a class="navbar-brand" href="#" style="color:#FFF">BlueML</a></nav>  <br/>  <br/>  <br/>
+<div class="container" id="welcome">
+    <div class="col-md-8" style="background-color:#fff;border-radius:25px;padding:20px"><br/><br/>
+        <h1><b>BlueML</b></h1>
+        <p>v2.0<br/></p>
+        <h2>a web-based, open source, machine learning application designed for wavelet-based analysis of  EEG waveform data, intended to diagnose cardiac and neurological disorders.</h2>      <br/>
+        <hr/>      <a href="http://socr.umich.edu"><img src="http://www.socr.umich.edu/img/SOCR_3D_Logo_UM.png" style="height:100px"/></a>      <a href="https://umich.edu"><img src="http://vpcomm.umich.edu/assets/brand/home/logo.png" style="height:105px"/></a>      <br/>
+        <hr/><br/>
+        <button class="btn btn-primary" type="button" onclick="step1()">Enter</button>      <br/>      <br/>
+    </div>
+</div>
+<div class="container" id="main">
+    <div class="col-md-8" id="progressbar" style="background-color:#fff;border-radius:5px;padding:20px">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" id="prog" style="width:40%"></div>
+        </div>
+    </div>    <br/>
+    <div class="col-md-8" id="step1" style="background-color:#fff;border-radius:25px;padding:20px">
+        <h1><b>Select Training Data</b></h1><br/>
+        <h2>
+            choose the baseline
+            dataset you wish to classify your dataset against.
+        </h2><br/>
+        <p>EEG Datasets</p>
+        <button class="btn btn-outline-info" id="TUHbutton" type="button" onclick="TUHclicked()">TUH<sup>[1]</sup></button>
+        <button class="btn btn-outline-info" id="CBHbutton" type="button" onclick="CBHclicked()">CBH-MIT Scalp<sup>[2]</sup></button>
+        <button class="btn btn-info" id="ESRbutton" type="button" onclick="ESRclicked()">Epileptic Seizure Recognition<sup>[3]</sup></button>
+        <p>or:</p>
+        <button class="btn btn-outline-info" id="ownTrainButton" type="button" onclick="ownTrainingReveal()">Choose &amp; Upload Your Own Training Data</button>
+ 
+        <div id="uploadOwnTrain" style="display:none">
+            <form method="POST" action="#" enctype="multipart/form-data">
+                <!-- COMPONENT START-->
+                <div class="form-group">
+                    <div class="input-group input-file" name="Fichier1"><span class="input-group-btn">
+                  <button class="btn btn-default btn-choose" type="button">Choose</button></span>&#x9;&#x9;
+                        <input class="form-control" type="text" placeholder="Choose a file..."/>&#x9;&#x9;              <span class="input-group-btn">
+                  <button class="btn btn-warning btn-reset" type="button">Reset</button></span>
+                    </div>&#x9;&#x9;          <br/>&#x9;&#x9;
+                    <button class="btn btn-success" type="button" ng-click="uploadOwnTrainFile()">Submit</button>
+                </div>
+            </form>
+        </div> 
+        <br/><br/><br/>
+        <button class="btn btn-dark" type="button" onclick="showWelcome()">Previous</button>
+        <button class="btn btn-primary" id="step2Button" type="button" onclick="step2()">Next</button>        <br/><br/>
+        <hr/>
+
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" id="referencesButton" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="showReferences()">References</button>
+                    </h5>
+                </div>        &#x9;&#x9;
+                <div class="collapse hidden" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>[1] https://www.isip.piconepress.com/projects/tuh_eeg/</p>&#x9;&#x9;&#x9;&#x9;
+                        <p>[2] Ali Shoeb. Application of Machine Learning to Epileptic Seizure Onset Detection and Treatment. PhD Thesis, Massachusetts Institute of Technology, September 2009.</p>&#x9;&#x9;&#x9;&#x9;
+                        <p>[3] Andrzejak RG, Lehnertz K, Rieke C, Mormann F, David P, Elger CE (2001) Indications of nonlinear deterministic and finite dimensional structures in time series of brain electrical activity: Dependence on recording region and brain state, Phys. Rev. E, 64, 061907</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8" id="step2" style="background-color:#fff;border-radius:25px;padding:20px">
+        <h1><b>Upload Evaluation Data</b></h1><br/>
+        <h2>upload the data you wish to evaluate for classification and further analysis.</h2><br/>
+
+            <!-- COMPONENT START-->
+
+           <!--//<input class="btn btn-secondary" id="f" type="file" name="f" accept=".csv,.edf"/></span>          <br/>-->
+ <!--                <form action='file/upload' method='post' encType="multipart/form-data">
+                    <input type="file" name="file" accept=".csv,.edf" />
+                    <input type='submit' value='Upload!'  />
+                </form> -->
+
+         <div id="uploadOwnTest">
+            <form method="POST" action="#" enctype="multipart/form-data">
+                <!-- COMPONENT START-->
+                <div class="form-group">
+                    <div class="input-group input-file2" name="Fichier1"><span class="input-group-btn">
+                  <button class="btn btn-default btn-choose" type="button">Choose</button></span>&#x9;&#x9;
+                        <input class="form-control" type="text" placeholder="Choose a file..."/>&#x9;&#x9;              <span class="input-group-btn">
+                  <button class="btn btn-warning btn-reset" type="button">Reset</button></span>
+                    </div>&#x9;&#x9;          <br/>&#x9;&#x9;
+                    <button class="btn btn-success" type="button" ng-click="uploadOwnTestFile()">Submit</button>
+                </div>
+            </form>
+        </div>                
+
+
+                <!--
+                <input class="btn btn-dark" type="button" value="Check Format" onclick="check()"/> -->
+                <input class="btn btn-warning" type="button" value="Reset" onclick="resetA();reset()"/>
+        <button class="btn btn-dark" type="button" onclick="step1()">Previous</button>
+        <button class="btn btn-primary" id="evaluationNext" type="button" onclick="myFunction()">Next</button>      <br/><br/>
+        <hr/>
+        <p>*Multiple file upload functionality coming in the near future.</p>
+    </div>
+    <div class="col-md-8" id="step3" style="background-color:#fff;border-radius:25px;padding:20px">
+        <h1><b>Analysis: Choose Model</b></h1><br/>
+        <h2>choose the model you wish to classify your data with:</h2><br/>
+        <div style="background-color:#ededed;border-radius:25px;padding:20px">
+            <p>Algorithm Complexity: </p>
+            <input id="ex8" data-slider-id="ex1Slider" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" disabled=""/><br/><br/>
+            <input type="checkbox" checked="" data-toggle="toggle" data-width="100" data-offstyle="warning" disabled=""/>
+        </div>      <br/><br/><br/><br/>
+        <button class="btn btn-dark" type="button" onclick="step2()">Previous</button>
+        <button class="btn btn-primary" id="next_ge" type="button" onclick="step4()">Next</button>      <br/><br/>
+        <hr/>
+        <p>*More features coming soon.</p>
+    </div>
+    <div class="col-md-8" id="step4" style="background-color:#fff;border-radius:25px;padding:20px">
+        <h1><b>Results</b></h1><br>
+        <h5>Your {{res.filename}} data file has been successfully processed by our {{res.model}} model trained on the {{res.dataset}} dataset. The current classification accuracy of our EEG model, per 10-fold binary cross-validation conducted by the BlueML team on the entire {{res.dataset}} dataset, is {{res.accuracy}}.</h5><br>
+        <div ng-if="diagnosis() == true">
+            <h4>The evaluation data you have provided has been indicates, per our trained model, a tendency towards <strong>{{res.disease}}</strong>.</h4><br>
+            <h5>Typical patients of this disorder have following symptons:</h5>
+            <ul>
+                <li ng-repeat="x in res.symptoms">{{x}}</li>
+            </ul>
+            <h5>Suggested treatments include:</h5>
+            <ul>
+                <li ng-repeat="y in res.treatments">{{y}}</li>
+            </ul>
+        </div>
+        <div ng-if="diagnosis() == false">
+            <h4>Congratulations, <strong>our model does not detect any neurological diseases</strong>!</h4><br>
+        </div>
+        <br><br><br><br>
+
+        <button class="btn btn-dark" type="button" onclick="step3()">Previous</button>      <br/><br/>
+        <hr/>
+        <p>*Visualization integration coming soon.</p>
+    </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/bootstrap-slider.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+    window.onload = document.getElementById("main").style.display = "none";
+    window.onload = document.getElementById("step2").style.display = "none";
+    function showWelcome() {
+        document.getElementById("welcome").style.display = "block";
+        document.getElementById("main").style.display = "none";
+    }
+    function step1() {
+        document.getElementById("welcome").style.display = "none";
+        document.getElementById("main").style.display = "block";
+        document.getElementById("step1").style.display = "block";
+        document.getElementById("step2").style.display = "none";
+        document.getElementById("step3").style.display = "none";
+        document.getElementById("step4").style.display = "none";
+        document.getElementById("prog").style.width = "25%"
+    }
+    function step2() {
+        document.getElementById("welcome").style.display = "none";
+        document.getElementById("step1").style.display = "none";
+        document.getElementById("step2").style.display = "block";
+        document.getElementById("step3").style.display = "none";
+        document.getElementById("step4").style.display = "none";
+        document.getElementById("prog").style.width = "50%"
+    }
+    function step3() {
+        closepage();
+        // 获取文件后缀
+        // var f = document.getElementById("f").files;
+        // if (f[0] != null) {
+        //     var suffixname = f[0].name.substr(f[0].name.lastIndexOf(".")).toLowerCase();
+        //     if(suffixname !== ".csv")
+        //     {
+        //         // 文件后缀名
+        //         alert("Sorry, your file is not in CSV format! Please upload another file.");
+        //     }
+        //     else if(f[0].name !== "eeg1.csv" && f[0].name !== "eeg2.csv"){
+        //         alert("Sorry, your file is not in EEG dataset! Please upload another file.");
+        //     }
+        //     else {
+                document.getElementById("welcome").style.display = "none";
+                document.getElementById("step1").style.display = "none";
+                document.getElementById("step2").style.display = "none";
+                document.getElementById("step3").style.display = "block";
+                document.getElementById("step4").style.display = "none";
+                document.getElementById("prog").style.width = "75%"
+            // }
+        // } else {
+            // alert("Sorry, you have to upload a testing file in order to proceed to the next step.")
+        // }
+    }
+    function step4() {
+        document.getElementById("welcome").style.display = "none";
+        document.getElementById("step1").style.display = "none";
+        document.getElementById("step2").style.display = "none";
+        document.getElementById("step3").style.display = "none";
+        document.getElementById("step4").style.display = "block";
+        document.getElementById("prog").style.width = "100%"
+        // results();
+    }
+    function TUHclicked() {
+        document.getElementById("TUHbutton").className = "btn btn-info";
+        document.getElementById("CBHbutton").className = "btn btn-outline-info";
+        document.getElementById("ESRbutton").className = "btn btn-outline-info";
+        document.getElementById("uploadOwnTrain").style.display = "none";
+        document.getElementById("ownTrainButton").className = "btn btn-outline-info"
+        document.getElementById("step2Button").disabled = false;
+    }
+
+    function CBHclicked() {
+        document.getElementById("TUHbutton").className = "btn btn-outline-info";
+        document.getElementById("CBHbutton").className = "btn btn-info";
+        document.getElementById("ESRbutton").className = "btn btn-outline-info";
+        document.getElementById("uploadOwnTrain").style.display = "none";
+        document.getElementById("ownTrainButton").className = "btn btn-outline-info"
+        document.getElementById("step2Button").disabled = false;
+    }
+    function ESRclicked() {
+        document.getElementById("TUHbutton").className = "btn btn-outline-info";
+        document.getElementById("CBHbutton").className = "btn btn-outline-info";
+        document.getElementById("ESRbutton").className = "btn btn-info";
+        document.getElementById("uploadOwnTrain").style.display = "none";
+        document.getElementById("ownTrainButton").className = "btn btn-outline-info"
+        document.getElementById("step2Button").disabled = false;
+    }
+    function ownTrainingReveal() {
+        if (document.getElementById("uploadOwnTrain").style.display == "none") {
+            document.getElementById("ownTrainButton").className = "btn btn-info"
+            document.getElementById("TUHbutton").className = "btn btn-outline-info";
+            document.getElementById("CBHbutton").className = "btn btn-outline-info";
+            document.getElementById("ESRbutton").className = "btn btn-outline-info";
+            document.getElementById("uploadOwnTrain").style.display = "block";
+            document.getElementById("step2Button").disabled = true
+        } else {
+            document.getElementById("uploadOwnTrain").style.display = "none";
+            document.getElementById("ESRbutton").className = "btn btn-info";
+            document.getElementById("ownTrainButton").className = "btn btn-outline-info"
+            document.getElementById("step2Button").disabled = false;
+        }
+    }
+    function bs_input_file() {
+        $(".input-file").before(
+            function() {
+                if ( ! $(this).prev().hasClass('input-ghost') ) {
+                    var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0' id='train-input'>");
+                    element.attr("name",$(this).attr("name"));
+                    element.change(function(){
+                        element.next(element).find('input').val((element.val()).split('\\').pop());
+                    });
+                    $(this).find("button.btn-choose").click(function(){
+                        element.click();
+                    });
+                    $(this).find("button.btn-reset").click(function(){
+                        element.val(null);
+                        $(this).parents(".input-file").find('input').val('');
+                    });
+                    // $(this).find('input').css("cursor","pointer");
+                    $(this).find('input').mousedown(function() {
+                        $(this).parents('.input-file').prev().click();
+                        return false;
+                    });
+                    return element;
+                }
+            }
+        );
+        $(".input-file2").before(
+            function() {
+                if ( ! $(this).prev().hasClass('input-ghost') ) {
+                    var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0' id='test-input'>");
+                    element.attr("name",$(this).attr("name"));
+                    element.change(function(){
+                        element.next(element).find('input').val((element.val()).split('\\').pop());
+                    });
+                    $(this).find("button.btn-choose").click(function(){
+                        element.click();
+                    });
+                    $(this).find("button.btn-reset").click(function(){
+                        element.val(null);
+                        $(this).parents(".input-file2").find('input').val('');
+                    });
+                    // $(this).find('input').css("cursor","pointer");
+                    $(this).find('input').mousedown(function() {
+                        $(this).parents('.input-file2').prev().click();
+                        return false;
+                    });
+                    return element;
+                }
+            }
+        );
+    }
+    $(function() {
+        bs_input_file();
+    });
+    var slider = new Slider("#ex8", {
+        tooltip: 'always'
+    });
+</script>
+<script>
+    function showReferences() {
+        if (document.getElementById("collapseOne").className == "collapse hidden") {
+            document.getElementById("collapseOne").className = "collapse show";
+        } else {
+            document.getElementById("collapseOne").className = "collapse hidden";
+        }
+    }
+    function resetA() {
+        document.getElementById("evaluationNext").disabled = true;
+        document.getElementById("f").disabled = false;
+    }
+    function rnd(min,max){
+        return Math.floor(Math.random()*(max-min+1)+min );
+    }
+    var myVar;
+    function myFunction() {
+        // console.log("myFunction executed");
+        showPage();
+        setTimeout(step3, rnd(3000, 5000));
+        // console.log("myFunction ended");
+    }
+    function showPage() {
+        document.getElementById("loader").style.display = "block";
+    }
+    function closepage(){
+        document.getElementById("loader").style.display = "none";
+    }
+</script>
+<script type="text/javascript">
+    function check() {
+        // 获取文件
+        var f = document.getElementById("f").files;
+        if (f[0] == null) {
+            alert("You haven't uploaded a file yet. Please do so above to check whether or not the format is compatible!")
+        } else {
+            // 获取文件后缀
+            var suffixname = f[0].name.substr(f[0].name.lastIndexOf(".")).toLowerCase();
+            if(suffixname !== ".csv")
+            {
+                // 文件后缀名
+                alert("Sorry, your file is not in CSV format! Please upload another file.");
+            }
+            else if(f[0].name !== "eeg1.csv" && f[0].name !== "eeg2.csv"){
+                alert("Sorry, your file is not in EEG dataset! Please upload another file.");
+            } else {
+                alert("File compatible!");
+                document.getElementById("evaluationNext").disabled = false;
+                document.getElementById("f").disabled = true;
+            }
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    var app = angular.module("BlueML", []);
+    // app.factory('Holder', function() {
+    //   return {
+    //     filename: "",
+    //     disease: "",
+    //     model: "",
+    //     dataset: "",
+    //     accuracy: "",
+    //     symptoms: [],
+    //     treatments: [],
+    //     status_code: 0
+    //   };
+    // });
+
+    app.controller("resultsController", function($scope, $http){
+        $scope.uploadOwnTestFile = function(){
+            var trainFile = document.getElementById("test-input").files[0];
+            if (trainFile == null){
+                alert("Please specify training data path");
+                return;
+            }
+            var formData = new FormData();
+            formData.append('file', trainFile);
+            $http.post("http://localhost:3000/rest/results", formData).then(function (res) {
+                console.log(res);
+                $scope.res = res.data;
+                $scope.disease = res.data.disease;
+                // $scope.Holder = Holder;
+                // $scope.filename = res.data.filename;
+                // $scope.disease = res.data.disease;
+                // $scope.model = res.data.model;
+                // $scope.dataset = res.data.dataset;
+                // $scope.accuracy = res.data.accuracy;
+                // $scope.symptoms = res.data.symptoms;
+                // $scope.treatments = res.data.treatments;
+                // $scope.status_code = res.data.status_code;
+                // console.log($scope.Holder)
+                // $scope.res = res;
+                // $scope.disease = res.disease;
+                // $scope.diagnosis = function () {
+                //     if ($scope.disease == "") return false;
+                //     return true;
+                // }
+                $scope.diagnosis = function () {
+                    // console.log($scope.disease);
+                    if ($scope.disease == "none") return false;
+                    return true;
+                }
+            });
+        };
+    });
+
+    app.controller("uploadTrainController", function($scope, $http){
+        $scope.uploadOwnTrainFile = function(){
+            var trainFile = document.getElementById("train-input").files[0];
+            if (trainFile == null){
+                alert("Please specify training data path");
+                return;
+            }
+            var formData = new FormData();
+            formData.append('file', trainFile);
+            $http.post("http://localhost:8080/rest/training/datasets/upload", formData)
+                .then(
+                    function (data){
+                        console.log("Upload successfully!");
+                    },
+                    function(data){
+                        console.log("Upload failed!");
+                    });
+        };
+    });
+
+
+    // app.controller("resultsController", function($scope, $http, Holder) {
+    //     // $scope.res = {filename: "eeg.csv",
+    //     //               disease: "epileptic seizure",
+    //     //               model: "Neural Network Model",
+    //     //               dataset: "Seizure Recognition Dataset",
+    //     //               accuracy: "99%",
+    //     //               symptoms:  ["Uncontrollable jerking movements of the arms and legs", "Loss of consciousness or awareness", "Psychic symptoms such as fear, anxiety or deja vu"],
+    //     //               treatments: ["Anti-epileptic drugs", "Vagus nerve stimulator", "Brain surgery"],
+    //     //               status_code: 200};
+
+    //     $scope.res = Holder;
+
+    //     $scope.diagnosis = function () {
+    //       if (Holder.disease == "") return false;
+    //       return true;
+    //     }
+
+    //     // $http.get('http://localhost:8080/rest/results').success(function (res) {
+    //     //     $scope.res = res;
+    //     //     $scope.disease = res.disease;
+    //     //     $scope.diagnosis = function () {
+    //     //         if ($scope.disease == "") return false;
+    //     //         return true;
+    //     //     }
+    //     // });
+
+    // });
+</script>
+</body>
+</html>

@@ -1,7 +1,9 @@
-doctype html
 html(lang='en', ng-app='BlueML')
-  head
+head
+body(style='background-color:#f4f4f4')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(http-equiv='content-type', content='text/html; charset=UTF-8')
+    |  --&gt;
     meta(charset='utf-8')
     title BlueML
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
@@ -10,8 +12,58 @@ html(lang='en', ng-app='BlueML')
     meta(name='keywords', content='Statistics Online Computational Resources')
     meta(name='google-translate-customization', content='234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e')
     link(rel='icon', type='image/png', href='./static/images/favicon.png')
+    link(href='https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css', rel='stylesheet')
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/css/bootstrap-slider.css', rel='stylesheet')
+    |  --&gt;
     // Import Statements for CSS files
     link(href='./css/bootstrap.css', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='./css/stylesheet.css', media='screen')
+    style.
+      /* Center the loader */
+      #loader {
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      margin: -75px 0 0 -75px;
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 50px;
+      height: 50px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+      }
+      @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+      }
+      @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+      }
+      /* Add animation to "page content" */
+      .animate-bottom {
+      position: relative;
+      -webkit-animation-name: animatebottom;
+      -webkit-animation-duration: 1s;
+      animation-name: animatebottom;
+      animation-duration: 1s
+      }
+      @-webkit-keyframes animatebottom {
+      from { bottom:-100px; opacity:0 }
+      to { bottom:0px; opacity:1 }
+      }
+      @keyframes animatebottom {
+      from{ bottom:-100px; opacity:0 }
+      to{ bottom:0; opacity:1 }
+      }
+      #myDiv {
+      display: none;
+      text-align: center;
+      }
     style(type='text/css').
       body {
       padding-top: 60px;
@@ -24,367 +76,572 @@ html(lang='en', ng-app='BlueML')
     style(type='text/css').
       body {
       position: static !important;
-      top:0px !important;
+      top: 0px !important;
       }
     link(href='./css/bootstrap-responsive.css', rel='stylesheet')
-    link(href='css/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href='css/bootstrap.css', rel='stylesheet', media='screen')
     link(href='css/bootstrap-slider.css', rel='stylesheet', media='screen')
     link(href='css/layout.css', rel='stylesheet', media='screen')
     link(href='css/Load_Data_Page.css', rel='stylesheet', media='screen')
-    // Le HTML5 shim, for IE6-8 support of HTML5 elements
-    //if lt IE 9
     link(rel='shortcut icon', href='../img/SOCR_Web_Icon.ico')
     link(rel='alternate', type='application/rss+xml', title='SOCR News', href='feed.rss')
-    // Import JS files
-  body
-    .navbar.navbar-dark.bg-dark.fixed-top.navbar-expand-md
-      .navbar-inner
-        a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
-          // - &#x2630;
-          // - <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-        a.brand(href='../index.html', rel='tooltip', title='Statistics Online Computational Resource') SOCR
-        .nav-collapse.collapse
-          p.navbar-text.float-right
-            a.btn.icon.rss(href='feed.rss')
-              i.icon-bullhorn
-              | RSS
-          ul.nav
-            // - changed <li> tags to match new list specifications
-            // <li class="active"><a href="#">Home</a></li>
-            li.dropdown.nav-item
-              a#drop5.dropdown-toggle.nav-link(role='button', data-toggle='dropdown', href='#', rel='tooltip', title='Learn about the SOCR Resource')
-                | About
-                b.caret
-              ul#menu3.dropdown-menu(role='menu', aria-labelledby='drop5')
-                li.dropdown-item
-                  a(tabindex='-1', href='SOCR_About.html') About SOCR
-                li.dropdown-item
-                  a(tabindex='-1', href='http://wiki.socr.umich.edu/index.php/SOCR_News') News and Events
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/people') SOCR Team
-                li.dropdown-item
-                  a(tabindex='-1', href='http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html') Geo-Map
-                li.dropdown-item
-                  a(tabindex='-1', href='SOCR_Contact.html') Contact
-                li.dropdown-item
-                  a(tabindex='-1', href='http://wiki.socr.umich.edu/index.php/SOCR_News') News/Events
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/html/SOCR_Publications.html') Publications
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/html/SOCR_Recognitions.html') Recognitions
-                li.dropdown-item
-                  a(tabindex='-1', href='http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf') Brochure
-                li.divider.dropdown-item
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/html/SOCR_Funding.html') Funding
-                li.dropdown-item
-                  a(tabindex='-1', href='http://SOCR.umich.edu/html/SOCR_Support.html') Donations
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/html/SOCR_Acknowledgments.html') Acknowledgments
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/html/SOCR_CitingLicense.html') Citing/Licences
-                li.divider.dropdown-item
-                li.dropdown-item
-                  a(tabindex='-1', href='http://wiki.socr.umich.edu/') SOCR Wiki
-                li.dropdown-item
-                  a(tabindex='-1', href='http://wiki.socr.umich.edu/index.php/SOCR_Servers') SOCR Servers
-                li.dropdown-item
-                  a(tabindex='-1', href='http://www.socr.umich.edu/docs/SOCR_Documentation.html') Documentation
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/html/SOCR_Download.html') Download
-                li.dropdown-item
-                  a(tabindex='-1', href='http://www.socr.umich.edu/html/SOCR_Languages.html') Language Translation
-                li.divider.dropdown-item
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/html/Navigators.html', rel='tooltip', title='SOCR Resource Graphical Navigator')
-                    | SOCR Resource Navigator
-            li.nav-item
-              a.nav-link(href='SOCR_Contact.html', rel='tooltip', title='Contact the SOCR Resource') Contact
-            li.dropdown.nav-item
-              a#drop5.dropdown-toggle.nav-link(role='button', data-toggle='dropdown', href='#', rel='tooltip', title='Use these tools if your browser is Java/JVM 1.6+ enabled!')
-                | Java Applets
-                b.caret
-              ul#menu3.dropdown-menu(role='menu', aria-labelledby='drop5')
-                li.dropdown-item
-                  a(tabindex='-1', href='#', rel='tooltip', title='Use these tools if your browser is Java/JVM 1.6+ enabled!') Java 1.6 Applets
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/html/dist/') Distributions
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/html/exp') Experiments
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/html/mod') Modeler
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/html/ana') Analyses
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/html/cha') Charts
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/html/gam') Games
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.ucla.edu/webstart/index.html') Web-Start
-                li.divider.dropdown-item
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.ucla.edu/legacy/htmls/', rel='tooltip', title='For older Java/JVM 1.5 enabled Browsers Use the links below!') Legacy Java 1.5 Applets
-            li.dropdown.nav-item
-              a#drop5.dropdown-toggle.nav-link(role='button', data-toggle='dropdown', href='#', rel='tooltip', title='A collection of portable modern HTML5 Webapps')
-                | Webapps
-                b.caret
-              ul#menu3.dropdown-menu(role='menu', aria-labelledby='drop5')
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/HTML5/MotionChart/') Motion Charts
-                li.dropdown-item
-                  a(tabindex='-1', href='http://www.distributome.org/V3') Distributome Navigator
-                li.dropdown-item
-                  a(tabindex='-1', href='http://www.distributome.org/tools.html') Distributome Webapps
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/HTML5/BivariateNormal/') Bivariate Normal Distribution Calculator
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/HTML5/charts/ViolinChart/') Violin Chart
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/HTML5/Resampling_Webapp/') Randomization and Resampling Webapp
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/Applets/index.html#Tables') Probability Tables
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/HTML5/') Other SOCR HTML5 Webapps
-            li.dropdown.nav-item
-              a#drop5.dropdown-toggle.nav-link(role='button', data-toggle='dropdown', href='#', rel='tooltip', title='Additional SOCR Resources')
-                | More
-                b.caret
-              ul#menu3.dropdown-menu(role='menu', aria-labelledby='drop5')
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators') High-Precision Calculators
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/Applets/index.html#Tables') Probability Tables
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools') Function and Image-Processing Applets
-                li.dropdown-item
-                  a(tabindex='-1', href='http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets') Other Java Applets
-            li.nav-item
-              a.nav-link(href='http://nursing.umich.edu', rel='tooltip', title='University of Michigan School of Nursing') UMSN
-            li.nav-item
-              #google_translate_element.nav-collapse.collapse
-              script(type='text/javascript').
-                function googleTranslateElementInit() {
-                new google.translate.TranslateElement({pageLanguage: 'en',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false,
-                gaTrack: true, gaId: 'UA-676559-1'}, 'google_translate_element');
-                }
-              script(type='text/javascript', src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit')
-        // /.nav-collapse
-    .container
-      .header
-        .row
-          .col-xl-12.text-center
-            h1
-              img#blue_ml_logo(src='./static/images/blueML_logo.png')
-            p.lead
-              | a web-based, open source machine learning application designed for wavelet-based
-              | analysis of EKG and EEG waveform, intended to diagnose cardiac and neurological
-              | disorders.
-            ul.list-unstyled
-              li Version 1.1
-              li by MDP cohort 2017
-        // /.row
-      .span3
-          ul.nav.nav-pills.flex-column
-            li.nav-item
-              a.nav-link.active(href='#')
-                | Get Started 
-                span.sr-only (current)
-            li.nav-item
-              a.nav-link(href='http://wiki.socr.umich.edu/index.php/SOCR_Videos') Videos
-            li.nav-item
-              a.nav-link(href='http://wiki.socr.umich.edu/index.php/SOCR_Help_Pages') Help Pages
-            li.nav-item
-              a.nav-link(href='http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials') Activities
-          ul.nav.nav-pills.flex-column
-            li.nav-item
-              a.nav-link(href='http://wiki.socr.umich.edu/index.php/SOCR_Courses') Courses
-            li.nav-item
-              a.nav-link(href='http://socr.umich.edu/Applets/index.html#Tables') Probability Distribution Tables
-            li.nav-item
-              a.nav-link(href='http://socr.umich.edu/HTML5/') New Webapps
-            li.nav-item
-              a.nav-link(href='http://socr.umich.edu/html/dist/') Distributions
-          ul.nav.nav-pills.flex-column
-            li.nav-item
-              a.nav-link(href='http://socr.umich.edu/html/exp') Experiments
-            li.nav-item
-              a.nav-link(href='http://socr.umich.edu/html/ana/') Analyses
-            li.nav-item
-              a.nav-link(href='http://socr.umich.edu/html/mod') Data Modeler
-            li.nav-item
-              a.nav-link(href='http://socr.umich.edu/html/cha') Charts and Graphs
-            li.nav-item
-              a.nav-link(href='http://socr.umich.edu/html/gam') Games
-            li.nav-item
-              a.nav-link(href='http://wiki.socr.umich.edu/index.php/EBook') EBook
-            li.nav-item
-              a.nav-link(href='http://wiki.socr.umich.edu/index.php/SOCR_Data') Datasets
-            li.nav-item
-              a.nav-link(href='http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials') Activities
-            li.nav-item
-              a.nav-link(href='http://www.SOCR.umich.edu/html/SOCR_Support.html') Donations
-            li.nav-item
-              a.nav-link(href='http://wiki.socr.umich.edu/index.php/Available_SOCR_Development_Projects') SOCR Projects
-            li.nav-item
-              a.nav-link(href='http://wiki.socr.umich.edu/index.php/SOCR_News') Events
-            li.nav-item
-              a.nav-link(href='http://forums.stat.ucla.edu/socr') Forum
-            li.nav-item
-              a.nav-link(href='http://www.socr.umich.edu/html/SOCR_Feedback.html') Survey
-
-      // /.container
-      // The Progress Bar
-      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
-      .container
-        h2 You are in Progress: 
-        .progress
-          .progress-bar.progress-bar-striped.table-active(role='progressbar', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100', style='width:25%')
-            span.sr-only
+    div(ng-controller='resultsController')
+      #loader(style='display:none')
+      nav.navbar.fixed-top.navbar-dark.bg-primary
+        a.navbar-brand(href='#', style='color:#FFF') BlueML
+      |   
       br
-      // Web App Content
-      .app-container
-        .app-nav-bar
-          .row
-            .col-xl-12.text-center
-              ul.nav.nav-pills.nav-justified
-                li#training_data_page.table-active.nav-item(role='presentation')
-                  a.nav-link(href='#') Select Training Data
-                li#load_data_page.app-nav.nav-item(role='presentation')
-                  a.nav-link(href='#') Upload Test Data
-                li#analysis_page.app-nav.nav-item(role='presentation')
-                  a.nav-link(href='#') Analysis
-                li#results_page.app-nav.nav-item(role='presentation')
-                  a.nav-link(href='#') Results
+      |   
+      br
+      |   
+      br
+      #welcome.container
+        .col-md-8(style='background-color:#fff;border-radius:25px;padding:20px')
+          br
+          br
+          |         
+          h1
+            b BlueML
+          |         
+          p
+            | v2.0
+            br
+          |         
+          h2
+            | a web-based, open source, machine learning application designed for wavelet-based analysis of  EEG waveform data, intended to diagnose cardiac and neurological disorders.
+          |       
+          br
+          |         
+          hr
+          |       
+          a(href='http://socr.umich.edu')
+            img(src='http://www.socr.umich.edu/img/SOCR_3D_Logo_UM.png', style='height:100px')
+          |       
+          a(href='https://umich.edu')
+            img(src='http://vpcomm.umich.edu/assets/brand/home/logo.png', style='height:105px')
+          |       
+          br
+          |         
+          hr
+          br
+          |         
+          button.btn.btn-primary(type='button', onclick='step1()') Enter
+          |       
+          br
+          |       
+          br
+      #main.container
+        #progressbar.col-md-8(style='background-color:#fff;border-radius:5px;padding:20px')
+          .progress
+            #prog.progress-bar.progress-bar-striped(style='width:40%')
+        |     
         br
-        .app-interface-container
-          .row
-            .col-xl-12.text-center
-              .module(id='Training Data Page')
-                // Training Data Page goes here
-                h1 Select Training Data
-                div.btn-group-vertical#available-data(ng-controller='adCntrl')
-                  button#available-data-options.btn-group(type='button' ng-repeat='x in dataset') {{x}} dataset
-                 // button#available-data-options.btn-group(type='button' ng-repeat='x in datasetSelected') {{x}}
-                //div(ng-app='availData' ng-controller='adCntrl')
-                  //input(type='radio', name='ad', ng-model='selectSet', value='mit') 
-                  //|&nbsp;MIT <br>
-                  //input(type='radio', name='ad', ng-model='selectSet', value='stan') 
-                  //|&nbsp;Stanford <br>
-                  //input(type='radio', name='ad', ng-model='selectSet', value='physbank') 
-                  //|&nbsp;Physiobank <br>
-                //div(ng-switch='selectSet')
-                  //div(ng-switch-when='mit')
-                  //div(ng-switch-when='stan')
-                  //div(ng-switch-when='physbank')
-                //.switch(ng-switch='selectSet')
-                  //.switch(ng-switch-when='mit')
-                    //h1 hi
-                  //.switch(ng-switch-when='stan')
-                    //h1 hi
-                  //.switch(ng-switch-when='physbank')
-                    //h1 hi
-              .module(id='Load Data Page')
-                // Load Data Page goes here
-                h1 Upload Your Data
-                .file_upload
-                  .table-responsive
-                    table#file_upload_table.table.table-bordered
-                      thead
-                        tr
-                          th File Number
-                          th File
-                          th File Name
-                          th Delete
-                      tbody
-                        tr
-                          td 1
-                          td
-                            input#file_upload_button(type='file', name='file')
-                          td
-                          td
-                            button#delete_file_upload.btn.btn-secondary.btn-sm(type='button', onclick='deletetr(this)')
-                              span.glyphicon.glyphicon-minus
-                              |  Remove
-                    a#add_another_upload_button.btn.btn-secondary.btn-lg(disabled='disabled')
-                      | Add Another File
-                    p
-                      button#upload_button.btn.btn-secondary.btn-lg(type='button', name='Upload_ECG') Upload ECG File
-              .module(id='Analysis Page')
-                // Analysis Page goes here
-                h1 Select Algorithm Complexity
-                b   Less Accurate/Faster  
-                input#slide
-                b   More Accurate/Slower  
+        |     
+        #step1.col-md-8(style='background-color:#fff;border-radius:25px;padding:20px')
+          h1
+            b Select Training Data
+          br
+          |         
+          h2
+            | choose the baseline
+            | dataset you wish to classify your dataset against.
+          br
+          |         
+          p EEG Datasets
+          |         
+          button#TUHbutton.btn.btn-outline-info(type='button', onclick='TUHclicked()')
+            | TUH
+            sup [1]
+          |         
+          button#CBHbutton.btn.btn-outline-info(type='button', onclick='CBHclicked()')
+            | CBH-MIT Scalp
+            sup [2]
+          |         
+          button#ESRbutton.btn.btn-info(type='button', onclick='ESRclicked()')
+            | Epileptic Seizure Recognition
+            sup [3]
+          |         
+          p or:
+          |         
+          button#ownTrainButton.btn.btn-outline-info(type='button', onclick='ownTrainingReveal()') Choose &amp; Upload Your Own Training Data
+          |  
+          |         
+          #uploadOwnTrain(style='display:none')
+            form(method='POST', action='#', enctype='multipart/form-data')
+              // COMPONENT START
+              .form-group
+                .input-group.input-file(name='Fichier1')
+                  span.input-group-btn
+                    button.btn.btn-default.btn-choose(type='button') Choose
+                  | &#x9;&#x9;
+                  |                         
+                  input.form-control(type='text', placeholder='Choose a file...')
+                  | &#x9;&#x9;              
+                  span.input-group-btn
+                    button.btn.btn-warning.btn-reset(type='button') Reset
+                | &#x9;&#x9;          
                 br
+                | &#x9;&#x9;
+                |                     
+                button.btn.btn-success(type='button', ng-click='uploadOwnTrainFile()') Submit
+          |  
+          |         
+          br
+          br
+          br
+          |         
+          button.btn.btn-dark(type='button', onclick='showWelcome()') Previous
+          |         
+          button#step2Button.btn.btn-primary(type='button', onclick='step2()') Next
+          |         
+          br
+          br
+          |         
+          hr
+          |         
+          #accordionExample.accordion
+            .card
+              #headingOne.card-header
+                h5.mb-0
+                  button#referencesButton.btn.btn-link(type='button', data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne', onclick='showReferences()') References
+              |         &#x9;&#x9;
+              |                 
+              #collapseOne.collapse.hidden(aria-labelledby='headingOne', data-parent='#accordionExample')
+                  p [1] https://www.isip.piconepress.com/projects/tuh_eeg/
+                  | &#x9;&#x9;&#x9;&#x9;
+                  |                         
+                  p
+                    | [2] Ali Shoeb. Application of Machine Learning to Epileptic Seizure Onset Detection and Treatment. PhD Thesis, Massachusetts Institute of Technology, September 2009.
+                  | &#x9;&#x9;&#x9;&#x9;
+                  |                         
+                  p
+                    | [3] Andrzejak RG, Lehnertz K, Rieke C, Mormann F, David P, Elger CE (2001) Indications of nonlinear deterministic and finite dimensional structures in time series of brain electrical activity: Dependence on recording region and brain state, Phys. Rev. E, 64, 061907
+        |     
+        #step2.col-md-8(style='background-color:#fff;border-radius:25px;padding:20px')
+          h1
+            b Upload Evaluation Data
+          br
+          |         
+          h2 upload the data you wish to evaluate for classification and further analysis.
+          br
+          // COMPONENT START
+          // //<input class="btn btn-secondary" id="f" type="file" name="f" accept=".csv,.edf"/></span>          <br/>
+          //
+            <form action='file/upload' method='post' encType="multipart/form-data">
+            <input type="file" name="file" accept=".csv,.edf" />
+            <input type='submit' value='Upload!'  />
+            </form>
+          #uploadOwnTest
+            form(method='POST', action='#', enctype='multipart/form-data')
+              // COMPONENT START
+              .form-group
+                .input-group.input-file2(name='Fichier1')
+                  span.input-group-btn
+                    button.btn.btn-default.btn-choose(type='button') Choose
+                  | &#x9;&#x9;
+                  |                         
+                  input.form-control(type='text', placeholder='Choose a file...')
+                  | &#x9;&#x9;              
+                  span.input-group-btn
+                    button.btn.btn-warning.btn-reset(type='button') Reset
+                | &#x9;&#x9;          
                 br
-                .dropdown(style='width: 125px;margin:auto')
-                  button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
-                    | Advanced Options	
-                    span.caret
-                  ul.dropdown-menu
-                    li.dropdown-item
-                      a(href='#') Option 1
-                    li.dropdown-item
-                      a(href='#') Option 2
-                    li.dropdown-item
-                      a(href='#') Option 3
-                h1 Select Features for Classification
-                .containerCheck(ng-controller='FeatureCtrl')
-                  label.form-check(ng-repeat='(feature,enabled) in features')
-                    input(type='checkbox', ng-model='features[feature]')
-                    |  {{feature}}
-              .module(id='Result Page')
-                // Result Page goes here
-                h1 Result
-      // /.row
-    button#previous_module.btn.btn-outline-primary(type='button') Previous
-    button#next_module.btn.btn-outline-primary(type='button') Next
-    // /.container
-    // jQuery Version 1.11.1
-    script(src='http://code.jquery.com/jquery-2.0.0.js')
-    // Bootstrap Core JavaScript
-    script(src='js/nav.js')
-    script(src='js/progress.js')
-    footer.site-footer
-      center
-        a(href='http://www.socr.umich.edu/') SOCR Resource
-        |             Visitor number 
-        img(src='http://counter.digits.net/?counter=SOCR', align='middle', border='0', height='20', hspace='4', vspace='2', width='60')
-        script(type='text/javascript').
-          var d=new Date();
-          document.write(" | "+d.getFullYear()+" | ");
-        a(href='../img/SOCR_Email.png')
-          img(alt='SOCR Email', title='SOCR Email', src='../img/SOCR_Email.png', style='border: 0px solid ;')
-    // Import Statements for JS files, add new files at the end
-    script(src='./js/jquery.js')
-    script(src='node_modules/tether/dist/js/tether.min.js')
-    script(src='./js/bootstrap.js')
-    script(src='./js/bootstrap-transition.js')
-    script(src='./js/bootstrap-alert.js')
-    script(src='./js/bootstrap-modal.js')
-    script(src='./js/bootstrap-dropdown.js')
-    script(src='./js/bootstrap-scrollspy.js')
-    script(src='./js/bootstrap-tab.js')
-    script(src='./js/bootstrap-tooltip.js')
-    script(src='./js/bootstrap-popover.js')
-    script(src='./js/bootstrap-button.js')
-    script(src='./js/bootstrap-collapse.js')
-    script(src='./js/bootstrap-carousel.js')
-    script(src='./js/bootstrap-typeahead.js')
-    script(src='./js/bootstrap-slider.js')
-    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js')
-    script(src='./js/featureCtrl.js')
-    // <script src="./js/slider.js"></script>
-    script(src='./js/Load_Data_Page.js')
-    script(src='./js/parser.js')
-    script(src='./js/datalist.js')
-    // End Import Statements for JS files
-    // GoogleAnalytics
-    script(src='http://www.google-analytics.com/urchin.js', type='text/javascript')
+                | &#x9;&#x9;
+                |                     
+                button.btn.btn-success(type='button', ng-click='uploadOwnTestFile()') Submit
+          //
+            <input class="btn btn-dark" type="button" value="Check Format" onclick="check()"/>
+          input.btn.btn-warning(type='button', value='Reset', onclick='resetA();reset()')
+          |         
+          button.btn.btn-dark(type='button', onclick='step1()') Previous
+          |         
+          button#evaluationNext.btn.btn-primary(type='button', onclick='myFunction()') Next
+          |       
+          br
+          br
+          |         
+          hr
+          |         
+          p *Multiple file upload functionality coming in the near future.
+        |     
+        #step3.col-md-8(style='background-color:#fff;border-radius:25px;padding:20px')
+          h1
+            b Analysis: Choose Model
+          br
+          |         
+          h2 choose the model you wish to classify your data with:
+          br
+          |         
+          div(style='background-color:#ededed;border-radius:25px;padding:20px')
+            p Algorithm Complexity: 
+            |             
+            input#ex8(data-slider-id='ex1Slider', type='text', data-slider-min='0', data-slider-max='20', data-slider-step='1', data-slider-value='14', disabled='')
+            br
+            br
+            |             
+            input(type='checkbox', checked='', data-toggle='toggle', data-width='100', data-offstyle='warning', disabled='')
+          |       
+          br
+          br
+          br
+          br
+          |         
+          button.btn.btn-dark(type='button', onclick='step2()') Previous
+          |         
+          button#next_ge.btn.btn-primary(type='button', onclick='step4()') Next
+          |       
+          br
+          br
+          |         
+          hr
+          |         
+          p *More features coming soon.
+        |     
+        #step4.col-md-8(style='background-color:#fff;border-radius:25px;padding:20px')
+          h1
+            b Results
+          br
+          |         
+          h5
+            | Your {{res.filename}} data file has been successfully processed by our {{res.model}} model trained on the {{res.dataset}} dataset. The current classification accuracy of our EEG model, per 10-fold binary cross-validation conducted by the BlueML team on the entire {{res.dataset}} dataset, is {{res.accuracy}}.
+          br
+          |         
+          div(ng-if='diagnosis() == true')
+            h4
+              | The evaluation data you have provided has been indicates, per our trained model, a tendency towards 
+              strong {{res.disease}}
+              | .
+            br
+            |             
+            h5 Typical patients of this disorder have following symptons:
+            |             
+            ul
+              li(ng-repeat='x in res.symptoms') {{x}}
+            |             
+            h5 Suggested treatments include:
+            |             
+            ul
+              li(ng-repeat='y in res.treatments') {{y}}
+          |         
+          div(ng-if='diagnosis() == false')
+            h4
+              | Congratulations, 
+              strong our model does not detect any neurological diseases
+              | !
+            br
+          |         
+          br
+          br
+          br
+          br
+          |         
+          button.btn.btn-dark(type='button', onclick='step3()') Previous
+          |       
+          br
+          br
+          |         
+          hr
+          |         
+          p *Visualization integration coming soon.
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
+    script(src='https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/bootstrap-slider.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js')
+    script.
+      window.onload = document.getElementById("main").style.display = "none";
+      window.onload = document.getElementById("step2").style.display = "none";
+      function showWelcome() {
+      document.getElementById("welcome").style.display = "block";
+      document.getElementById("main").style.display = "none";
+      }
+      function step1() {
+      document.getElementById("welcome").style.display = "none";
+      document.getElementById("main").style.display = "block";
+      document.getElementById("step1").style.display = "block";
+      document.getElementById("step2").style.display = "none";
+      document.getElementById("step3").style.display = "none";
+      document.getElementById("step4").style.display = "none";
+      document.getElementById("prog").style.width = "25%"
+      }
+      function step2() {
+      document.getElementById("welcome").style.display = "none";
+      document.getElementById("step1").style.display = "none";
+      document.getElementById("step2").style.display = "block";
+      document.getElementById("step3").style.display = "none";
+      document.getElementById("step4").style.display = "none";
+      document.getElementById("prog").style.width = "50%"
+      }
+      function step3() {
+      closepage();
+      // 获取文件后缀
+      // var f = document.getElementById("f").files;
+      // if (f[0] != null) {
+      //     var suffixname = f[0].name.substr(f[0].name.lastIndexOf(".")).toLowerCase();
+      //     if(suffixname !== ".csv")
+      //     {
+      //         // 文件后缀名
+      //         alert("Sorry, your file is not in CSV format! Please upload another file.");
+      //     }
+      //     else if(f[0].name !== "eeg1.csv" && f[0].name !== "eeg2.csv"){
+      //         alert("Sorry, your file is not in EEG dataset! Please upload another file.");
+      //     }
+      //     else {
+      document.getElementById("welcome").style.display = "none";
+      document.getElementById("step1").style.display = "none";
+      document.getElementById("step2").style.display = "none";
+      document.getElementById("step3").style.display = "block";
+      document.getElementById("step4").style.display = "none";
+      document.getElementById("prog").style.width = "75%"
+      // }
+      // } else {
+      // alert("Sorry, you have to upload a testing file in order to proceed to the next step.")
+      // }
+      }
+      function step4() {
+      document.getElementById("welcome").style.display = "none";
+      document.getElementById("step1").style.display = "none";
+      document.getElementById("step2").style.display = "none";
+      document.getElementById("step3").style.display = "none";
+      document.getElementById("step4").style.display = "block";
+      document.getElementById("prog").style.width = "100%"
+      // results();
+      }
+      function TUHclicked() {
+      document.getElementById("TUHbutton").className = "btn btn-info";
+      document.getElementById("CBHbutton").className = "btn btn-outline-info";
+      document.getElementById("ESRbutton").className = "btn btn-outline-info";
+      document.getElementById("uploadOwnTrain").style.display = "none";
+      document.getElementById("ownTrainButton").className = "btn btn-outline-info"
+      document.getElementById("step2Button").disabled = false;
+      }
+      function CBHclicked() {
+      document.getElementById("TUHbutton").className = "btn btn-outline-info";
+      document.getElementById("CBHbutton").className = "btn btn-info";
+      document.getElementById("ESRbutton").className = "btn btn-outline-info";
+      document.getElementById("uploadOwnTrain").style.display = "none";
+      document.getElementById("ownTrainButton").className = "btn btn-outline-info"
+      document.getElementById("step2Button").disabled = false;
+      }
+      function ESRclicked() {
+      document.getElementById("TUHbutton").className = "btn btn-outline-info";
+      document.getElementById("CBHbutton").className = "btn btn-outline-info";
+      document.getElementById("ESRbutton").className = "btn btn-info";
+      document.getElementById("uploadOwnTrain").style.display = "none";
+      document.getElementById("ownTrainButton").className = "btn btn-outline-info"
+      document.getElementById("step2Button").disabled = false;
+      }
+      function ownTrainingReveal() {
+      if (document.getElementById("uploadOwnTrain").style.display == "none") {
+      document.getElementById("ownTrainButton").className = "btn btn-info"
+      document.getElementById("TUHbutton").className = "btn btn-outline-info";
+      document.getElementById("CBHbutton").className = "btn btn-outline-info";
+      document.getElementById("ESRbutton").className = "btn btn-outline-info";
+      document.getElementById("uploadOwnTrain").style.display = "block";
+      document.getElementById("step2Button").disabled = true
+      } else {
+      document.getElementById("uploadOwnTrain").style.display = "none";
+      document.getElementById("ESRbutton").className = "btn btn-info";
+      document.getElementById("ownTrainButton").className = "btn btn-outline-info"
+      document.getElementById("step2Button").disabled = false;
+      }
+      }
+      function bs_input_file() {
+      $(".input-file").before(
+      function() {
+      if ( ! $(this).prev().hasClass('input-ghost') ) {
+      var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0' id='train-input'>");
+      element.attr("name",$(this).attr("name"));
+      element.change(function(){
+      element.next(element).find('input').val((element.val()).split('\\\').pop());
+      });
+      $(this).find("button.btn-choose").click(function(){
+      element.click();
+      });
+      $(this).find("button.btn-reset").click(function(){
+      element.val(null);
+      $(this).parents(".input-file").find('input').val('');
+      });
+      // $(this).find('input').css("cursor","pointer");
+      $(this).find('input').mousedown(function() {
+      $(this).parents('.input-file').prev().click();
+      return false;
+      });
+      return element;
+      }
+      }
+      );
+      $(".input-file2").before(
+      function() {
+      if ( ! $(this).prev().hasClass('input-ghost') ) {
+      var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0' id='test-input'>");
+      element.attr("name",$(this).attr("name"));
+      element.change(function(){
+      element.next(element).find('input').val((element.val()).split('\\\').pop());
+      });
+      $(this).find("button.btn-choose").click(function(){
+      element.click();
+      });
+      $(this).find("button.btn-reset").click(function(){
+      element.val(null);
+      $(this).parents(".input-file2").find('input').val('');
+      });
+      // $(this).find('input').css("cursor","pointer");
+      $(this).find('input').mousedown(function() {
+      $(this).parents('.input-file2').prev().click();
+      return false;
+      });
+      return element;
+      }
+      }
+      );
+      }
+      $(function() {
+      bs_input_file();
+      });
+      var slider = new Slider("#ex8", {
+      tooltip: 'always'
+      });
+    script.
+      function showReferences() {
+      if (document.getElementById("collapseOne").className == "collapse hidden") {
+      document.getElementById("collapseOne").className = "collapse show";
+      } else {
+      document.getElementById("collapseOne").className = "collapse hidden";
+      }
+      }
+      function resetA() {
+      document.getElementById("evaluationNext").disabled = true;
+      document.getElementById("f").disabled = false;
+      }
+      function rnd(min,max){
+      return Math.floor(Math.random()*(max-min+1)+min );
+      }
+      var myVar;
+      function myFunction() {
+      // console.log("myFunction executed");
+      showPage();
+      setTimeout(step3, rnd(3000, 5000));
+      // console.log("myFunction ended");
+      }
+      function showPage() {
+      document.getElementById("loader").style.display = "block";
+      }
+      function closepage(){
+      document.getElementById("loader").style.display = "none";
+      }
     script(type='text/javascript').
-      _uacct = "UA-676559-1"; urchinTracker();
-    script(src='./js/parse_csv.js')
-    script(src='./js/papaparse.min.js')
-    // End of GoogleAnalytics Code
-
+      function check() {
+      // 获取文件
+      var f = document.getElementById("f").files;
+      if (f[0] == null) {
+      alert("You haven't uploaded a file yet. Please do so above to check whether or not the format is compatible!")
+      } else {
+      // 获取文件后缀
+      var suffixname = f[0].name.substr(f[0].name.lastIndexOf(".")).toLowerCase();
+      if(suffixname !== ".csv")
+      {
+      // 文件后缀名
+      alert("Sorry, your file is not in CSV format! Please upload another file.");
+      }
+      else if(f[0].name !== "eeg1.csv" && f[0].name !== "eeg2.csv"){
+      alert("Sorry, your file is not in EEG dataset! Please upload another file.");
+      } else {
+      alert("File compatible!");
+      document.getElementById("evaluationNext").disabled = false;
+      document.getElementById("f").disabled = true;
+      }
+      }
+      }
+    script(type='text/javascript').
+      var app = angular.module("BlueML", []);
+      // app.factory('Holder', function() {
+      //   return {
+      //     filename: "",
+      //     disease: "",
+      //     model: "",
+      //     dataset: "",
+      //     accuracy: "",
+      //     symptoms: [],
+      //     treatments: [],
+      //     status_code: 0
+      //   };
+      // });
+      app.controller("resultsController", function($scope, $http){
+      $scope.uploadOwnTestFile = function(){
+      var trainFile = document.getElementById("test-input").files[0];
+      if (trainFile == null){
+      alert("Please specify training data path");
+      return;
+      }
+      var formData = new FormData();
+      formData.append('file', trainFile);
+      $http.post("http://localhost:3000/rest/results", formData).then(function (res) {
+      console.log(res);
+      $scope.res = res.data;
+      $scope.disease = res.data.disease;
+      // $scope.Holder = Holder;
+      // $scope.filename = res.data.filename;
+      // $scope.disease = res.data.disease;
+      // $scope.model = res.data.model;
+      // $scope.dataset = res.data.dataset;
+      // $scope.accuracy = res.data.accuracy;
+      // $scope.symptoms = res.data.symptoms;
+      // $scope.treatments = res.data.treatments;
+      // $scope.status_code = res.data.status_code;
+      // console.log($scope.Holder)
+      // $scope.res = res;
+      // $scope.disease = res.disease;
+      // $scope.diagnosis = function () {
+      //     if ($scope.disease == "") return false;
+      //     return true;
+      // }
+      $scope.diagnosis = function () {
+      // console.log($scope.disease);
+      if ($scope.disease == "none") return false;
+      return true;
+      }
+      });
+      };
+      });
+      app.controller("uploadTrainController", function($scope, $http){
+      $scope.uploadOwnTrainFile = function(){
+      var trainFile = document.getElementById("train-input").files[0];
+      if (trainFile == null){
+      alert("Please specify training data path");
+      return;
+      }
+      var formData = new FormData();
+      formData.append('file', trainFile);
+      $http.post("http://localhost:8080/rest/training/datasets/upload", formData)
+      .then(
+      function (data){
+      console.log("Upload successfully!");
+      },
+      function(data){
+      console.log("Upload failed!");
+      });
+      };
+      });
+      // app.controller("resultsController", function($scope, $http, Holder) {
+      //     // $scope.res = {filename: "eeg.csv",
+      //     //               disease: "epileptic seizure",
+      //     //               model: "Neural Network Model",
+      //     //               dataset: "Seizure Recognition Dataset",
+      //     //               accuracy: "99%",
+      //     //               symptoms:  ["Uncontrollable jerking movements of the arms and legs", "Loss of consciousness or awareness", "Psychic symptoms such as fear, anxiety or deja vu"],
+      //     //               treatments: ["Anti-epileptic drugs", "Vagus nerve stimulator", "Brain surgery"],
+      //     //               status_code: 200};
+      //     $scope.res = Holder;
+      //     $scope.diagnosis = function () {
+      //       if (Holder.disease == "") return false;
+      //       return true;
+      //     }
+      //     // $http.get('http://localhost:8080/rest/results').success(function (res) {
+      //     //     $scope.res = res;
+      //     //     $scope.disease = res.disease;
+      //     //     $scope.diagnosis = function () {
+      //     //         if ($scope.disease == "") return false;
+      //     //         return true;
+      //     //     }
+      //     // });
+      // });
