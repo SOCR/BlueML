@@ -1,3 +1,5 @@
+var Results = require('./models/Results');
+
 module.exports = function(app) {
 
 	// server routes ===========================================================
@@ -30,7 +32,7 @@ module.exports = function(app) {
             treatments: []}
         }
         console.log(template);
-        res.json(template);
+        res.send(template);
     });
 
     // frontend routes =========================================================

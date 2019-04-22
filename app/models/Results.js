@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var resultsSchema new Schema({
+var resultsSchema = new Schema({
 	filename: String,
 	disease: String,
 	model: String,
