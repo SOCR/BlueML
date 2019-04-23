@@ -1,0 +1,25 @@
+.file_upload tr > *:nth-child(3) {
+    display: none;
+}
+.file_upload tr > *:nth-child(4) {
+    display: none;
+}
+
+
+
+#add_another_upload_button {
+    position: fixed;
+    left: 100px;
+    bottom: 10%;
+    background-color: #00274c;
+    color: #ffcb05;
+}
+
+
+#upload_button{
+    position: fixed;
+    right: 100px;
+    bottom: 10%;
+    background-color: #00274c;
+    color: #ffcb05;
+}
