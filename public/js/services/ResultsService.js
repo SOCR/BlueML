@@ -13,6 +13,7 @@ angular.module('ResultsService', []).factory('Results', ['$http', function($http
  //        symptoms: ["Uncontrollable jerking movements of the arms and legs", "Loss of consciousness or awareness", "Psychic symptoms such as fear, anxiety or deja vu"],
  //        treatments: ["Anti-epileptic drugs", "Vagus nerve stimulator", "Brain surgery"]
  //    }
-	return $http.get("/rest/results");
+	// return $http.get("/rest/results");
 	// return template;
+	return {};
 }]);
