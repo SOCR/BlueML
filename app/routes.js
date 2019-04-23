@@ -35,11 +35,10 @@ module.exports = function(app) {
         res.send(template);
     });
 
-
-    // return the message back to the rest/testing/datasets/upload
     app.post('/rest/testing/datasets/upload', function(req, res) {
-        console.log('Upload Testing data!!!');
-        res.send({});
+        console.log('Successfully submitted the file');
+        var return_result = 'successful';
+        res.send(return_result);
     });
 
 
