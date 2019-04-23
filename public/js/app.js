@@ -1,1 +1,2 @@
-angular.module('sampleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'NerdCtrl', 'NerdService', 'GeekCtrl', 'GeekService']);
+console.log("blueml app.js");
+angular.module('BlueML', ['ngRoute', 'appRoutes', 'ResultsCtrl', 'SubmitCtrl']);

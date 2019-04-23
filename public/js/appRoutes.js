@@ -1,22 +1,15 @@
 angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
+	console.log("in app_routes.js");
 	$routeProvider
 
 		// home page
-		.when('/', {
-			templateUrl: 'views/home.html',
-			controller: 'MainController'
+		.when('http://localhost:8080/rest/testing/datasets/upload', {
+
+			templateUrl: 'views/index.html',
+			controller: 'SubmitController' 
 		})
 
-		.when('/nerds', {
-			templateUrl: 'views/nerd.html',
-			controller: 'NerdController'
-		})
-
-		.when('/geeks', {
-			templateUrl: 'views/geek.html',
-			controller: 'GeekController'	
-		});
 
 	$locationProvider.html5Mode(true);
 
