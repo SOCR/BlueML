@@ -4,11 +4,9 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 	$routeProvider
 
 		// home page
-		.when('http://localhost:8080/rest/training/datasets/upload', {
-			// console.log("inside app_routes.js");
+		.when('http://localhost:8080/rest/testing/datasets/upload', {
 
-			// templateUrl: 'views/index.html',
-			// controller: 'ResultsController',
+			templateUrl: 'views/index.html',
 			controller: 'SubmitController' 
 		})
 
