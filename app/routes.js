@@ -1,7 +1,7 @@
-var Results = require('./models/Results');
+// var Results = require('./models/Results');
 
 module.exports = function(app) {
-
+    console.log('in routes.js');
 	// server routes ===========================================================
 	// handle things like api calls
 	// authentication routes
@@ -37,8 +37,8 @@ module.exports = function(app) {
 
     // frontend routes =========================================================
     // route to handle all angular requests
-    app.get('*', function(req, res) {
-        res.sendfile('./public/views/index.html'); // load our public/index.html file
-    });
+    // app.get('*', function(req, res) {
+    //     res.sendfile('./public/views/index.html'); // load our public/index.html file
+    // });
 
 };

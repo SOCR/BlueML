@@ -1,13 +1,16 @@
 angular.module('ResultsCtrl', []).controller('ResultsController', function($scope, Results) {
-
-		console.log(Results);
-        $scope.res = Results;
+	console.log('in results controller');
+	console.log(Results);
+	$scope.getResults = function() {
+		$scope.res = Results;
         $scope.disease = Results.disease;
         
 	    $scope.diagnosis = function () {
 	        if ($scope.disease == "none") return false;
 	        return true;
 	    }
+
+    };
 
 	// template = {
  //        filename: filename,

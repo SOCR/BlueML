@@ -186,30 +186,23 @@ function check() {
 }
 
 
-// var app = angular.module("BlueML", []);
+var app = angular.module("BlueML", []);
 
-// app.controller("resultsController", function($scope, $http){
-//     $scope.uploadOwnTestFile = function(){
-//         var trainFile = document.getElementById("test-input").files[0];
-//         if (trainFile == null){
-//             alert("Please specify training data path");
-//             return;
-//         }
-//         var formData = new FormData();
-//         formData.append('file', trainFile);
-//         $http.post("http://localhost:8080/rest/results", formData).then(function (res) {
-//             console.log(res);
-//             $scope.res = res.data;
-//             $scope.disease = res.data.disease;
+app.controller("resultsController", function($scope, $http){
+    $scope.uploadOwnTestFile = function(){
+        $http.post("http://localhost:8080/rest/results", formData).then(function (res) {
+            console.log(res);
+            $scope.res = res.data;
+            $scope.disease = res.data.disease;
 
-//             $scope.diagnosis = function () {
-//                 // console.log($scope.disease);
-//                 if ($scope.disease == "none") return false;
-//                 return true;
-//             }
-//         });
-//     };
-// });
+            $scope.diagnosis = function () {
+                // console.log($scope.disease);
+                if ($scope.disease == "none") return false;
+                return true;
+            }
+        });
+    };
+});
 
 // app.controller("uploadTrainController", function($scope, $http){
 //     $scope.uploadOwnTrainFile = function(){
