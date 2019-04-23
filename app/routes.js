@@ -35,6 +35,15 @@ module.exports = function(app) {
         res.send(template);
     });
 
+
+    // return the message back to the rest/testing/datasets/upload
+    app.post('/rest/testing/datasets/upload', function(req, res) {
+        console.log('Upload Testing data!!!');
+        res.send({});
+    });
+
+
+
     // frontend routes =========================================================
     // route to handle all angular requests
     app.get('*', function(req, res) {
