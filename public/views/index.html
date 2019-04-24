@@ -25,6 +25,8 @@
 
     <!-- ANGULAR CUSTOM -->
     <script src="js/controllers/ResultsController.js"></script>
+    <script src="js/controllers/SubmitController.js"></script>
+
     <!-- <script src="js/services/ResultsService.js"></script> -->
     <script src="js/appRoutes.js"></script>
     <script src="js/app.js"></script>
@@ -105,7 +107,8 @@
         <h1><b>Upload Evaluation Data</b></h1><br/>
         <h2>upload the data you wish to evaluate for classification and further analysis.</h2><br/>
 
-         <div id="uploadOwnTest">
+         <div id="uploadOwnTest" ng-controller="SubmitController">
+
             <form method="POST" action="#" enctype="multipart/form-data">
                 <!-- COMPONENT START-->
                 <div class="form-group">
@@ -114,7 +117,7 @@
                         <input class="form-control" type="text" placeholder="Choose a file..."/>&#x9;&#x9;              <span class="input-group-btn">
                   <button class="btn btn-warning btn-reset" type="button">Reset</button></span>
                     </div>&#x9;&#x9;          <br/>&#x9;&#x9;
-                    <button class="btn btn-success" type="button" ng-click="uploadOwnTestFile()">Submit</button>
+                    <button class="btn btn-success" type="button" ng-click="uploadOwnTestFile()" >Submit</button>
                 </div>
             </form>
         </div>                

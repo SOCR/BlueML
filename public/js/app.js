@@ -1,2 +1,2 @@
 console.log("blueml app.js");
-angular.module('BlueML', ['ngRoute', 'appRoutes', 'ResultsCtrl']);
+angular.module('BlueML', ['ngRoute', 'appRoutes', 'ResultsCtrl', 'SubmitCtrl']);
