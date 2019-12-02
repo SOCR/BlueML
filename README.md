@@ -1,11 +1,10 @@
-BlueML
-==========================
+# BlueML
 
-1. ensure the [node framework](https://nodejs.org/en/) has been installed
+This is a repo for the BlueML MEAN Stack application.
 
-
-2. navigate to the root directory of the project in node, and run `npm install`
-
-2. once dependencies are installed, launch node server: `npm start`
-
-3. navigate to selected address in browser to launch webapp (default is [http://localhost:8080/](http://localhost:8080/))
+## Installation
+1. Download the repository
+2. Install npm modules: `npm install`
+3. Install bower dependencies `bower install`
+4. Start up the server: `node server.js`
+5. View in browser at http://localhost:8080
