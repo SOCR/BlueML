@@ -4,7 +4,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 	$routeProvider
 
 		// home page
-		.when('http://localhost:8080/rest/testing/datasets/upload', {
+		.when('rest/testing/datasets/upload', {
 
 			templateUrl: 'views/index.html',
 			controller: 'SubmitController' 
