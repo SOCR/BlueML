@@ -49,6 +49,7 @@ module.exports = function(app) {
         var result = ["1"];
         var outcome = "false";
         var template = []
+        var number = 0;
         var number_prediction = 1;
         var row_number = 0;
         var j = 1;
@@ -93,6 +94,7 @@ module.exports = function(app) {
             if (prediction > 0.5) {
                 prediction_result = "Have desease";
                 outcome = "true";
+                number = number+1;
             }
             if (prediction < 0.5) {
                 prediction_result = "Have no desease";
@@ -106,6 +108,7 @@ module.exports = function(app) {
             if (prediction_cnn > 0.5) {
                 prediction_result = "Have desease";
                 outcome = "true";
+                number = number+1;
             }
             if (prediction_cnn < 0.5) {
                 prediction_result = "Have no desease";
@@ -126,7 +129,7 @@ module.exports = function(app) {
                 //     symptoms: ["Uncontrollable jerking movements of the arms and legs", "Loss of consciousness or awareness", "Psychic symptoms such as fear, anxiety or deja vu"],
                 //     treatments: ["Anti-epileptic drugs", "Vagus nerve stimulator", "Brain surgery"]
                 // }
-                template.push({'patient' : row_number,'filename': file,'userID': number_prediction, 'disease': disease,'model': "Neural Network Model",'dataset': "Seizure Recognition Dataset",'accuracy': "99%",'prediction': prediction_result,'prediction2': prediction_result,'symptoms': ["Uncontrollable jerking movements of the arms and legs", "Loss of consciousness or awareness", "Psychic symptoms such as fear, anxiety or deja vu"], 'treatments': ["Anti-epileptic drugs", "Vagus nerve stimulator", "Brain surgery"]})
+                template.push({'number' :  number,'patient' : row_number,'filename': file,'userID': number_prediction, 'disease': disease,'model': "Neural Network Model",'dataset': "Seizure Recognition Dataset",'accuracy': "99%",'prediction': prediction_result,'prediction2': prediction_result,'symptoms': ["Uncontrollable jerking movements of the arms and legs", "Loss of consciousness or awareness", "Psychic symptoms such as fear, anxiety or deja vu"], 'treatments': ["Anti-epileptic drugs", "Vagus nerve stimulator", "Brain surgery"]})
             }
             else {
                 // template = {
@@ -140,11 +143,11 @@ module.exports = function(app) {
                 //     symptoms: [],
                 //     treatments: []
                 // }
-                template.push({'patient' : row_number,'filename': file,'userID': number_prediction, 'disease': disease,'model': "Neural Network Model",'dataset': "Seizure Recognition Dataset",'accuracy': "99%",'prediction': prediction_result,'prediction2': prediction_result,'symptoms': ["Uncontrollable jerking movements of the arms and legs", "Loss of consciousness or awareness", "Psychic symptoms such as fear, anxiety or deja vu"], treatments: ["Anti-epileptic drugs", "Vagus nerve stimulator", "Brain surgery"]})
+                template.push({'number' :  number,'patient' : row_number,'filename': file,'userID': number_prediction, 'disease': disease,'model': "Neural Network Model",'dataset': "Seizure Recognition Dataset",'accuracy': "99%",'prediction': prediction_result,'prediction2': prediction_result,'symptoms': ["Uncontrollable jerking movements of the arms and legs", "Loss of consciousness or awareness", "Psychic symptoms such as fear, anxiety or deja vu"], treatments: ["Anti-epileptic drugs", "Vagus nerve stimulator", "Brain surgery"]})
             }
             number_prediction = number_prediction+1;
         }
-
+        console.log(number);
         console.log(template);
         res.send(template);
     });
