@@ -1,9 +1,5 @@
 // var Results = require('./models/Results');
 const tfn = require('@tensorflow/tfjs-node');
-const fse = require('fs-extra');
-var fs = require('fs');
-var csv = require('fast-csv');
-
 module.exports = function(app) {
     console.log('in routes.js');
     // ===========================================================
