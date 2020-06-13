@@ -187,203 +187,235 @@ html(lang='en')
         h1
           b Results
         br
-        h5 Your {{res[0].filename}} data file has been successfully processed by our {{res[0].model}} model trained on the {{res[0].dataset}}dataset. The current classification accuracy of our EEG model, per 10-fold binary cross-validation conducted by the BlueML team on the entire {{res[0].dataset}} dataset, is {{res[0].accuracy}}.
+        h5 Your {{res[0].filename}} data file has been successfully processed by our CNN and Naive Bayes model trained on the {{res[0].dataset}} dataset. The current classification accuracy of our EEG model, per 10-fold binary cross-validation conducted by the BlueML team on the entire {{res[0].dataset}} dataset, is 97%.
         br
         div(ng-if='diagnosis() == true')
           h4
-            | The evaluation data you have provided has been indicates, per our trained model, a tendency towards 
-            strong {{res[0].disease}}
+            | The evaluation dataset you have provided has been indicates that {{res[30].number}} 
+            |patients tend to have {{res[0].disease}} using CNN machine learning model
             | .
-          br
-          h5 You have uploaded {{res[0].patient}} patient, and there are first 30 User Diagnose Table:
+          
+          
+          h5 You have uploaded {{res[0].patient}} patients information, and there are the first 30 User diagnosed table:
             table.ui.celled.table.center.aligned
               thead
                 tr
                   th Patient ID
                   th Result For CNN
                   th Result For Naive Bayes
-                  th Testing Accuracy
+                  th Testing Accuracy for Naive Bayes
+                  th Testing Accuracy for CNN
                   th Training Dataset
               tbody
                   tr
                    td {{res[0].userID}}
                    td {{res[0].prediction}}
-                   td {{res[0].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset
                   tr
                    td {{res[1].userID}}
                    td {{res[1].prediction}}
-                   td {{res[1].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset
                   tr
                    td {{res[2].userID}}
                    td {{res[2].prediction}}
-                   td {{res[2].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset
                   tr
                    td {{res[3].userID}}
                    td {{res[3].prediction}}
-                   td {{res[3].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[4].userID}}
                    td {{res[4].prediction}}
-                   td {{res[4].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[5].userID}}
                    td {{res[5].prediction}}
-                   td {{res[5].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[6].userID}}
                    td {{res[6].prediction}}
-                   td {{res[6].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[7].userID}}
                    td {{res[7].prediction}}
-                   td {{res[7].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[8].userID}}
                    td {{res[8].prediction}}
-                   td {{res[8].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[9].userID}}
                    td {{res[9].prediction}}
-                   td {{res[9].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[10].userID}}
                    td {{res[10].prediction}}
-                   td {{res[10].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[11].userID}}
                    td {{res[11].prediction}}
-                   td {{res[11].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[12].userID}}
                    td {{res[12].prediction}}
-                   td {{res[12].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[13].userID}}
                    td {{res[13].prediction}}
-                   td {{res[13].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[14].userID}}
                    td {{res[14].prediction}}
-                   td {{res[14].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[15].userID}}
                    td {{res[15].prediction}}
-                   td {{res[15].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[16].userID}}
                    td {{res[16].prediction}}
-                   td {{res[16].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[17].userID}}
                    td {{res[17].prediction}}
-                   td {{res[17].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[18].userID}}
                    td {{res[18].prediction}}
-                   td {{res[18].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[19].userID}}
                    td {{res[19].prediction}}
-                   td {{res[19].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[20].userID}}
                    td {{res[20].prediction}}
-                   td {{res[20].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[21].userID}}
                    td {{res[21].prediction}}
                    td {{res[20].prediction2}}
                    td 95%
+                   td 97%
                    td UCI Dataset
                   tr
                    td {{res[22].userID}}
                    td {{res[22].prediction}}
                    td {{res[23].prediction2}}
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[23].userID}}
                    td {{res[23].prediction}}
-                   td {{res[23].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[24].userID}}
                    td {{res[24].prediction}}
-                   td {{res[24].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[25].userID}}
                    td {{res[25].prediction}}
-                   td {{res[25].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[26].userID}}
                    td {{res[26].prediction}}
-                   td {{res[26].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[27].userID}}
                    td {{res[27].prediction}}
-                   td {{res[27].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[28].userID}}
                    td {{res[28].prediction}}
-                   td {{res[28].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset 
                   tr
                    td {{res[29].userID}}
                    td {{res[29].prediction}}
-                   td {{res[29].prediction2}}
+                   td / 
                    td 95%
+                   td 97%
                    td UCI Dataset    
               tfoot
               
@@ -394,8 +426,14 @@ html(lang='en')
           ul
             li(ng-repeat='y in res[1].treatments') {{y}}
         div(ng-if='diagnosis() == false')
+        b Want to access more analytical tools?   
+           
+          b Try SOCR! 
+          a(href='http://www.socr.umich.edu/') SOCR Website
+          b
           h4
             strong Our model does not detect any neurological diseases
+     
             | !
             br
             br
