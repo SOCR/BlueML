@@ -150,13 +150,15 @@ module.exports = function(app) {
         res.send(template);
     });
 
+    // Get the posted evaluation data
     app.post('/rest/testing/datasets/upload', function(req, res) {
         console.log('Successfully submitted the file, in routes.js');
-        var return_result = 'successful';
+        const return_result = 'successful';
 
         var fstream;
-        req.pipe(req.busboy);
-        var busboy = new Busboy({ headers: req.headers });
+        const busboy = new Busboy({ headers: req.headers });
+        req.pipe(busboy);
+
         busboy.on('file', function(fieldname, file, filename) {
             console.log("Uploading: " + filename);
             fstream = fse.createWriteStream("uploads/data_test.csv");

@@ -3,7 +3,6 @@ angular.module('ResultsCtrl', []).controller('ResultsController', function($scop
     // console.log(Results);
     $scope.getResults = function() {
         $http.get("http://localhost:8080/rest/results").then(function (res) {
-            console.log(res);
             $scope.res = res.data;
             $scope.disease = res.data.disease;
 

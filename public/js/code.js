@@ -41,10 +41,10 @@ function step4() {
 }
 function TUHclicked() {
     document.getElementById("TUHbutton").className = "btn btn-info";
-    document.getElementById("CBHbutton").className = "btn btn-outline-info";
-    document.getElementById("ESRbutton").className = "btn btn-outline-info";
-    document.getElementById("uploadOwnTrain").style.display = "none";
-    document.getElementById("ownTrainButton").className = "btn btn-outline-info"
+    // document.getElementById("CBHbutton").className = "btn btn-outline-info";
+    // document.getElementById("ESRbutton").className = "btn btn-outline-info";
+    // document.getElementById("uploadOwnTrain").style.display = "none";
+    // document.getElementById("ownTrainButton").className = "btn btn-outline-info"
     document.getElementById("step2Button").disabled = false;
 }
 
