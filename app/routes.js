@@ -3,6 +3,7 @@ const tfn = require('@tensorflow/tfjs-node');
 const fse = require('fs-extra');
 var fs = require('fs');
 var csv = require('fast-csv');
+var Busboy = require('busboy');
 
 module.exports = function(app) {
     console.log('in routes.js');
@@ -39,7 +40,7 @@ module.exports = function(app) {
         // });
 
 
-        var filename = "/Users/junzhejiang/Desktop/eeg_blueMl/data.csv";
+        var filename =  __dirname + "/../data.csv";
         var file = "data.csv";
         var disease = "epileptic seizure";
         var data = fs.readFileSync(filename, 'utf-8');
@@ -65,10 +66,10 @@ module.exports = function(app) {
             return line.split(",").map(x=>parseFloat(x));
         });
         for (var i = 1; i< 50; i++) {
-        console.log(row_number);
-        console.log("result ====== ");
-        var test_patient = data_tf[i].splice(1)
-        console.log(data_tf);
+        console.log(i);
+        // console.log("result ====== ");
+        var test_patient = data_tf[i].splice(2)
+        // console.log(data_tf);
         const patient_id = 0;
         const test = test_patient;
             var sd = [162.55, 162.90, 161.18, 159.55, 158.92, 159.53, 159.71, 160.65, 161.74, 161.42, 161.20, 161.32, 165.46, 170.22, 172.19, 169.90, 163.80, 160.47, 160.28, 158.65, 158.83, 162.83, 169.45, 172.24, 170.55, 166.61, 164.05, 164.05, 163.41, 161.42, 159.51, 159.99, 161.00, 161.40, 161.22, 160.65, 162.56, 165.97, 166.02, 163.14, 159.50, 157.18, 156.81, 158.34, 160.06, 162.75, 168.02, 169.63, 166.95, 162.27, 158.15, 156.07, 157.73, 160.97, 163.07, 160.49, 157.80, 157.66, 160.66, 164.68, 165.64, 162.33, 157.36, 157.00, 160.03, 162.10, 162.25, 160.61, 159.59, 159.21, 160.02, 161.06, 162.39, 161.68, 160.99, 161.24, 160.83, 160.45, 158.38, 158.96, 163.15, 169.13, 168.23, 162.77, 160.04, 160.22, 162.71, 163.50, 163.25, 164.22, 166.04, 165.45, 161.68, 159.72, 162.16, 165.33, 168.34, 168.09, 168.35, 171.44, 174.11, 173.14, 172.05, 168.86, 167.69, 166.29, 163.44, 163.79, 165.79, 168.33, 168.15, 165.47, 161.20, 161.17, 163.94, 164.36, 161.58, 160.34, 160.72, 158.31, 155.24, 157.89, 163.62, 167.64, 166.12, 161.98, 159.25, 158.17, 156.63, 155.47, 156.07, 158.91, 160.69, 161.22, 162.68, 165.06, 166.45, 166.12, 165.40, 164.52, 164.33, 165.25, 166.98, 168.36, 168.65, 169.82, 169.97, 168.29, 168.79, 169.81, 169.49, 165.96, 163.73, 166.16, 169.53, 169.57, 168.47, 169.12, 171.09, 172.73, 173.38, 170.24, 167.82, 167.46, 166.66, 165.42, 166.69, 167.04, 165.40, 164.04, 164.68, 167.10, 167.14, 165.30, 162.61, 161.29, 161.56, 163.90];
@@ -76,19 +77,19 @@ module.exports = function(app) {
             const testTensor = tfn.tensor2d(test, [test.length, 1]);
             const sdTensor = tfn.tensor2d(sd, [sd.length, 1]);
             const meanTensor = tfn.tensor2d(mean, [mean.length, 1]);
-            const standardizationTestTensor = testTensor.sub(meanTensor).div(sdTensor).expandDims();
-            standardizationTestTensor.print();
-            console.log(standardizationTestTensor);
+            // const standardizationTestTensor = testTensor.sub(meanTensor).div(sdTensor).expandDims();
+            // standardizationTestTensor.print();
+            // console.log(standardizationTestTensor);
 
         // console.log(X_perdict_data_patient1);
-        console.log("============================");
-        console.log("now predicting the");
-        console.log(patient_id + 1); // zero indexed in the csv file
-        console.log("patient data");
-        console.log("============================");
-        console.log("the prediction result is");
+        // console.log("============================");
+        // console.log("now predicting the");
+        // console.log(patient_id + 1); // zero indexed in the csv file
+        // console.log("patient data");
+        // console.log("============================");
+        // console.log("the prediction result is");
         const prediction = nb.predict([test]);
-        console.log(prediction); // suppose return 0 in this case
+        // console.log(prediction); // suppose return 0 in this case
             var prediction_result = "get_result";
             if (prediction > 0.5) {
                 prediction_result = "Have desease";
@@ -145,7 +146,7 @@ module.exports = function(app) {
             number_prediction = number_prediction+1;
         }
 
-        console.log(template);
+        // console.log(template);
         res.send(template);
     });
 
@@ -155,8 +156,8 @@ module.exports = function(app) {
 
         var fstream;
         req.pipe(req.busboy);
-        console.log('here');
-        req.busboy.on('file', function(fieldname, file, filename) {
+        var busboy = new Busboy({ headers: req.headers });
+        busboy.on('file', function(fieldname, file, filename) {
             console.log("Uploading: " + filename);
             fstream = fse.createWriteStream("uploads/data_test.csv");
             file.pipe(fstream);
