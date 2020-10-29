@@ -143,6 +143,11 @@ function showReferences() {
         document.getElementById("collapseOne").className = "collapse hidden";
     }
 }
+
+function submitTest() {
+    document.getElementById("evaluationNext").disabled = false;
+}
+
 function resetA() {
     document.getElementById("evaluationNext").disabled = true;
     document.getElementById("f").disabled = false;

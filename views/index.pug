@@ -151,10 +151,10 @@ html(lang='en')
               br
               | 		
 
-              button.btn.btn-success(type='button', ng-click='uploadOwnTestFile()') Submit
+              button.btn.btn-success(type='button', ng-click='uploadOwnTestFile()', onclick='submitTest()') Submit
         input.btn.btn-warning(type='button', value='Reset', onclick='resetA();reset()')
         button.btn.btn-dark(type='button', onclick='step1()') Previous
-        button.btn.btn-primary#evaluationNext(type='button', onclick='myFunction()') Next
+        button.btn.btn-primary#evaluationNext(type='button', onclick='myFunction()' disabled) Next
         br
         br
         hr
@@ -167,11 +167,17 @@ html(lang='en')
         h2 choose the model you wish to classify your data with:
         br
         div(style='background-color:#ededed;border-radius:25px;padding:20px')
-          p Algorithm Complexity:
-          input#ex8(data-slider-id='ex1Slider', type='text', data-slider-min='0', data-slider-max='20', data-slider-step='1', data-slider-value='14', disabled)
+          h4 
+            span Algorithm
+            span(style='float:right') Algorithm Complexity
+          //- input#ex8(data-slider-id='ex1Slider', type='text', data-slider-min='0', data-slider-max='20', data-slider-step='1', data-slider-value='14', disabled)
           br
+          input.algorithm_box#naive_bayes(type='checkbox', checked, data-toggle='toggle', data-width='100', data-offstyle='warning', disabled)
+          label(for='naive_bayes' style='display:inline')
+            span Naive Bayes
+            span(style='float:right') O(nK)
           br
-          input(type='checkbox', checked, data-toggle='toggle', data-width='100', data-offstyle='warning', disabled)
+          
         br
         br
         br
