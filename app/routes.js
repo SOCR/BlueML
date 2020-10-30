@@ -91,11 +91,11 @@ module.exports = function(app) {
             const prediction = nb.predict([test]);
             let prediction_result = "get_result";
             if (prediction > 0.5) {
-                prediction_result = "Have desease";
+                prediction_result = "Disease";
                 outcome = "true";
             }
             if (prediction < 0.5) {
-                prediction_result = "Have no desease";
+                prediction_result = "No disease";
             }
 
             const testTensor_cnn = tfn.tensor4d(test_patient, [1, test_patient.length, 1, 1]);
@@ -105,11 +105,11 @@ module.exports = function(app) {
             const prediction_cnn = model_cnn.predict(testTensor_cnn).arraySync()[0][0];
 
             if (prediction_cnn > 0.5) {
-                prediction_result = "Have desease";
+                prediction_result = "Disease";
                 outcome = "true";
             }
             if (prediction_cnn < 0.5) {
-                prediction_result = "Have no desease";
+                prediction_result = "No disease";
             }
 
 
