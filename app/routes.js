@@ -4,7 +4,6 @@ const fse = require('fs-extra');
 var fs = require('fs');
 var csv = require('fast-csv');
 var Busboy = require('busboy');
-var alert = require('alert');
 var uploadFileName = '';
 
 module.exports = function(app) {
