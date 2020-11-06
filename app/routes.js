@@ -1,9 +1,9 @@
-// var Results = require('./models/Results');
 const tfn = require('@tensorflow/tfjs-node');
 const fse = require('fs-extra');
-var fs = require('fs');
-var csv = require('fast-csv');
+const fs = require('fs');
 var Busboy = require('busboy');
+const GaussianNB = require('machinelearn/naive_bayes');
+
 var uploadFileName = '';
 
 module.exports = function(app) {
@@ -12,9 +12,6 @@ module.exports = function(app) {
     app.get('/rest/results', async function(req, res) {
         console.log('Getting results...');
         console.log("======= Naive Bayes");
-        const fs = require('fs');
-        const GaussianNB = require('machinelearn/naive_bayes');
-        const tfn = require('@tensorflow/tfjs-node');
 
         console.log("Running BlueML test.js")
         const nb = new GaussianNB.GaussianNB();
