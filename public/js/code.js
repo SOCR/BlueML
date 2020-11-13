@@ -4,6 +4,21 @@ function showWelcome() {
     document.getElementById("welcome").style.display = "block";
     document.getElementById("main").style.display = "none";
 }
+
+function showHelp() {
+    var elements = document.getElementsByClassName('helpContent');
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = 'block';
+    }
+}
+
+function hideHelp() {
+    var elements = document.getElementsByClassName('helpContent');
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = 'none';
+    }
+}
+
 function step1() {
     document.getElementById("welcome").style.display = "none";
     document.getElementById("main").style.display = "block";
@@ -13,6 +28,7 @@ function step1() {
     document.getElementById("step4").style.display = "none";
     document.getElementById("prog").style.width = "25%"
 }
+
 function step2() {
     document.getElementById("welcome").style.display = "none";
     document.getElementById("step1").style.display = "none";
@@ -21,6 +37,7 @@ function step2() {
     document.getElementById("step4").style.display = "none";
     document.getElementById("prog").style.width = "50%"
 }
+
 function step3() {
     closepage();
 
@@ -31,14 +48,17 @@ function step3() {
     document.getElementById("step4").style.display = "none";
     document.getElementById("prog").style.width = "75%"
 }
+
 function step4() {
+    showPage();
     document.getElementById("welcome").style.display = "none";
     document.getElementById("step1").style.display = "none";
     document.getElementById("step2").style.display = "none";
     document.getElementById("step3").style.display = "none";
     document.getElementById("step4").style.display = "block";
-    document.getElementById("prog").style.width = "100%"
+    document.getElementById("prog").style.width = "100%";
 }
+
 function TUHclicked() {
     document.getElementById("TUHbutton").className = "btn btn-info";
     // document.getElementById("CBHbutton").className = "btn btn-outline-info";
@@ -56,6 +76,7 @@ function CBHclicked() {
     document.getElementById("ownTrainButton").className = "btn btn-outline-info"
     document.getElementById("step2Button").disabled = false;
 }
+
 function ESRclicked() {
     document.getElementById("TUHbutton").className = "btn btn-outline-info";
     document.getElementById("CBHbutton").className = "btn btn-outline-info";
@@ -64,6 +85,7 @@ function ESRclicked() {
     document.getElementById("ownTrainButton").className = "btn btn-outline-info"
     document.getElementById("step2Button").disabled = false;
 }
+
 function ownTrainingReveal() {
     if (document.getElementById("uploadOwnTrain").style.display == "none") {
         document.getElementById("ownTrainButton").className = "btn btn-info"
@@ -79,6 +101,7 @@ function ownTrainingReveal() {
         document.getElementById("step2Button").disabled = false;
     }
 }
+
 function bs_input_file() {
     $(".input-file").before(
         function() {
@@ -129,9 +152,11 @@ function bs_input_file() {
         }
     );
 }
+
 $(function() {
     bs_input_file();
 });
+
 var slider = new Slider("#ex8", {
     tooltip: 'always'
 });
@@ -152,17 +177,22 @@ function resetA() {
     document.getElementById("evaluationNext").disabled = true;
     document.getElementById("f").disabled = false;
 }
+
 function rnd(min,max){
     return Math.floor(Math.random()*(max-min+1)+min );
 }
+
 var myVar;
+
 function myFunction() {
     showPage();
     setTimeout(step3, rnd(3000, 5000));
 }
+
 function showPage() {
     document.getElementById("loader").style.display = "block";
 }
+
 function closepage(){
     document.getElementById("loader").style.display = "none";
 }
@@ -189,5 +219,3 @@ function check() {
         }
     }
 }
-
-
