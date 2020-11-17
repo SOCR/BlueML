@@ -55,12 +55,74 @@ body { padding-top:30px; }
     margin-right: 10px;
 }
 
-.helpContent{
-    display: none;
-    background-color:#DCDCDC;
-    border-radius:25px;
-    padding:20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+/* Popup container */
+.popup {
+    position: relative;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 30px;
 }
+
+.download {
+    position: relative;
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 8em;
+    opacity: 0.9;
+    background-color: #f0f6ff;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    right: -0.6rem;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+}
+
+.help-text {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f0f6ff;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 120%;
+    right: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    font-size: 20px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.download .show {display:block;}
+  
