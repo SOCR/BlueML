@@ -228,7 +228,7 @@ function downloadData(string) {
     if (string === 'json') {
         let a = document.createElement('a');
         a.href = '/rest/results';
-        a.setAttribute('download', 'outputData.json');
+        a.setAttribute('download', 'prediction.json');
         a.click();
     } else if (string === 'csv') {
         $.getJSON('/rest/results', function(data) {
