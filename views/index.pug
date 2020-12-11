@@ -7,27 +7,27 @@ html(lang='en')
     title BlueML
     //  CSS 
     link(rel='stylesheet', href='libs/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='css/style.css')
     //  custom styles 
     //  JS  
-    //  <script src="libs/angular/angular.min.js"></script> 
-    //  <script src="libs/angular-route/angular-route.min.js"></script> 
+    //  script(src="libs/angular/angular.min.js")
+    //  script(src="libs/angular-route/angular-route.min.js")
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
-    //  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script> 
+    //  script(src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js")
     script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/bootstrap-slider.js')
-    //  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
-    //  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script> 
+    //  script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js")
+    //  script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js")
     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js')
     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js')
     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.js')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
-    script(src='/Users/junzhejiang/Desktop/eeg_blueMl/BlueML-4/views/model.jpg')
     script(src='papaparse.min.js')
 
     //  ANGULAR CUSTOM 
     script(src='js/controllers/ResultsController.js')
     script(src='js/controllers/SubmitController.js')
-    //  <script src="js/services/ResultsService.js"></script> 
+    //  script(src="js/services/ResultsService.js")
     script(src='js/appRoutes.js')
     script(src='js/app.js')
   body(ng-app='BlueML', ng-controller='ResultsController', style='background-color:#f4f4f4')
@@ -38,8 +38,10 @@ html(lang='en')
     br
     br
     .container#welcome
-      .col-md-8(style='background-color:#fff;border-radius:25px;padding:20px')
-        br
+      .col-md-8(style='background-color:#fff;border-radius:25px;padding:20px;')
+        i.fa.fa-question-circle.popup(onclick="showPopup('popup-p1')")
+          h3.popuptext#popup-p1 Help information
+            p.help-text Welcome to BlueML! Follow the steps and click on help for more information, specific to each page!
         br
         h1
           b BlueML
@@ -56,7 +58,7 @@ html(lang='en')
         br
         hr
         br
-        button.btn.btn-primary(type='button', onclick='step1()') Enter
+        button.btn.btn-primary(type='button', onclick='step1();') Enter
         br
         br
     .container#main
@@ -65,6 +67,9 @@ html(lang='en')
           .progress-bar.progress-bar-striped#prog(style='width:40%')
       br
       .col-md-8#step1(style='background-color:#fff;border-radius:25px;padding:20px')
+        i.fa.fa-question-circle.popup(onclick="showPopup('popup-p2')")
+          h3.popuptext#popup-p2 Help information
+            p.help-text Choose the training dataset. Right now there is only one dataset available, so it will be picked by default.
         h1
           b Select Training Data
         br
@@ -106,8 +111,8 @@ html(lang='en')
         br
         br
         br
-        button.btn.btn-dark(type='button', onclick='showWelcome()') Previous
-        button.btn.btn-primary#step2Button(type='button', onclick='step2()') Next
+        button.btn.btn-dark(type='button', onclick='showWelcome();') Previous
+        button.btn.btn-primary#step2Button(type='button', onclick='step2();') Next
         br
         br
         hr
@@ -127,9 +132,11 @@ html(lang='en')
                 | 				
 
                 p [3] Andrzejak RG, Lehnertz K, Rieke C, Mormann F, David P, Elger CE (2001) Indications of nonlinear deterministic and finite dimensional structures in time series of brain electrical activity: Dependence on recording region and brain state, Phys. Rev. E, 64, 061907
-      .col-md-8#step2(style='background-color:#fff;border-radius:25px;padding:20px')
-        
 
+      .col-md-8#step2(style='background-color:#fff;border-radius:25px;padding:20px')
+        i.fa.fa-question-circle.popup(onclick="showPopup('popup-p3')")
+          h3.popuptext#popup-p3 Help information
+            p.help-text Update a CSV file of your data with at least 74 fields. All fields after 74 will be truncated. Click submit and then click next.
         h1
           b Upload Evaluation Data
         br
@@ -152,50 +159,79 @@ html(lang='en')
               br
               | 		
 
-              button.btn.btn-success(type='button', ng-click='uploadOwnTestFile()') Submit
+              button.btn.btn-success(type='button', ng-click='uploadOwnTestFile()', onclick='submitTest()') Submit
         input.btn.btn-warning(type='button', value='Reset', onclick='resetA();reset()')
-        button.btn.btn-dark(type='button', onclick='step1()') Previous
-        button.btn.btn-primary#evaluationNext(type='button', onclick='myFunction()') Next
+        button.btn.btn-dark(type='button', onclick='step1();') Previous
+        button.btn.btn-primary#evaluationNext(type='button', onclick='myFunction();' disabled) Next
         br
         br
         hr
         p *Multiple file upload functionality coming in the near future.
       .col-md-8#step3(style='background-color:#fff;border-radius:25px;padding:20px')
-
+        i.fa.fa-question-circle.popup(onclick="showPopup('popup-p4')")
+          h3.popuptext#popup-p4 Help information
+            p.help-text Currently there are only 2 models to choose from, so both are selected by default.
         h1
           b Analysis: Choose Model
         br
         h2 choose the model you wish to classify your data with:
         br
         div(style='background-color:#ededed;border-radius:25px;padding:20px')
-          p Algorithm Complexity:
-          input#ex8(data-slider-id='ex1Slider', type='text', data-slider-min='0', data-slider-max='20', data-slider-step='1', data-slider-value='14', disabled)
+          h4 
+            span Algorithm
+            span(style='float:right') Algorithm Complexity
+          //- input#ex8(data-slider-id='ex1Slider', type='text', data-slider-min='0', data-slider-max='20', data-slider-step='1', data-slider-value='14', disabled)
           br
+          input.algorithm_box#naive_bayes(type='checkbox', checked, data-toggle='toggle', data-width='100', data-offstyle='warning', disabled)
+          label(for='naive_bayes' style='display:inline')
+            span Naive Bayes
+            span(style='float:right') O(nK)
           br
-          input(type='checkbox', checked, data-toggle='toggle', data-width='100', data-offstyle='warning', disabled)
+          input.algorithm_box#CNN(type='checkbox', checked, data-toggle='toggle', data-width='100', data-offstyle='warning', disabled)
+          label(for='CNN' style='display:inline')
+            span CNN
+            span(style='float:right')
+          br
+          
         br
         br
         br
         br
-        button.btn.btn-dark(type='button', onclick='step2()') Previous
-        button.btn.btn-primary#next_ge(type='button', ng-click='getResults()', onclick='step4()') Next
+        button.btn.btn-dark(type='button', onclick='step2();') Previous
+        button.btn.btn-primary#next_ge(type='button', ng-click='getResults()', onclick='step4();') Next
         br
         br
         hr
         p *More features coming soon.
       .col-md-8#step4(style='background-color:#fff;border-radius:25px;padding:20px')
+      
+        i.fa.fa-question-circle.popup(onclick="showPopup('popup-p5')")
+          h3.popuptext#popup-p5 Help information
+            p.help-text You're results have been calculated! This table displays the first 30 entries of the output. To download the output as a json file, click the download button right next to me.
+        i.fa.fa-arrow-circle-down.download(onclick="showDownloadOption()")
+          .dropdown-content#dropdown
+            a(onclick="downloadData('csv')") CSV
+            a(onclick="downloadData('json')") JSON
+            
         h1
           b Results
         br
-        h5 Your {{res[0].filename}} data file has been successfully processed by our {{res[0].model}} model trained on the {{res[0].dataset}}dataset. The current classification accuracy of our EEG model, per 10-fold binary cross-validation conducted by the BlueML team on the entire {{res[0].dataset}} dataset, is {{res[0].accuracy}}.
-        br
         div(ng-if='diagnosis() == true')
+          script(type='text/javascript').
+            closepage();
+          h5 Your {{res[0].filename}} data file has been successfully processed by our {{res[0].model}} model trained on the {{res[0].dataset}}dataset. The current classification accuracy of our EEG model, per 10-fold binary cross-validation conducted by the BlueML team on the entire {{res[0].dataset}} dataset, is {{res[0].accuracy}}.
+          br
           h4
             | The evaluation data you have provided has been indicates, per our trained model, a tendency towards 
             strong {{res[0].disease}}
             | .
           br
-          h5 You have uploaded {{res[0].patient}} patient, and there are first 30 User Diagnose Table:
+          h5 You have uploaded {{res[0].patient}} patient, and below are the first 30 User Diagnose Table:
+            br
+            br
+            br
+          h5 Below is the first 30 User Diagnose Table:
+            br
             table.ui.celled.table.center.aligned
               thead
                 tr
@@ -404,9 +440,8 @@ html(lang='en')
         br
         br
         br
-        button.btn.btn-dark(type='button', onclick='step3()') Previous
+        button.btn.btn-dark(type='button', onclick='step3();') Previous
         br
         br
         hr
     script(src='js/code.js', type='text/javascript')
-    //  <script src="js/controllers/ResultsController.js"></script> 
