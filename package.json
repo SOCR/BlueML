@@ -13,6 +13,6 @@
     "machinelearn": "^2.1.5",
     "method-override": "~2.0.2",
     "mongoose": "~3.8.0",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   }
 }
